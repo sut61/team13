@@ -1,26 +1,30 @@
-package th.sut.sa.demo.entity;
-
-import lombok.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+package entity;
 import javax.persistence.*;
+import lombok.*;
+public class Student {
+    @Id
+    private @NonNull
+    long id;
+    private @NonNull
+    String username;
+    private @NonNull
+    String num;
+    private @NonNull
+    String nation;
+    private @NonNull
+    String disease;
 
-@Entity
-// @Getter @Setter
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
 
-@Table(name="Student")
-public class Student { private  @NonNull Long id;
+    public Student(String username,
+                   String num,
+                   String disease
 
-    private @NonNull String username;
 
-    private @NonNull Long num;
-    private @NonNull String nation;
+    ) {
+        this.username = username;
+        this.num = num;
+        this.disease = disease;
 
-    private @NonNull String disease;
-    private @NonNull String allergy;
-    private @NonNull Date dates;
+
+    }
 }
