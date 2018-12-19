@@ -15,9 +15,5 @@ public class Medicine {
     private @NonNull long medicineId;
     private @NonNull String medicineName;
     
-   // public Medicine(){}
-   // public Medicine(String medicineName){
-   //      this.medicineName = medicineName;
-   // }    
-   
+     
 }
