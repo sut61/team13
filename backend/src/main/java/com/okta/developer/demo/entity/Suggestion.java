@@ -13,8 +13,8 @@ import lombok.*;
 public class Suggestion {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private @NonNull long suggestionId;
-    private @NonNull String suggestion; //ข้อแนะนำ
+    private long suggestionId;
+    private String suggestion; //ข้อแนะนำ
     
     public Suggestion(){}
     public Suggestion(String suggestion){
