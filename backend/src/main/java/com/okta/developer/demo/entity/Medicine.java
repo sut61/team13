@@ -1,5 +1,4 @@
 ﻿package com.okta.developer.demo.entity;
-
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
