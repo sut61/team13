@@ -1,6 +1,9 @@
-packagre th.sut.sa.demo.Entity;
+package com.okta.developer.demo.entity;
+
+import javax.persistence.*;
+@Table(name="Student")
 public class Student{
-    private @NonNull
+    //private @NonNull 
     long id;
 
 

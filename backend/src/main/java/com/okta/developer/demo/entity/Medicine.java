@@ -1,4 +1,5 @@
-﻿package com.sa.cc.demo.entity;
+﻿package com.okta.developer.demo.entity;
+
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +14,10 @@ public class Medicine {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private @NonNull long medicineId;
-    private @NonNull String medicineName;
+    private @NonNull String dispensation; //การจ่ายยา
     
-     
+    public Medicine(){}
+    public Medicine(String dispensation){
+         this.dispensation = dispensation;
+    }    
 }

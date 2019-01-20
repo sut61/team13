@@ -1,4 +1,4 @@
-package com.okta.developer.demo;
+package com.okta.developer.demo.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

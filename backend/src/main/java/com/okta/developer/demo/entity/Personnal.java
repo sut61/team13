@@ -1,6 +1,5 @@
-package com.example.demo.Entity;
+package com.okta.developer.demo.entity;
 import lombok.*;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -9,17 +8,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Personnal {
-
-    @Data
     @Entity
     @Getter
     @Setter
-    @ToString
-    @EqualsAndHashCode
-
-    @Table(name = "Personnel")
-    public class Personnel {
+    @Table(name = "Personnal")
+public class Personnal {
+ 
         @Id
         @SequenceGenerator(name="Personnel_seq",sequenceName="Personnel_seq")
         @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="Personnel_seq")
@@ -34,5 +28,5 @@ public class Personnal {
         private   @NonNull String phonenumber;
         private   @NonNull String E_mail;
         private   @NonNull String extraction;
-
+        
     }
