@@ -14,7 +14,7 @@ public class PatientName {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private @NonNull Long id;
-    private @NonNull String prefix; //คำนำหน้าชื่อ
+  //  private @NonNull String prefix; //คำนำหน้าชื่อ
     private @NonNull String patientName;
     //private @NonNull Long age;
     
@@ -34,9 +34,9 @@ public class PatientName {
     @JoinColumn(name = "suggestionId")
     private Suggestion suggestion;
 
-   
-    public PatientName(String prefix, String patientName){
-        this.prefix = prefix;
+    public PatientName(){}
+    public PatientName(String patientName){
+     //   this.prefix = prefix;
         this.patientName = patientName;
         Hospital hospital = new Hospital();
         Symptom symptom = new Symptom();
