@@ -17,7 +17,11 @@ public class PatientName {
   //  private @NonNull String prefix; //คำนำหน้าชื่อ
     private @NonNull String patientName;
     //private @NonNull Long age;
-    
+
+    @ManyToOne()
+    @JoinColumn(name = "prefixId")
+    private Prefix prefix;
+
     @ManyToOne()
     @JoinColumn(name = "hospitalId")
     private Hospital hospital;
@@ -36,13 +40,10 @@ public class PatientName {
 
     public PatientName(){}
     public PatientName(String patientName){
-     //   this.prefix = prefix;
         this.patientName = patientName;
+        Prefix prefix = new Prefix();
         Hospital hospital = new Hospital();
         Symptom symptom = new Symptom();
         Treatment treatment = new Treatment();
     }
-
-     
-
 }
