@@ -14,11 +14,11 @@ public class Hospital {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private @NonNull long hospitalId;
-    private @NonNull String referral; // การส่งต่อผู้ป่วย
-    
+    private @NonNull String hospital; 
+
     public Hospital(){}
-    public Hospital(String referral){
-         this.referral = referral;
+    public Hospital(String hospital){
+         this.hospital = hospital;
     }    
    
 }

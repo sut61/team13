@@ -16,7 +16,7 @@ public class PatientName {
     private @NonNull Long id;
   //  private @NonNull String prefix; //คำนำหน้าชื่อ
     private @NonNull String patientName;
-    //private @NonNull Long age;
+    private @NonNull String suggestion;
 
     @ManyToOne()
     @JoinColumn(name = "prefixId")
@@ -33,17 +33,14 @@ public class PatientName {
     @ManyToOne()
     @JoinColumn(name = "treatmentId")
     private Treatment treatment;
-
-    @ManyToOne()
-    @JoinColumn(name = "suggestionId")
-    private Suggestion suggestion;
-
+    
     public PatientName(){}
-    public PatientName(String patientName){
-        this.patientName = patientName;
+    public PatientName(String patientName, String suggestion){
         Prefix prefix = new Prefix();
         Hospital hospital = new Hospital();
         Symptom symptom = new Symptom();
         Treatment treatment = new Treatment();
+        this.patientName = patientName;
+        this.suggestion = suggestion;
     }
 }
