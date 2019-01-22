@@ -7,7 +7,7 @@ import { MatFormFieldModule, MatGridListModule, MatSelectModule } from '@angular
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { NurseRoomComponent } from './nurseroom/nurseroom.component';
+import { NursRoomComponent } from './nursroom/nursroom.component';
 import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [];
@@ -15,7 +15,7 @@ const appRoutes: Routes = [];
 @NgModule({
   declarations: [
     AppComponent,
-    NurseRoomComponent
+    NursRoomComponent
   ],
   imports: [
     BrowserModule,
