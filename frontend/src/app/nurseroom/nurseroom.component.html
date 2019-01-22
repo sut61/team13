@@ -1,0 +1,57 @@
+
+<body>
+  <div class="flex-container">
+    <form #nurseroom = "ngForm"  (ngSubmit) = "onClickSubmit(nurseroom.value)" >
+      <h2>ระบบห้องพยาบาล</h2>
+        <mat-form-field>  
+          <h4>คำนำหน้า:</h4> 
+            <mat-select name ="prefix" [(ngModel)]="nurseroom.prefixs">
+              <mat-option *ngFor="let prefix of prefixs" [value]="prefix.value">
+                {{prefix.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field><br>
+
+        <mat-form-field>
+          <h4>ชื่อ-นามสกุล:</h4> 
+            <input matInput name ="patientName"  [(ngModel)]="nurseroom.patientName_id">
+        </mat-form-field><br>
+
+        <mat-form-field>  
+          <h4>อาการป่วย:</h4> 
+            <mat-select name ="symptom" [(ngModel)]="nurseroom.symptoms">
+              <mat-option *ngFor="let symptom of symptoms" [value]="symptom.value">
+                {{symptom.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field><br>
+
+        <mat-form-field>  
+            <h4>การรักษา:</h4> 
+              <mat-select name ="treatment" [(ngModel)]="nurseroom.treatments">
+                <mat-option *ngFor="let treatment of treatments" [value]="treatment.value">
+                  {{treatment.viewValue}}
+                </mat-option>
+              </mat-select>
+        </mat-form-field><br>
+
+        <mat-form-field>
+          <h4>การนำส่งโรงพยาบาล:</h4> 
+            <mat-select name ="hospital" [(ngModel)]="nurseroom.hospitals">
+              <mat-option *ngFor="let hospital of hospitals" [value]="hospital.value">
+                {{hospital.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field><br>
+
+        <mat-form-field>
+          <h4>คำแนะนำ:</h4> 
+            <input matInput name ="suggestion"  [(ngModel)]="nurseroom.suggestion_id">
+        </mat-form-field><br>
+    
+      <pre style="text-align:left;">
+        <button type="submit" mat-stroked-button color="primary">บันทึก</button>
+      </pre>
+    </form>
+  </div>
+</body>
