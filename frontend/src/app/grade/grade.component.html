@@ -1,0 +1,62 @@
+<div style="background-color:#363636;text-align:center;">
+  <br>
+  <br>
+  <h2 style="color:#ffffff;">ระบบประเมินผลการศึกษา</h2>
+  <br>
+  <br>
+</div>
+<div style="background-color:#363636;text-align:center;">
+  <mat-form-field>
+    <mat-select placeholder="Student Name" [(ngModel)]="StudentSelect">
+      <mat-option *ngFor="let stu of students" [value]="stu.student_id">
+        {{stu.student_name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+<div style ="background-color:#363636;text-align:center;">
+  <mat-form-field>
+    <mat-select placeholder="Major"  [(ngModel)]="MajorSelect" >
+      <mat-option *ngFor="let major of majorrs" [value]="major.major_id">
+        {{major.major_name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div style="background-color:#363636;text-align:center;">
+  <mat-form-field style="background-color:#363636;text-color:#ffffff;">
+    <input matInput placeholder="Point" [(ngModel)]="point">
+  </mat-form-field>
+</div>
+<div style="background-color:#363636;text-align:center;">
+  <mat-form-field>
+    <mat-select placeholder="Grade" [(ngModel)]="GpaSelect">
+      <mat-option *ngFor="let g of gpa" [value]="g.id">
+        {{g.ggpa}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <mat-select placeholder="Profressoner"  [(ngModel)]="ProSelect" >
+      <mat-option *ngFor="let ma of professors" [value]="ma.professor_id">
+        {{ma.professor_name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <br>
+</div>
+
+<div class="grade-button-row" style="background-color:#363636;text-align:center;">
+  <button mat-raised-button (click)="save()">Save</button>
+  &nbsp;
+  <button mat-raised-button (click)="cancel()"  color="accent">Cancel</button>
+  &nbsp;
+  &nbsp;
+  <br>
+  <br>
+</div>
+

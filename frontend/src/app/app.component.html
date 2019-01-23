@@ -1,1 +1,25 @@
-<app-nursroom></app-nursroom>
+<body >
+<div class="gradehome">
+  <div style="background-color:#FF0066;border-bottom-width: thin;text-color:#FFFFFF">
+
+
+    <MARQUEE behavior='scroll' direction='Up' height='50' scrollamount='2' scrolldelay='100' width='100' onmouseover='this.stop()' onmouseout='this.start()'>
+
+      &nbsp;
+    </MARQUEE>
+    &nbsp;
+    <a class="navbar-brand" routerLink="home" routerLinkActive="active" style="color: #FFFFFF;text-decoration: none;font-size: 40px;width: 10px">หน้าหลัก </a>
+    &nbsp; &nbsp;&nbsp;&nbsp;
+    <a class="navbar-brand" routerLink="grade" routerLinkActive="active" style="color: #FFFFFF;text-decoration:none;font-size: 40px" >ประเมินผลการศึกษา</a>
+    &nbsp; &nbsp;&nbsp;&nbsp;
+    <a class="navbar-brand" routerLink="nursroom" routerLinkActive="active" style="color: #FFFFFF;text-decoration:none;font-size: 40px" >ห้องพยาบาล</a>
+
+  </div>
+
+</div>
+
+<ul>
+  <router-outlet></router-outlet>
+
+
+</ul>
