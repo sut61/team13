@@ -20,6 +20,25 @@ export class HomeService {
   getgpa(): Observable<any> {
     return this.http.get(this.API + '/gpaa');
   }
+getpo(): Observable<any>{
+    return this.http.get(this.API + '/position')
+  }
+
+  getdegree(): Observable<any>{
+    return this.http.get(this.API + '/degree')
+  }
+
+  getgender(): Observable<any>{
+    return this.http.get(this.API + '/gender')
+  }
+
+  getreligion(): Observable<any>{
+    return this.http.get(this.API + '/religion')
+  }
+
+  geteducation(): Observable<any>{
+    return this.http.get(this.API + '/education')
+  }
 
 
 }
