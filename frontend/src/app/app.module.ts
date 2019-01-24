@@ -9,7 +9,7 @@ import {MatCheckboxModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule , MatNativeDateModule} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
@@ -44,18 +44,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { GradeComponent } from './grade/grade.component';
 import { MainhomeComponent } from './mainhome/mainhome.component';
+import { PersonnalComponent } from './personnal/personnal.component';
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'home', component: HomeComponent, children: [
-    { path: 'mainhome', component: MainhomeComponent },
-  { path: 'grade', component: GradeComponent },
-  { path: 'nursroom', component: NursRoomComponent },
-    ]
-  },
-  { path: '**',   redirectTo: '/login'},
+{ path: 'login', component: LoginComponent},
+{ path: 'home', component: HomeComponent, children: [
+{ path: 'mainhome', component: MainhomeComponent },
+{ path: 'grade', component: GradeComponent },
+{ path: 'nursroom', component: NursRoomComponent },
+{ path: 'personnal', component: PersonnalComponent },
+]
+},
+{ path: '**',   redirectTo: '/login'},
 
-  { path: '',   redirectTo: '/login',pathMatch: 'full'
-  }
+{ path: '',   redirectTo: '/login',pathMatch: 'full'
+}
 
 ];
 
@@ -66,7 +68,8 @@ const appRoutes: Routes = [
     HomeComponent,
     GradeComponent,
     LoginComponent,
-    MainhomeComponent
+    MainhomeComponent,
+    PersonnalComponent
   ],
   imports: [
     BrowserModule,
@@ -105,9 +108,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+MatNativeDateModule
   ],
   providers: [AppComponent,HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

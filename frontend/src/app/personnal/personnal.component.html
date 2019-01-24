@@ -1,0 +1,115 @@
+<div style="background-color:#2F4F4F;text-align:center;">
+  <br>
+  <br>
+  <h2 style="color:#ffffff;">ระบบจัดเก็บข้อมูลครูและบุคลากร</h2>
+  <br>
+  <h4 style="color:#ffffff;">ประวัติ</h4>
+  <br>
+
+
+
+<mat-drawer-container class="example-container">
+  <mat-drawer-content>
+    <div class="example-full-width">
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="เลขประจำตัวพนักงาน" [(ngModel)]="jobId">
+      </mat-form-field>
+
+      &nbsp;
+      <mat-form-field>
+        <mat-select placeholder="ตำแหน่งงาน" [(ngModel)]="positionsSelect" name="position">
+          <mat-option *ngFor="let po of positions" [value]="po.position_id">
+            {{po.position}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field>
+        <mat-select placeholder="วิทยฐานะ" [(ngModel)]="degreesSelect">
+          <mat-option *ngFor="let de of degrees" [value]="de.degree_id" >
+            {{de.degree}}
+          </mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+      <br>
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="เลขประจำตัวประชาชน" [(ngModel)]="identificationNumber">
+      </mat-form-field>
+      <br>
+
+
+      <mat-form-field>
+        <mat-select placeholder="คำนำหน้า" [(ngModel)]="gendersSelect">
+          <mat-option *ngFor="let gen of genders" [value]="gen.gender_id">
+            {{gen.gender}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="ชื่อ" [(ngModel)]="fname">
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="นามสกุล" [(ngModel)]="lname">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="วันเกิด" [(ngModel)]="birthday">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      <br>
+
+      <mat-form-field>
+        <mat-select placeholder="ศาสนา" [(ngModel)]="religionsSelect">
+          <mat-option *ngFor="let re of religions" [value]="re.id">
+            {{re.religion}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="เชื้อชาติ" [(ngModel)]="nationality">
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="สัญชาติ" [(ngModel)]="extraction">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-select placeholder="วุฒิการศึกษา" [(ngModel)]="educationsSelect">
+          <mat-option *ngFor="let edu of educations" [value]="edu.education_id">
+            {{edu.education}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="สาขาวิชา" [(ngModel)]="major">
+      </mat-form-field>
+      <br>
+
+
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="เบอร์โทรติดต่อ" [(ngModel)]="phone">
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="E-mail" [(ngModel)]="email">
+      </mat-form-field>
+
+      <br>
+      <button mat-fab color="primary" (click)= "insert()" >Upload</button>    &nbsp;&nbsp;
+      <button mat-fab color="primary" (click)= "cancal()">Cancel</button>
+
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+</div>
