@@ -41,15 +41,22 @@ import { HomeService } from './service/home.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 import { GradeComponent } from './grade/grade.component';
+import { MainhomeComponent } from './mainhome/mainhome.component';
 const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent},
+  { path: 'home', component: HomeComponent, children: [
+    { path: 'mainhome', component: MainhomeComponent },
   { path: 'grade', component: GradeComponent },
   { path: 'nursroom', component: NursRoomComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+    ]
+  },
+  { path: '**',   redirectTo: '/login'},
+
+  { path: '',   redirectTo: '/login',pathMatch: 'full'
   }
+
 ];
 
 @NgModule({
@@ -57,7 +64,9 @@ const appRoutes: Routes = [
     AppComponent,
     NursRoomComponent,
     HomeComponent,
-    GradeComponent
+    GradeComponent,
+    LoginComponent,
+    MainhomeComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +107,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule
   ],
-  providers: [HomeService],
+  providers: [AppComponent,HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
