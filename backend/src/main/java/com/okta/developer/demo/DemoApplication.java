@@ -29,7 +29,8 @@ public class DemoApplication {
 	TreatmentRepository treatmentRepository, HospitalRepository hospitalRepository,GradeReporitory gradeReporitory, MajorReporitory majorReporitory,
                            ProfessorReporitory professorReporitory, StudentReporitory studentReporitory,GpaRepository gpaRepository ,
                            DegreeRepository degreeRepository , EducationRepository educationRepository , GenderRepository genderRepository,
-                           PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository) {
+                           PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,
+    UserRepository userRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -203,11 +204,16 @@ public class DemoApplication {
             Religion r4 = new Religion();
             r4.setReligion("พราหมณ์-ฮินดู");
 
+            User user = new User("admin","1234","1234","111");
+            userRepository.save(user);
+            User user1 = new User("jirasak","0848254341","1235","112");
+            userRepository.save(user1);
+
             religionRepository.save(r1);
             religionRepository.save(r2);
             religionRepository.save(r3);
             religionRepository.save(r4);
-
+            userRepository.findAll().forEach(System.out::println);
 
 
 
