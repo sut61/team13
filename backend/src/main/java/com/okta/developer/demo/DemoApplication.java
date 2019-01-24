@@ -182,12 +182,12 @@ public class DemoApplication {
             positionRepository.save(p4);
 
 
-            Gender gd1 = new Gender();
-            gd1.setGender("นาย");
-            Gender gd2 = new Gender();
-            gd2.setGender("นาง");
-            Gender gd3 = new Gender();
-            gd3.setGender("นางสาว");
+            Genders gd1 = new Genders();
+            gd1.setGenders("นาย");
+            Genders gd2 = new Genders();
+            gd2.setGenders("นาง");
+            Genders gd3 = new Genders();
+            gd3.setGenders("นางสาว");
 
             genderRepository.save(gd1);
             genderRepository.save(gd2);

@@ -38,7 +38,7 @@ public class PersonnalController {
     }
 
     @GetMapping(path = "/gender")
-    public Collection<Gender> genders() {
+    public Collection<Genders> genders() {
         return genderRepository.findAll().stream().collect(Collectors.toList());
     }
 
@@ -65,7 +65,7 @@ public class PersonnalController {
 
         Degree degree = degreeRepository.findById(de_id).get();
         Education education = educationRepository.findById(edu_id).get();
-        Gender gender = genderRepository.findById(gen_id).get();
+        Genders gender = genderRepository.findById(gen_id).get();
         Position position = positionRepository.findById(po_id).get();
         Religion religion = religionRepository.findById(re_id).get();
 
