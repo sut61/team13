@@ -134,7 +134,7 @@ public class Personnal {
         Birthday = birthday;
     }
 
-    public Gender getGenders() {
+    public Genders getGenders() {
         return Gender;
     }
 
