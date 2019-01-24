@@ -27,8 +27,9 @@ public class DemoApplication {
 	@Bean
 	ApplicationRunner init(PrefixRepository prefixRepository, SymptomRepository symptomRepository,
 	TreatmentRepository treatmentRepository, HospitalRepository hospitalRepository,GradeReporitory gradeReporitory, MajorReporitory majorReporitory,
-                           ProfessorReporitory professorReporitory, StudentReporitory studentReporitory,
-                           GpaRepository gpaRepository) {
+                           ProfessorReporitory professorReporitory, StudentReporitory studentReporitory,GpaRepository gpaRepository ,
+                           DegreeRepository degreeRepository , EducationRepository educationRepository , GenderRepository genderRepository,
+                           PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -112,6 +113,104 @@ public class DemoApplication {
             gradeReporitory.findAll().forEach(System.out::println);
             professorReporitory.findAll().forEach(System.out::println);
             majorReporitory.findAll().forEach(System.out::println);
+
+
+
+            Degree d1 =new Degree();
+            d1.setDegree("เชี่ยวชาญพิเศษ");
+            Degree d2 =new Degree();
+            d2.setDegree("เชี่ยวชาญ");
+            Degree d3 =new Degree();
+            d3.setDegree("ชำนาญการพิเศษ");
+            Degree d4 =new Degree();
+            d4.setDegree("ชำนาญการ");
+            Degree d5 =new Degree();
+            d5.setDegree("คุณครู");
+            Degree d6 =new Degree();
+            d6.setDegree("คุณครผู้ช่วย");
+            Degree d7 =new Degree();
+            d7.setDegree("คุณครูอัตราจ้าง");
+            Degree d8 =new Degree();
+            d8.setDegree("พนักงานราชการ");
+
+            degreeRepository.save(d1);
+            degreeRepository.save(d2);
+            degreeRepository.save(d3);
+            degreeRepository.save(d4);
+            degreeRepository.save(d5);
+            degreeRepository.save(d6);
+            degreeRepository.save(d7);
+            degreeRepository.save(d8);
+
+
+            Education e1 = new Education();
+            e1.setEducation("ปริญญาเอก");
+            Education e2 = new Education();
+            e2.setEducation("ปริญญาโท");
+            Education e3 = new Education();
+            e3.setEducation("ปริญญาตรี");
+            Education e4 = new Education();
+            e4.setEducation("ปวส.");
+            Education e5 = new Education();
+            e5.setEducation("ปวช.");
+            Education e6 = new Education();
+            e6.setEducation("มัธยมปลาย");
+            Education e7 = new Education();
+            e7.setEducation("มัธยมต้น");
+
+            educationRepository.save(e1);
+            educationRepository.save(e2);
+            educationRepository.save(e3);
+            educationRepository.save(e4);
+            educationRepository.save(e5);
+            educationRepository.save(e6);
+            educationRepository.save(e7);
+
+
+            Position p1 = new Position();
+            p1.setPosition("ผู้อำนวยการ");
+            Position p2 = new Position();
+            p2.setPosition("รองผู้อำนวยการ");
+            Position p3 = new Position();
+            p3.setPosition("คุณครู");
+            Position p4 = new Position();
+            p4.setPosition("พนักงานราชการ");
+
+            positionRepository.save(p1);
+            positionRepository.save(p2);
+            positionRepository.save(p3);
+            positionRepository.save(p4);
+
+
+            Gender gd1 = new Gender();
+            gd1.setGender("นาย");
+            Gender gd2 = new Gender();
+            gd2.setGender("นาง");
+            Gender gd3 = new Gender();
+            gd3.setGender("นางสาว");
+
+            genderRepository.save(gd1);
+            genderRepository.save(gd2);
+            genderRepository.save(gd3);
+
+
+            Religion r1 = new Religion();
+            r1.setReligion("พุทธ");
+            Religion r2 = new Religion();
+            r2.setReligion("คริสต์");
+            Religion r3 = new Religion();
+            r3.setReligion("อิสลาม");
+            Religion r4 = new Religion();
+            r4.setReligion("พราหมณ์-ฮินดู");
+
+            religionRepository.save(r1);
+            religionRepository.save(r2);
+            religionRepository.save(r3);
+            religionRepository.save(r4);
+
+
+
+
 		};
 	}
 }
