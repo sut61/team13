@@ -208,6 +208,9 @@ public class DemoApplication {
             userRepository.save(user);
             User user1 = new User("jirasak","0848254341","1235","112");
             userRepository.save(user1);
+            User user2 = new User("B5908851","02012541","1245","113");
+            userRepository.save(user2);
+
 
             religionRepository.save(r1);
             religionRepository.save(r2);
