@@ -38,7 +38,7 @@ public class Personnal {
     Date Birthday;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Gender")    private Gender Gender ;
+    @JoinColumn(name = "Gender")    private Genders Gender ;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Religion")    private Religion Religion ;
@@ -134,11 +134,11 @@ public class Personnal {
         Birthday = birthday;
     }
 
-    public Gender getGender() {
+    public Gender getGenders() {
         return Gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGenders(Genders gender) {
         Gender = gender;
     }
 
