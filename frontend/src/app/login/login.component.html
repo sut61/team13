@@ -1,0 +1,25 @@
+
+<div class="flex-container"  style="text-align: center;">
+
+  <mat-card >
+    <p style="background-color: #2e3131;text-align: center;">Login</p>
+
+
+
+    <mat-card-content  style="text-align: center;background-color:#2e3131;">
+      <form #login="ngForm" (ngSubmit)="onClickSubmit(login.value)" class="flex-item">
+        <mat-form-field>
+          <input matInput placeholder="Username" name="username" [(ngModel)]="login.username">
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="Password" name="password" type="password" [(ngModel)]="login.password">
+        </mat-form-field><br>
+
+        <button type="submit" mat-stroked-button color="primary">Login</button>
+        <br><pre>  </pre>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+
