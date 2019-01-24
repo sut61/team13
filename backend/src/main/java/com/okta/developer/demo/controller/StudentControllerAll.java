@@ -39,23 +39,12 @@ public class StudentControllerAll {
     }
     @PostMapping("/student/{ge_id}/{nationality_id}/{religion_id}/{username}/{num}/{nation}/{disease}/{allergy}")
     public Student student(@PathVariable long ge_id,@PathVariable long nationality_id,@PathVariable long religion_id
-            ,@PathVariable String username,@PathVariable String disease,@PathVariable String allergy,@PathVariable String num,@PathVariable String nation){
+            ,@PathVariable String username,@PathVariable String disease,@PathVariable String allergy,@PathVariable String num,@PathVariable String nation) {
 
         Gender gender = genderRepository.findById(ge_id).get();
         Nationality nationality = nationalityRepository.findById(nationality_id).get();
         Religion religion = religionRepository.findById(religion_id).get();
 
-        Student student = new Student();
-        student.setUsername(username);
-        student.setNum(num);
-        student.setGender(gender);
-        student.setNationality(nationality);
-        student.setReligion(religion);
-        student.setNation(nation);
-        student.setDisease(disease);
-        student.setAllergy(allergy);
-        studentRepository.save(student);
-        return student;
     }
 }
 
