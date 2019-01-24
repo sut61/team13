@@ -80,7 +80,7 @@ public class PersonnalController {
         personnal.setEducational(major);
         personnal.setNationality(nat);
         personnal.setPhonenumber(phone);
-        personnal.setGender(gender);
+        personnal.setGenders(gender);
         personnal.setPosition(position);
         personnal.setReligion(religion);
         personnal.setDegree(degree);

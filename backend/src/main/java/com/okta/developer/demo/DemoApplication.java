@@ -30,7 +30,7 @@ public class DemoApplication {
                            ProfessorReporitory professorReporitory, StudentReporitory studentReporitory,GpaRepository gpaRepository ,
                            DegreeRepository degreeRepository , EducationRepository educationRepository , GenderRepository genderRepository,
                            PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,
-    UserRepository userRepository) {
+    UserRepository userRepository,NationalityRepository nationalityRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -189,11 +189,15 @@ public class DemoApplication {
             gd2.setGenders("นาง");
             Genders gd3 = new Genders();
             gd3.setGenders("นางสาว");
-
+            Genders gd4 = new Genders();
+            gd3.setGenders("เด็กชาย");
+            Genders gd5 = new Genders();
+            gd3.setGenders("เด็กหญิง");
             genderRepository.save(gd1);
             genderRepository.save(gd2);
             genderRepository.save(gd3);
-
+            genderRepository.save(gd4);
+            genderRepository.save(gd5);
 
             Religion r1 = new Religion();
             r1.setReligion("พุทธ");
@@ -218,8 +222,21 @@ public class DemoApplication {
             religionRepository.save(r4);
             userRepository.findAll().forEach(System.out::println);
 
+            Nationality n1 = new Nationality();
+            n1.setNation("ไทย");
+            Nationality n2 = new Nationality();
+            n2.setNation("กัมพูชา");
+            Nationality n3 = new Nationality();
+            n3.setNation("ลาว");
+            Nationality n4 = new Nationality();
+            n4.setNation("เวียดนาม");
+
+            nationalityRepository.save(n1);
+            nationalityRepository.save(n2);
+            nationalityRepository.save(n3);
+            nationalityRepository.save(n4);
 
 
-		};
+        };
 	}
 }

@@ -49,8 +49,16 @@ public class Personnal {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Degree ")    private Degree Degree ;
 
+    public Education getEducation() {
+        return education;
+    }
+
+    public void setEducation(Education education) {
+        this.education = education;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Education ")    private Education Education ;
+    @JoinColumn(name = "Education ")    private Education education ;
 
     public Personnal(){}
 
