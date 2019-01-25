@@ -26,7 +26,8 @@ public class PersonnalController {
     private PositionRepository positionRepository;
     @Autowired
     private ReligionRepository religionRepository;
-
+    @Autowired
+    private PersonnelRepository personnelRepository;
     @GetMapping(path = "/degree")
     public Collection<Degree> degrees() {
         return degreeRepository.findAll().stream().collect(Collectors.toList());
@@ -45,6 +46,11 @@ public class PersonnalController {
     @GetMapping(path = "/personal")
     public Collection<Personnal> personnals() {
         return personnalRepository.findAll().stream().collect(Collectors.toList());
+    }
+
+    @GetMapping(path = "/personel")
+    public Collection<Personnel> personnels() {
+        return personnelRepository.findAll().stream().collect(Collectors.toList());
     }
 
     @GetMapping(path = "/position")

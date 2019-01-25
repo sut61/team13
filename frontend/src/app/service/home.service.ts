@@ -42,5 +42,18 @@ getpo(): Observable<any>{
   getnationality(): Observable<any>{
     return this.http.get(this.API + '/Nationality')
   }
+  getTeacher(): Observable<any> {
+    return this.http.get(this.API + '/personel');
+  }
+  getRoom():  Observable<any> {
+    return this.http.get(this.API + '/Rooms');
+  }
+  getSubject(): Observable<any> {
+    return this.http.get(this.API + '/Majors');
+  }
+
+  getStudyTimeTable(): Observable<any> {
+    return this.http.get(this.API + '/Studytimetables');
+  }
 
 }

@@ -46,13 +46,14 @@ import { GradeComponent } from './grade/grade.component';
 import { MainhomeComponent } from './mainhome/mainhome.component';
 import { PersonnalComponent } from './personnal/personnal.component';
 import { StudentComponent } from './student/student.component';
+import { TableComponent } from './table/table.component';
 const appRoutes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: 'home', component: HomeComponent, children: [
 { path: 'mainhome', component: MainhomeComponent },
 { path: 'grade', component: GradeComponent },
 { path: 'nursroom', component: NursRoomComponent },
-{ path: 'personnal', component: PersonnalComponent },
+{ path: 'personnal', component: PersonnalComponent }, { path: 'table', component: TableComponent },
 { path: 'student', component: StudentComponent }
 ]
 },
@@ -72,7 +73,8 @@ const appRoutes: Routes = [
     LoginComponent,
     MainhomeComponent,
     PersonnalComponent,
-    StudentComponent
+    StudentComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

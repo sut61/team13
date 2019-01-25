@@ -31,8 +31,8 @@ public class DemoApplication {
 	TreatmentRepository treatmentRepository, HospitalRepository hospitalRepository,GradeReporitory gradeReporitory, MajorReporitory majorReporitory,
                            ProfessorReporitory professorReporitory, StudentReporitory studentReporitory,GpaRepository gpaRepository ,
                            DegreeRepository degreeRepository , EducationRepository educationRepository , GenderRepository genderRepository,
-                           PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,
-    UserRepository userRepository,NationalityRepository nationalityRepository) {
+                           PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,RoomRepository RoomRepository, StudyTimeTableRepository studyTimeTableRepository,
+    UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -239,6 +239,36 @@ public class DemoApplication {
             nationalityRepository.save(n3);
             nationalityRepository.save(n4);
             nationalityRepository.findAll().forEach(System.out::println);
+
+            Room room = new Room("B4101");
+            RoomRepository.save(room);
+            Room room2 = new Room("B1202");
+            RoomRepository.save(room2);
+            Room room3 = new Room("B1108");
+            RoomRepository.save(room3);
+            Room room4 = new Room("B3032");
+            RoomRepository.save(room4);
+
+
+            Personnel personnel = new Personnel("1123","5645313","Prayuth","Chanocha",
+                    "Po_2018@hotmail.com","Thai","B","Computer Engineering","044-856-4681");
+            personnelRepository.save(personnel);
+            Personnel personnel2 = new Personnel("1150","87451245","Srivoradee","Rangsriramanakul",
+                    "Sri_2019@sut.com","Thai","B","Computer Engineering","044-123-1345");
+            personnelRepository.save(personnel2);
+
+
+            Studytimetable stt = new Studytimetable("08.00-10.00","Monday", major1,room2, personnel);
+            studyTimeTableRepository.save(stt);
+            Studytimetable stt2 = new Studytimetable("10.00-12.00","Friday", major2,room, personnel2);
+            studyTimeTableRepository.save(stt2);
+            Studytimetable stt3 = new Studytimetable("13.00-15.00","Wednesday", major3,room3, personnel2);
+            studyTimeTableRepository.save(stt3);
+
+
+            RoomRepository.findAll().forEach(System.out::println);
+            studyTimeTableRepository.findAll().forEach(System.out::println);
+            personnelRepository.findAll().forEach(System.out::println);
 
         };
 	}

@@ -1,0 +1,131 @@
+<div  class="mat-elevation-z8">
+
+  <p style="font-size: 22px; background-color: #d2d7d3">
+    &nbsp; ตารางสอน
+  </p>
+
+
+
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+
+  <body>
+
+
+
+  <table class="table table-striped">
+
+    <tr>
+      <th class="hidden">No</th>
+      <th>Time</th>
+      <th>Day</th>
+      <th>Subject</th>
+      <th>Teacher</th>
+      <th>Room</th>
+    </tr>
+
+    <tbody>
+    <tr *ngFor="let Studytimetable of No">
+      <td class="hidden">{{Studytimetable.idStudytimetable}}</td>
+
+      <td>{{Studytimetable.timedate}}</td>
+      <td>{{Studytimetable.day}}</td>
+      <td>{{Studytimetable.teachers.identification_number}}</td>
+      <td>{{Studytimetable.teachers.birthday}}  {{Studytimetable.teachers.educational}}</td>
+      <td>{{Studytimetable.rooms.roomname}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <p style="background-color: #dddddd">&nbsp;&nbsp;เพิ่ม</p>
+  <div style="background-color:#2e3131; text-align: center;" >
+    <mat-form-field hintLabel="hh.mm - HH.MM">
+      <input matInput placeholder="Time" [(ngModel)]="stt.timeSelect" name="timedate">
+    </mat-form-field>
+
+
+    &nbsp;  &nbsp;  &nbsp;
+    <mat-form-field hintLabel="Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday">
+      <input matInput placeholder="Day" [(ngModel)]="stt.daySelect" name="day">
+    </mat-form-field>
+
+    &nbsp;  &nbsp;  &nbsp;
+
+
+    <mat-form-field >
+      <mat-select placeholder="Teacher" [(ngModel)]="stt.teacherSelect" name="nameteacher">
+        <mat-option *ngFor="let Personnel of teachers" [value]="Personnel.fname">
+          {{Personnel.birthday}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;  &nbsp;  &nbsp;
+
+    <mat-form-field>
+      <mat-select placeholder="Room" [(ngModel)]="stt.RoomSelect" name="roomname">
+        <mat-option *ngFor="let Room of rooms" [value]="Room.roomname">
+          {{Room.roomname}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;  &nbsp;  &nbsp;
+    <mat-form-field>
+      <mat-select placeholder="Subject" [(ngModel)]="stt.SubjectSelect" name="majorname">
+        <mat-option *ngFor="let Major of subjects" [value]="Major.majorname">
+          {{Major.majorname}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;  &nbsp;  &nbsp;
+    <br>
+
+    <mat-card-actions>
+      <br>
+      <button mat-raised-button (click)="save()" color="primary">Save</button>
+      &nbsp;  &nbsp;  &nbsp;
+      <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+      <br>
+
+      <pre>          </pre>
+    </mat-card-actions>
+
+  </div>
+
+  <p style="background-color: #dddddd" >&nbsp;&nbsp;ลบ</p>
+  <div style="background-color:#2e3131; text-align: center;">
+
+    <mat-form-field>
+      <mat-select placeholder="No" [(ngModel)]="stt.deleteSelect" name="idStudytimetable">
+        <mat-option *ngFor="let Studytimetable of No" [value]="Studytimetable.idStudytimetable">
+          {{Studytimetable.idStudytimetable}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br/><br/>
+    <button mat-raised-button (click)="Delete()" color="warn">Delete</button>
+
+    <br/><br/><br/>
+  </div>
+  </body>
+
+
+
+  <br>
+</div>

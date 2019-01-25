@@ -28,23 +28,23 @@ public class Major {
         this.major_id = major_id;
     }
 
-    public String getMajor_name() {
-        return major_name;
+    public String getMajorname() {
+        return majorname;
     }
 
-    public void setMajor_name(String major_name) {
-        this.major_name = major_name;
+    public void setMajorname(String major_name) {
+        this.majorname = major_name;
     }
 
-    private @NonNull String major_name;
+    private @NonNull String majorname;
 
     public Major(String major_name){
 
-        this.major_name = major_name ;
+        this.majorname = major_name ;
     }
     public Major(){
 
-        ;
+
     }
 
 
