@@ -21,7 +21,17 @@ public class DemoApplication {
     @Autowired PatientNameRepository patientNameRepository ;
     @Autowired TreatmentRepository treatmentRepository;
 	@Autowired PrefixRepository prefixRepository;
+    @Autowired
+	private BooksRepository bookrepository ;
 
+	@Autowired
+	private BookTypeRepository booktyperepository ;
+
+	@Autowired
+	private BookcaseRepository bookcaserepository ;
+
+	@Autowired
+    private AuthorRepository authorrepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -32,7 +42,8 @@ public class DemoApplication {
                            ProfessorReporitory professorReporitory, StudentReporitory studentReporitory,GpaRepository gpaRepository ,
                            DegreeRepository degreeRepository , EducationRepository educationRepository , GenderRepository genderRepository,
                            PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,RoomRepository RoomRepository, StudyTimeTableRepository studyTimeTableRepository,
-    UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository) {
+    UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository,
+    BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -269,6 +280,76 @@ public class DemoApplication {
             RoomRepository.findAll().forEach(System.out::println);
             studyTimeTableRepository.findAll().forEach(System.out::println);
             personnelRepository.findAll().forEach(System.out::println);
+
+
+            Author author = new Author();
+      author.setAuthorname("นายประยุทธ์");
+      authorRepository.save(author);
+
+      BookType bookType1 = new BookType();
+      BookType bookType2 = new BookType();
+      BookType bookType3 = new BookType();
+      BookType bookType4 = new BookType();
+      BookType bookType5 = new BookType();
+      BookType bookType6 = new BookType();
+      BookType bookType7 = new BookType();
+      BookType bookType8 = new BookType();
+      BookType bookType9 = new BookType();
+      BookType bookType10 = new BookType();
+      bookType1.setBookType("000 - Generalities");
+      bookType2.setBookType("100 - Pholosophy and Psychology");
+      bookType3.setBookType("200 - Religion");
+      bookType4.setBookType("300 - Social Sciences");
+      bookType5.setBookType("400 - Language");
+      bookType6.setBookType("500 - Natural Scinces and Mathematics");
+      bookType7.setBookType("600 - Technology");
+      bookType8.setBookType("700 - Arts");
+      bookType9.setBookType("800 - Literature");
+      bookType10.setBookType("900 - Geography  and  History");
+      bookTypeRepository.save(bookType1);
+      bookTypeRepository.save(bookType2);
+      bookTypeRepository.save(bookType3);
+      bookTypeRepository.save(bookType4);
+      bookTypeRepository.save(bookType5);
+      bookTypeRepository.save(bookType6);
+      bookTypeRepository.save(bookType7);
+      bookTypeRepository.save(bookType8);
+      bookTypeRepository.save(bookType9);
+      bookTypeRepository.save(bookType10);
+
+      Bookcase bookcase1 = new Bookcase();
+      Bookcase bookcase2 = new Bookcase();
+      Bookcase bookcase3 = new Bookcase();
+      Bookcase bookcase4 = new Bookcase();
+      Bookcase bookcase5 = new Bookcase();
+      Bookcase bookcase6 = new Bookcase();
+      Bookcase bookcase7 = new Bookcase();
+      Bookcase bookcase8 = new Bookcase();
+      Bookcase bookcase9 = new Bookcase();
+      Bookcase bookcase10 = new Bookcase();
+      bookcase1.setBookcase("BC1F1");
+      bookcase2.setBookcase("BC1F2");
+      bookcase3.setBookcase("BC2F1");
+      bookcase4.setBookcase("BC2F2");
+      bookcase5.setBookcase("BC3F1");
+      bookcase6.setBookcase("BC3F2");
+      bookcase7.setBookcase("BC4F1");
+      bookcase8.setBookcase("BC4F2");
+      bookcase9.setBookcase("BC5F1");
+      bookcase10.setBookcase("BC5F2");
+      bookcaseRepository.save(bookcase1);
+      bookcaseRepository.save(bookcase2);
+      bookcaseRepository.save(bookcase3);
+      bookcaseRepository.save(bookcase4);
+      bookcaseRepository.save(bookcase5);
+      bookcaseRepository.save(bookcase6);
+      bookcaseRepository.save(bookcase7);
+      bookcaseRepository.save(bookcase8);
+      bookcaseRepository.save(bookcase9);
+      bookcaseRepository.save(bookcase10);
+
+      Book book = new Book("Wukong", "นายประยุทธ์", bookcase1, bookType1, author);
+      bookRepository.save(book);
 
         };
 	}
