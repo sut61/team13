@@ -39,6 +39,8 @@ getpo(): Observable<any>{
   geteducation(): Observable<any>{
     return this.http.get(this.API + '/education')
   }
-
+  getnationality(): Observable<any>{
+    return this.http.get(this.API + '/Nationality')
+  }
 
 }

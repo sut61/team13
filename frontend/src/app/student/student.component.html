@@ -1,0 +1,66 @@
+
+<div style="text-align:center">
+  <div style="text-align:center">
+    <body bgcolor="000000">
+    <body bgcolor ='BEBEBE'>
+    &nbsp; &nbsp;&nbsp;&nbsp;
+    <a class="navbar-brand" routerLink="/table" routerLinkActive="active" style="color: black;text-decoration:none;font-size: 50px" >บันทึกประวัตินักเรียน</a>
+    </body>
+    <hr width="n" align="LEFT/RIGHT/CENTER" size="10" noshade color="BEBEBE">
+    <header  style="background-color:#696969; margin-center: 1px; ">
+
+      <div class="example-container"style="background-color:#2e3131; text-align: center;">
+        <mat-form-field>
+
+          <input matInput placeholder="เลขประจำตัวนักเรียน"[(ngModel)]="id">
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<mat-form-field>
+        <input matInput placeholder="เลขที่บัตรประชาชน"[(ngModel)]="num">
+      </mat-form-field>
+
+        <div>
+
+          <mat-form-field>
+            <mat-select placeholder="คำนำหน้าชื่อ"[(ngModel)]="gederSelect">
+
+              <mat-option *ngFor="let gender of gender" [value]="gender.gender_id">{{gender.gender}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <mat-form-field>
+          <input matInput placeholder="ชื่อ-สกุล"[(ngModel)]="username">
+        </mat-form-field>
+        </div>
+
+        <div>
+        <mat-form-field>
+          <mat-select placeholder="สัญชาติ"[(ngModel)]="nationalitySelect">
+
+            <mat-option *ngFor="let nationality of nationality" [value]="nationality.id">{{nationality.nation}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <mat-select placeholder="ศาสนา"[(ngModel)]="religionSelect">
+
+              <mat-option *ngFor="let religion  of religions " [value]="religion.id">{{religion.religion}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+
+
+        <body bgcolor ='BEBEBE'>
+
+        </body>
+        <button mat-raised-button (click)="save()" color="primary">Save</button>
+      </div>
+    </header>
+    </body>
+  </div>
+</div>

@@ -12,7 +12,6 @@ public class Students {
     private @NonNull Long id;
 
     private String name;
-    private String studentid ;
     private String num ;
 
 
@@ -43,13 +42,7 @@ public class Students {
         this.name = name;
     }
 
-    public String getStudentid() {
-        return studentid;
-    }
 
-    public void setStudentid(String studentid) {
-        this.studentid = studentid;
-    }
 
     public String getNum() {
         return num;

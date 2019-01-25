@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import{HomeService}from'../service/home.service';
+import {HomeService} from'../service/home.service';
 
 @Component({
   selector: 'app-personnal',
@@ -36,41 +36,43 @@ export class PersonnalComponent implements OnInit {
     major : string;
     phone : string;
     email : string;
-  constructor(  private  controller:HomeService ,
-                private   httpClient:HttpClient, private router:Router) { }
+  constructor(  private homeservice: HomeService ,
+                private httpClient: HttpClient,
+                private route: ActivatedRoute,
+                private router: Router ) { }
 
   ngOnInit() {
 
-   this.controller.getpo().subscribe(data => {
+   this.homeservice.getpo().subscribe(data => {
          this.positions = data;
         console.log(this.positions);
     });
 
-    this.controller.getdegree().subscribe(data => {
+    this.homeservice.getdegree().subscribe(data => {
          this.degrees = data;
         console.log(this.degrees);
     });
 
-     this.controller.getgender().subscribe(data => {
+     this.homeservice.getgender().subscribe(data => {
          this.genders = data;
         console.log(this.genders);
     });
 
-    this.controller.getreligion().subscribe(data => {
+    this.homeservice.getreligion().subscribe(data => {
          this.religions = data;
         console.log(this.religions);
     });
 
-     this.controller.geteducation().subscribe(data => {
+     this.homeservice.geteducation().subscribe(data => {
          this.educations = data;
         console.log(this.educations);
     });
   }
 
-insert(){
+save(){
 
-  this.httpClient.post('http://localhost:8080/personnal/'+this.religionsSelect+'/'+this.educationsSelect+'/'+this.gendersSelect+'/'+this.positionsSelect+'/'+this.degreesSelect+'/'+this.birthday+'/'+this.fname+'/'+this.lname+'/'+this.jobId+'/'+this.nationality+'/'+this.extraction+'/'+this.identificationNumber+'/'+this.major+'/'+this.phone+'/'+this.email,{}).subscribe()
-
+  this.httpClient.post('http://localhost:8080/personnals/'+this.religionsSelect+'/'+this.educationsSelect+'/'+this.gendersSelect+'/'+this.positionsSelect+'/'+this.degreesSelect+'/'+this.birthday+'/'+this.fname+'/'+this.lname+'/'+this.jobId+'/'+this.nationality+'/'+this.extraction+'/'+this.identificationNumber+'/'+this.major+'/'+this.phone+'/'+this.email,{}).subscribe()
+  alert('บันทึกสำเร็จ');
 }
 cancel(){
    this.router.navigate(['mainhome'])

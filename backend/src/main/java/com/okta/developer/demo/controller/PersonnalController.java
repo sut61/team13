@@ -57,7 +57,7 @@ public class PersonnalController {
         return religionRepository.findAll().stream().collect(Collectors.toList());
     }
 
-    @PostMapping(path = "/personnal/{re_id}/{edu_id}/{gen_id}/{po_id}/{de_id}/{birth}/{fname}/{lname}/{jobid}/{nat}/{extraction}/{iden}/{major}/{phone}/{email}")
+    @PostMapping(path = "/personnals/{re_id}/{edu_id}/{gen_id}/{po_id}/{de_id}/{birth}/{fname}/{lname}/{jobid}/{nat}/{extraction}/{iden}/{major}/{phone}/{email}")
     public Personnal personnal(@PathVariable Long re_id, @PathVariable Long edu_id, @PathVariable Long gen_id,
                                @PathVariable Long po_id, @PathVariable Long de_id, @PathVariable Date birth, @PathVariable String fname,
                                @PathVariable String lname, @PathVariable String jobid, @PathVariable String nat, @PathVariable String extraction, @PathVariable String iden,

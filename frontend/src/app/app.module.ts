@@ -45,6 +45,7 @@ import { LoginComponent } from './login/login.component';
 import { GradeComponent } from './grade/grade.component';
 import { MainhomeComponent } from './mainhome/mainhome.component';
 import { PersonnalComponent } from './personnal/personnal.component';
+import { StudentComponent } from './student/student.component';
 const appRoutes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: 'home', component: HomeComponent, children: [
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
 { path: 'grade', component: GradeComponent },
 { path: 'nursroom', component: NursRoomComponent },
 { path: 'personnal', component: PersonnalComponent },
+{ path: 'student', component: StudentComponent }
 ]
 },
 { path: '**',   redirectTo: '/login'},
@@ -69,7 +71,8 @@ const appRoutes: Routes = [
     GradeComponent,
     LoginComponent,
     MainhomeComponent,
-    PersonnalComponent
+    PersonnalComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,

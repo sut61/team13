@@ -1,8 +1,9 @@
 package com.okta.developer.demo.entity;
-import lombok.NonNull;
+import lombok.*;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "Nationality")
 public class Nationality {
     @Id
     @SequenceGenerator(name="na_seq",sequenceName="na_seq")

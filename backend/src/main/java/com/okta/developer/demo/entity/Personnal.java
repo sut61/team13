@@ -22,7 +22,7 @@ public class Personnal {
     @Id
     @SequenceGenerator(name="Personnal_seq",sequenceName="Personnal_seq")
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="Personnal_seq")
-    @Column(name="Personnal_ID",unique = true, nullable = true)
+    private   @NonNull Long id ;
     private   @NonNull String fname;
     private   @NonNull String Lname;
     private   @NonNull String nationality;
@@ -38,16 +38,19 @@ public class Personnal {
     Date Birthday;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Gender")    private Genders Gender ;
+      private Genders Gender ;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Religion")    private Religion Religion ;
+     private Religion Religion ;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Position ")    private Position Position ;
+     private Position Position ;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Degree ")    private Degree Degree ;
+     private Degree Degree ;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Education education ;
 
     public Education getEducation() {
         return education;
@@ -57,8 +60,7 @@ public class Personnal {
         this.education = education;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Education ")    private Education education ;
+
 
     public Personnal(){}
 
