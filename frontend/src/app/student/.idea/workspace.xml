@@ -105,6 +105,12 @@
       <change beforePath="$PROJECT_DIR$/../personnal/personnal.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../personnal/personnal.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../personnal/personnal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../personnal/personnal.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service/home.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../service/home.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/student.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/student.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/student.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/student.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student.component.spec.ts" afterDir="false" />
