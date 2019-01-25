@@ -5,6 +5,13 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class HomeService {
   public API = '//localhost:8080';
+  getBooktype(): Observable<any>{
+    return this.http.get(this.API + '/booktype'); }
+
+  getbookcase(): Observable<any>{
+    return this.http.get(this.API + '/bookcase');
+  }
+
   constructor(private http: HttpClient) {}
 
   getStudent(): Observable<any> {

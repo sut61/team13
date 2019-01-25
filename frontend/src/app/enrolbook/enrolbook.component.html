@@ -1,0 +1,46 @@
+
+<mat-card class="example-card">
+
+  <h4 class="aa">บันทึกข้อมูลหนังสือ</h4>
+  <div class="flex-container">
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Book Name" [(ngModel)]="bookname">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Quantity" [(ngModel)]="quantity">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Author" [(ngModel)]="author">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field  class="example-mid-width">
+      <mat-select placeholder="Book Type" [(ngModel)]="bookTypeSelect" name="booktype">
+        <mat-option *ngFor="let booktype of booktypes" [value]="booktype.id">
+          {{booktype.bookType}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field  class="example-mid-width">
+      <mat-select placeholder="Book Case" [(ngModel)]="bookcaseSelect" name="bookcase">
+        <mat-option *ngFor="let bookcase of bookcases" [value]="bookcase.id">
+          {{bookcase.bookcase}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+
+    <button mat-button color="primary"  class="example-mid-width" (click)="insert()" >SAVE</button>
+    <br><br>
+    <button mat-button color="primary"  class="example-mid-width" routerLink="" >BACK</button>
+    <br><br>
+    <button mat-button ></button>
+  </div>
+</mat-card>
