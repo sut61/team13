@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a419460f-cb1c-4ae7-a1bd-89ee6a5efeed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/team13.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/team13.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/.gitignore.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/.gitignore.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/GradeControllerAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/GradeControllerAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/HospitalRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/HospitalRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/PersonnalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/PersonnalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/StudentsControllerAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/StudentsControllerAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Degree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Degree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Genders.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Genders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Gpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Gpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Major.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Nationality.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Nationality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/PatientName.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/PatientName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Personnal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Personnal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Prefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Prefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Religion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Religion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Students.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Symptom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Symptom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Treatment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/Treatment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/DegreeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/DegreeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/EducationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/EducationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/GenderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/GenderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/GpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/GpaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/GradeReporitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/GradeReporitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/HospitalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/HospitalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/MajorReporitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/MajorReporitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/NationalityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/NationalityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PatientNameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PatientNameRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PersonnalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PersonnalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PositionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PositionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PrefixRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/PrefixRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/ProfessorReporitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/ProfessorReporitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/ReligionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/ReligionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/StudentReporitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/StudentReporitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/StudentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/StudentsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/SymptomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/SymptomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/TreatmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/TreatmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/java/com/okta/developer/demo/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../backend/src/test/java/com/okta/developer/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../backend/src/test/java/com/okta/developer/demo/DemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.angular-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.angular-cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../e2e/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../e2e/app.e2e-spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../e2e/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../e2e/app.po.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../e2e/tsconfig.e2e.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../e2e/tsconfig.e2e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../protractor.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grade/grade.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../grade/grade.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grade/grade.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../grade/grade.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grade/grade.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../grade/grade.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grade/grade.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../grade/grade.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../home/home.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home/home.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../home/home.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../login/login.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mainhome/mainhome.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mainhome/mainhome.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mainhome/mainhome.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mainhome/mainhome.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mainhome/mainhome.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../mainhome/mainhome.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mainhome/mainhome.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../mainhome/mainhome.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nursroom/nursroom.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../nursroom/nursroom.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nursroom/nursroom.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nursroom/nursroom.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nursroom/nursroom.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../nursroom/nursroom.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nursroom/nursroom.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../nursroom/nursroom.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../personnal/personnal.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../personnal/personnal.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../personnal/personnal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../personnal/personnal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../personnal/personnal.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../personnal/personnal.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../personnal/personnal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../personnal/personnal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/home.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../service/home.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/student.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/student.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/0444.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/0444.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/PhotoSlide.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/PhotoSlide.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/enter.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/enter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/ตรา.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/ตรา.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/ลบ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/ลบ.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/Img/เพิ่ม.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../assets/Img/เพิ่ม.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../../favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../typings.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../typings.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tslint.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student.component.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/student.component.spec.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/student.component.spec.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="student" type="b2602c69:ProjectViewProjectNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="student" type="b2602c69:ProjectViewProjectNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a419460f-cb1c-4ae7-a1bd-89ee6a5efeed" name="Default Changelist" comment="" />
+      <created>1548419639467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548419639467</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/student.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
