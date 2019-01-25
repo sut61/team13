@@ -11,12 +11,15 @@ describe('StudentComponent', () => {
       declarations: [ StudentComponent ]
     })
     .compileComponents();
+
   }));
   beforeEach(() => {
     fixture = TestBed.createComponent(StudentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
   });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
