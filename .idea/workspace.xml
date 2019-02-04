@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3910c3-f1bb-45a7-9e14-b7038197a37e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Classrooms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Parents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/SchoolCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ClassroomsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ParentsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/SchoolCheckRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StatusRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -38,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/BookType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/BookType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Bookcase.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Bookcase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Classrooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Classrooms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Degree.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Degree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Education.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Genders.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Genders.java" afterDir="false" />
@@ -46,6 +39,7 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Hospital.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Major.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Nationality.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Nationality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Parents.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Parents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/PatientName.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/PatientName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Personnal.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Personnal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Personnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Personnel.java" afterDir="false" />
@@ -54,6 +48,8 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Professor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Religion.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Religion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/SchoolCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/SchoolCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Students.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Studytimetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Studytimetable.java" afterDir="false" />
@@ -64,6 +60,7 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/BookTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/BookTypeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/BookcaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/BookcaseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/BooksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/BooksRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ClassroomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ClassroomsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/DegreeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/DegreeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/EducationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/EducationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/GenderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/GenderRepository.java" afterDir="false" />
@@ -72,6 +69,7 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/HospitalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/HospitalRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/MajorReporitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/MajorReporitory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/NationalityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/NationalityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ParentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ParentsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/PatientNameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/PatientNameRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/PersonnalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/PersonnalRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/PersonnelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/PersonnelRepository.java" afterDir="false" />
@@ -80,6 +78,8 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ProfessorReporitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ProfessorReporitory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ReligionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/ReligionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/RoomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/SchoolCheckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/SchoolCheckRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StatusRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StudentReporitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StudentReporitory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StudentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StudentsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StudyTimeTableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/StudyTimeTableRepository.java" afterDir="false" />
@@ -307,7 +307,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -520,15 +520,15 @@
       <workItem from="1548414428856" duration="8459000" />
       <workItem from="1548425413547" duration="1816000" />
       <workItem from="1548433443191" duration="1607000" />
-      <workItem from="1549241211457" duration="365000" />
+      <workItem from="1549241211457" duration="862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23583000" />
+    <option name="totallyTimeSpent" value="24080000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24413647" />
