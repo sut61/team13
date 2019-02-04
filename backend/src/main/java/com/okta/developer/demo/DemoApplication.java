@@ -43,7 +43,7 @@ public class DemoApplication {
                            DegreeRepository degreeRepository , EducationRepository educationRepository , GenderRepository genderRepository,
                            PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,RoomRepository RoomRepository, StudyTimeTableRepository studyTimeTableRepository,
     UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository,
-    BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository) {
+    BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository,ClassroomsRepository classroomsRepository,ParentsRepository parentsRepository,SchoolCheckRepository schoolCheckRepository,StatusRepository statusRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -350,6 +350,36 @@ public class DemoApplication {
 
       Book book = new Book("Wukong", "นายประยุทธ์", bookcase1, bookType1, author);
       bookRepository.save(book);
+
+            Status sta = new Status();
+            Status sta1 = new Status();
+
+            sta.setStstusname("Present");
+            sta1.setStstusname("Absent");
+            statusRepository.save(sta);
+            statusRepository.save(sta1);
+
+            statusRepository.findAll().forEach(System.out::println);
+
+            Parents pa = new Parents();
+            Parents pa1 = new Parents();
+            pa.setName("Mather");
+            pa1.setName("Father");
+            parentsRepository.save(pa);
+            parentsRepository.save(pa1);
+            parentsRepository.findAll().forEach(System.out::println);
+
+            Classrooms cl = new Classrooms();
+            Classrooms cl1 = new Classrooms();
+            Classrooms cl2 = new Classrooms();
+            cl.setClassroom("อนุบาล1");
+            cl1.setClassroom("อนุบาล2");
+            cl2.setClassroom("อนุบาล3");
+            classroomsRepository.save(cl);
+            classroomsRepository.save(cl1);
+            classroomsRepository.save(cl2);
+            classroomsRepository.findAll().forEach(System.out::println);
+
 
         };
 	}
