@@ -43,11 +43,11 @@ public class SchoolcheckController {
     public Collection<SchoolCheck> schoolchecks() { return schoolCheckRepository.findAll().stream().collect(Collectors.toList());
     }
     @PostMapping(path = "/schoolcheck/{student}/{classroom}/{date}/{status}/{parent}")
-    public SchoolCheck schoolck(@PathVariable Long student,@PathVariable Long classroom,@PathVariable Date date,@PathVariable Long status,@PathVariable Long parents){
+    public SchoolCheck schoolck(@PathVariable Long student,@PathVariable Long classroom,@PathVariable Date date,@PathVariable Long status,@PathVariable Long parent){
         Student stu = studentReporitory.findById(student).get();
         Classrooms clas = classroomsRepository.findById(classroom).get();
         Status sta = statusRepository.findById(status).get();
-        Parents pa = parentsRepository.findById(parents).get();
+        Parents pa = parentsRepository.findById(parent).get();
         SchoolCheck schoolchecks = new SchoolCheck();
         schoolchecks.setStudent(stu);
         schoolchecks.setClassrooms(clas);

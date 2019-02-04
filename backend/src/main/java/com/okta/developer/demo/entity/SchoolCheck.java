@@ -19,20 +19,16 @@ public class SchoolCheck {
     private @io.micrometer.core.lang.NonNull
     Date Datecome;
 
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Student.class)
-    @JoinColumn(name = "STUDENT_ID", insertable = true)
+    @ManyToOne
     private Student student;
 
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity =  Status.class)
-    @JoinColumn(name = "Status",unique = true, nullable = true)
+    @ManyToOne
     private Status status;
 
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity =  Parents.class)
-    @JoinColumn(name = "Parents",unique = true, nullable = true)
+    @ManyToOne
     private Parents parents;
 
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity =  Classrooms.class)
-    @JoinColumn(name = "Classrooms",unique = true, nullable = true)
+    @ManyToOne
     private Classrooms classrooms;
 
     public Long getId() {
