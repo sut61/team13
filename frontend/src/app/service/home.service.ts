@@ -62,5 +62,18 @@ getpo(): Observable<any>{
   getStudyTimeTable(): Observable<any> {
     return this.http.get(this.API + '/Studytimetables');
   }
+  getStatus(): Observable<any> {
+    return this.http.get(this.API + '/Status');
+  }
+  getClassrooms(): Observable<any> {
+    return this.http.get(this.API + '/Classrooms');
+  }
+  getParent(): Observable<any> {
+    return this.http.get(this.API + '/Parents');
+  }
+  getSchoolcheck(): Observable<any> {
+    return this.http.get(this.API + '/SchoolCh');
+  }
+
 
 }

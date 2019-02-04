@@ -90,11 +90,25 @@ public class DemoApplication {
             gpaRepository.save(g6);
             gpaRepository.save(g7);
             gpaRepository.save(g8);
-            Stream.of("Tanapon", "Sitthichai", "Somchai", "Nanti").forEach(StudentName -> {
-                Student student = new Student();
-                student.setStudent_name(StudentName);
-                studentReporitory.save(student);
-            });
+            Student stu = new Student();
+            Student stu1 = new Student();
+            Student stu2 = new Student();
+            Student stu3 = new Student();
+            Student stu4 = new Student();
+            Student stu5 = new Student();
+            stu.setStudent_name("Tanapon");
+            stu1.setStudent_name("Sitthichai");
+            stu2.setStudent_name("Somchai");
+            stu3.setStudent_name("Nanti");
+            stu4.setStudent_name("Jiraphat");
+            stu5.setStudent_name("Thiti");
+            studentReporitory.save(stu);
+            studentReporitory.save(stu1);
+            studentReporitory.save(stu2);
+            studentReporitory.save(stu3);
+            studentReporitory.save(stu4);
+            studentReporitory.save(stu5);
+
             Stream.of("Somsri","Wanpen","Siripond","Noppong").forEach(professorName -> {
                 Professor professor = new Professor();
                 professor.setProfessor_name(professorName);

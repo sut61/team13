@@ -48,6 +48,7 @@ import { PersonnalComponent } from './personnal/personnal.component';
 import { StudentComponent } from './student/student.component';
 import { TableComponent } from './table/table.component';
 import { EnrolbookComponent } from './enrolbook/enrolbook.component';
+import { SchoolcheckComponent } from './schoolcheck/schoolcheck.component';
 const appRoutes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: 'home', component: HomeComponent, children: [
@@ -57,6 +58,7 @@ const appRoutes: Routes = [
 { path: 'personnal', component: PersonnalComponent },
     { path: 'table', component: TableComponent },
     { path: 'enrolbook', component: EnrolbookComponent},
+    { path: 'schoolcheck', component: SchoolcheckComponent},
 { path: 'student', component: StudentComponent }
 ]
 },
@@ -78,7 +80,8 @@ const appRoutes: Routes = [
     PersonnalComponent,
     StudentComponent,
     TableComponent,
-    EnrolbookComponent
+    EnrolbookComponent,
+    SchoolcheckComponent
   ],
   imports: [
     BrowserModule,

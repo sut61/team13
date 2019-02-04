@@ -74,8 +74,12 @@ export class GradeComponent implements OnInit {
     alert('ยกเลิก');
   }
   save(){
-    this.httpClient.post('http://localhost:8080/grade/'+this.point+'/'+this.GpaSelect+'/'+this.MajorSelect+'/'+this.ProSelect+'/'+this.StudentSelect,{}).subscribe()
-    alert('บันทึกสำเร็จ');
+    if(this.GpaSelect === null || this.StudentSelect === null || this.point === null || this.MajorSelect ===null|| this.ProSelect === null){
+      alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+    }else {
+      this.httpClient.post('http://localhost:8080/grade/' + this.point + '/' + this.GpaSelect + '/' + this.MajorSelect + '/' + this.ProSelect + '/' + this.StudentSelect, {}).subscribe()
+      alert('บันทึกสำเร็จ');
+    }
   }
 
 }
