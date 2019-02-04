@@ -21,7 +21,7 @@ public class SchoolcheckController {
     @Autowired private ParentsRepository parentsRepository;
     @Autowired private SchoolCheckRepository schoolCheckRepository;
     @Autowired private StatusRepository statusRepository;
-    @Autowired private StudentRepository studentRepository;
+    @Autowired private StudentReporitory studentReporitory;
 
     @GetMapping(path = "/Classrooms")
     public Collection<Classrooms> classrooms() {
@@ -35,16 +35,16 @@ public class SchoolcheckController {
     public Collection<Status> status() {
         return statusRepository.findAll().stream().collect(Collectors.toList());
     }
-    @GetMapping(path = "/Students")
+    @GetMapping(path = "/Studentsc")
     public Collection<Student> student() {
-        return studentRepository.findAll().stream().collect(Collectors.toList());
+        return studentReporitory.findAll().stream().collect(Collectors.toList());
     }
     @GetMapping(path = "/SchoolCh")
     public Collection<SchoolCheck> schoolchecks() { return schoolCheckRepository.findAll().stream().collect(Collectors.toList());
     }
     @PostMapping(path = "/schoolcheck/{student}/{classroom}/{date}/{status}/{parent}")
     public SchoolCheck schoolck(@PathVariable Long student,@PathVariable Long classroom,@PathVariable Date date,@PathVariable Long status,@PathVariable Long parents){
-        Student stu = studentRepository.findById(student).get();
+        Student stu = studentReporitory.findById(student).get();
         Classrooms clas = classroomsRepository.findById(classroom).get();
         Status sta = statusRepository.findById(status).get();
         Parents pa = parentsRepository.findById(parents).get();
