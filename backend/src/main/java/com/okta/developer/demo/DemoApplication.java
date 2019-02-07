@@ -43,7 +43,8 @@ public class DemoApplication {
                            DegreeRepository degreeRepository , EducationRepository educationRepository , GenderRepository genderRepository,
                            PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,RoomRepository RoomRepository, StudyTimeTableRepository studyTimeTableRepository,
     UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository,
-    BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository,ClassroomsRepository classroomsRepository,ParentsRepository parentsRepository,SchoolCheckRepository schoolCheckRepository,StatusRepository statusRepository) {
+    BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository,ClassroomsRepository classroomsRepository,ParentsRepository parentsRepository,SchoolCheckRepository schoolCheckRepository,StatusRepository statusRepository,
+                           PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -394,7 +395,49 @@ public class DemoApplication {
             classroomsRepository.save(cl2);
             classroomsRepository.findAll().forEach(System.out::println);
 
+            Building bui1 = new Building();
+            bui1.setBuilding("1");
+            Building bui2 = new Building();
+            bui2.setBuilding("2");
+            Building bui3 = new Building();
+            bui3.setBuilding("3");
+
+            buildingRepository.save(bui1);
+            buildingRepository.save(bui2);
+            buildingRepository.save(bui3);
+
+
+            Cla cla1 = new Cla();
+            cla1.setCla("1");
+            Cla cla2 = new Cla();
+            cla2.setCla("2");
+            Cla cla3 = new Cla();
+            cla3.setCla("3");
+            claRepository.save(cla1);
+            claRepository.save(cla2);
+            claRepository.save(cla3);
+
+            Roomm roo1 = new Roomm();
+            roo1.setRoomm("อนุบาล");
+            Roomm roo2 = new Roomm();
+            roo2.setRoomm("ป.1");
+            Roomm roo3 = new Roomm();
+            roo3.setRoomm("ป.2");
+            Roomm roo4 = new Roomm();
+            roo4.setRoomm("ป.3");
+            Roomm roo5 = new Roomm();
+            roo5.setRoomm("ป.4");
+
+            roommRepository.save(roo1);
+            roommRepository.save(roo2);
+            roommRepository.save(roo3);
+            roommRepository.save(roo4);
+            roommRepository.save(roo5);
 
         };
-	}
+
+    }
 }
+
+
+
