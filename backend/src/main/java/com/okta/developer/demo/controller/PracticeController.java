@@ -40,5 +40,25 @@ public class PracticeController {
                         .collect(Collectors.toList());
             }
 
+            @PostMapping("/practice/{bui_id}/{cla_id}/{roo_id}/{name}/{num}/{day}")
+            public Practice practice(@PathVariable long roo_id, @PathVariable long bui_id, @PathVariable long cla_id
+                    , @PathVariable String name, @PathVariable String num,@PathVariable Date day){
+
+                Roomm roomm = roommRepository.findById(roo_id).get();
+                Building building = buildingRepository.findById(bui_id).get();
+                Cla cla = claRepository.findById(cla_id).get();
+
+                Practice practice = new Practice();
+                practice.setName(name);
+                practice.setNum(num);
+                practice.setDay(day);
+                practice.setRoomm(roomm);
+                practice.setCla(cla);
+                practice.setBuilding(building);
+                practiceRepository.save(practice);
+                return practice;
+            }
+        }
+
 
            
