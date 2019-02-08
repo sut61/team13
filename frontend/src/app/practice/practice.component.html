@@ -1,0 +1,70 @@
+<div style="text-align:center">
+  <div style="text-align:center">
+    <body bgcolor="000000">
+    <body bgcolor ='BEBEBE'>
+    &nbsp; &nbsp;&nbsp;&nbsp;
+    <a class="navbar-brand" routerLink="/table" routerLinkActive="active" style="color: black;text-decoration:none;font-size: 50px" >แจ้งซ่อม</a>
+    </body>
+    <hr width="n" align="LEFT/RIGHT/CENTER" size="10" noshade color="BEBEBE">
+    <div  style="background-color:#696969; margin-center: 1px; ">
+
+      <div >
+
+        <mat-form-field>
+          <input matInput placeholder="ชื่อ-สกุล"[(ngModel)]="name">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="รายละเอียดการแจ้งซ่อม"[(ngModel)]="num">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="วันที่แจ้งซ่อม" [(ngModel)]="day">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+      </div>
+      <div> <mat-form-field>
+        <mat-select placeholder="อาคาร"[(ngModel)]="buildingSelect">
+
+          <mat-option *ngFor="let building of building" [value]="building.id">{{building.building}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+
+      <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-select placeholder="ชั้น"[(ngModel)]="claSelect">
+
+            <mat-option *ngFor="let cla of cla" [value]="cla.id">{{cla.cla}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-select placeholder="ห้อง"[(ngModel)]="roommSelect">
+
+            <mat-option *ngFor="let roomm  of roomm " [value]="roomm.id">{{roomm.roomm}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+
+
+      <body bgcolor ='BEBEBE'>
+
+      </body>
+      <button mat-raised-button (click)="save()" color="primary">Save</button>
+
+
+    </div>
