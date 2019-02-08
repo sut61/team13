@@ -4,6 +4,7 @@ import lombok.*;
 import java.util.*;
 import javax.persistence.*;
 import java.util.List;
+import javax.validation.constraints.*;
 
 @Entity
 @ToString
@@ -14,6 +15,13 @@ public class SchoolCheck {
     @SequenceGenerator(name="schoolcheck_seq",sequenceName="schoolcheck_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="schoolcheck_seq")
     private @NonNull Long id;
+
+
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
+    private String Parrents;
 
     @Temporal(TemporalType.DATE)
     private @io.micrometer.core.lang.NonNull
@@ -80,11 +88,19 @@ public class SchoolCheck {
     }
     public SchoolCheck(){}
 
-    public SchoolCheck(Date Datecome,Student Student, Classrooms Classrooms, Status Status, Parents Parent){
+    public String getParrents() {
+        return Parrents;
+    }
+
+    public void setParrents(String parrents) {
+        Parrents = parrents;
+    }
+    public SchoolCheck(Date Datecome,Student Student, Classrooms Classrooms, Status Status, Parents Parent, String Parrents){
         this.Datecome = Datecome;
         this.student = Student;
         this.classrooms = Classrooms;
         this.status = Status;
         this.parents = Parent;
+        this.Parrents = Parrents;
     }
 }

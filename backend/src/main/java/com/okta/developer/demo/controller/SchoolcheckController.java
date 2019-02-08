@@ -42,8 +42,8 @@ public class SchoolcheckController {
     @GetMapping(path = "/SchoolCh")
     public Collection<SchoolCheck> schoolchecks() { return schoolCheckRepository.findAll().stream().collect(Collectors.toList());
     }
-    @PostMapping(path = "/schoolcheck/{student}/{classroom}/{date}/{status}/{parent}")
-    public SchoolCheck schoolck(@PathVariable Long student,@PathVariable Long classroom,@PathVariable Date date,@PathVariable Long status,@PathVariable Long parent){
+    @PostMapping(path = "/schoolcheck/{student}/{classroom}/{date}/{status}/{parent}/{parrents}")
+    public SchoolCheck schoolck(@PathVariable Long student,@PathVariable Long classroom,@PathVariable Date date,@PathVariable Long status,@PathVariable Long parent,@PathVariable String parrents){
         Student stu = studentReporitory.findById(student).get();
         Classrooms clas = classroomsRepository.findById(classroom).get();
         Status sta = statusRepository.findById(status).get();
@@ -54,7 +54,9 @@ public class SchoolcheckController {
         schoolchecks.setStatus(sta);
         schoolchecks.setDatecome(date);
         schoolchecks.setParents(pa);
+        schoolchecks.setParrents(parrents);
         schoolCheckRepository.save(schoolchecks);
+
         return schoolchecks;
     }
 

@@ -3,6 +3,8 @@ package com.okta.developer.demo.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
+
 
 @Data
 @Entity
@@ -39,7 +41,12 @@ public class Grade {
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="grade_seq")
     @Column(name="GRADE_ID",unique = true, nullable = true)
     private @NonNull Long id;
-    private @NonNull int point;
+
+    @NotNull
+    @Min(value = 1)
+    @Max(value = 100)
+    @Positive
+    private int point;
 
 
 
