@@ -20,7 +20,8 @@ public class DemoApplication {
     @Autowired SymptomRepository symptomRepository;
     @Autowired PatientNameRepository patientNameRepository ;
     @Autowired TreatmentRepository treatmentRepository;
-	@Autowired PrefixRepository prefixRepository;
+    @Autowired PrefixRepository prefixRepository;
+    @Autowired ActivityRepository activityRepository;
     @Autowired
 	private BooksRepository bookrepository ;
 
@@ -44,7 +45,7 @@ public class DemoApplication {
                            PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,RoomRepository RoomRepository, StudyTimeTableRepository studyTimeTableRepository,
     UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository,
     BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository,ClassroomsRepository classroomsRepository,ParentsRepository parentsRepository,SchoolCheckRepository schoolCheckRepository,StatusRepository statusRepository,
-                           PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository) {
+                           PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -65,7 +66,12 @@ public class DemoApplication {
         Stream.of("-","โรงพยาบาลมหาวิทยาลัยเทคโนโลยีสุรนารี").forEach(hospital -> {
             hospitalRepository.save(new Hospital(hospital));
         });
-		hospitalRepository.findAll().forEach(System.out::println);
+        hospitalRepository.findAll().forEach(System.out::println);
+        
+        Stream.of("ทำกิจกรรมกลุ่ม","ดูสารคดี","อื่นๆ").forEach(activity -> {
+            activityRepository.save(new Activity(activity));
+        });
+		activityRepository.findAll().forEach(System.out::println);
 
             Gpa g1 = new Gpa();
             Gpa g2 = new Gpa();
