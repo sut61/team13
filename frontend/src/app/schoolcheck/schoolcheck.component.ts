@@ -20,6 +20,8 @@ export class SchoolcheckComponent implements OnInit {
 
   datecome = null;
   ParentSelect : null;
+  Parrents : string;
+
   No:Array<any>;
   constructor(private homeservice: HomeService ,
               private httpClient: HttpClient,
@@ -61,13 +63,10 @@ export class SchoolcheckComponent implements OnInit {
     if( this.ParentSelect === null || this.StatusSelect === null || this.ClassroomSelect === null || this.datecome === null || this.StudentSelect === null){
       alert('กรุณากรอกข้อมูลให้ครบถ้วน');
     }else {
-      this.httpClient.post('http://localhost:8080/schoolcheck/'+this.StudentSelect+'/'+this.ClassroomSelect+'/'+this.datecome+'/'+this.StatusSelect+'/'+this.ParentSelect,{}).subscribe()
+      this.httpClient.post('http://localhost:8080/schoolcheck/'+this.StudentSelect+'/'+this.ClassroomSelect+'/'+this.datecome+'/'+this.StatusSelect+'/'+this.ParentSelect+'/'+this.Parrents,{}).subscribe()
       alert('บันทึกสำเร็จ');
-   //   window.location.reload()
+     // window.location.reload()
     }
-  }
-  check(){
-    this.router.navigate(['schecktable'])
   }
 
 }

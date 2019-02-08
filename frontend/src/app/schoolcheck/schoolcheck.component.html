@@ -63,6 +63,12 @@
     </mat-select>
   </mat-form-field>
 </div>
+<div style="background-color:#2c3946;text-align:center;">
+  <i class="material-icons md-48" style="color: #2c3946">face</i> &nbsp;
+  <mat-form-field style="background-color:#2c3946;text-color:#ffffff;">
+    <input matInput placeholder="Parent Name" [(ngModel)]="Parrents">
+  </mat-form-field>
+</div>
 
 <div class="grade-button-row" style="background-color:#2c3946;text-align:center;">
   <br>
@@ -117,6 +123,7 @@
     <td>{{SchoolCheck.status.ststusname}}</td>
     <td>{{SchoolCheck.datecome}}</td>
     <td>{{SchoolCheck.parents.name}}</td>
+
   </tr>
   </tbody>
 </table>

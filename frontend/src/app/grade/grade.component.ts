@@ -25,16 +25,17 @@ export class GradeComponent implements OnInit {
   students: Array<any>;
   gpa: Array<any>;
 
-  MajorSelect= '';
+  MajorSelect= null;
 
-  StudentSelect ='';
-
-
-  GpaSelect ='';
+  StudentSelect =null;
 
 
-  ProSelect = '' ;
-  point:number;
+  GpaSelect =null;
+
+
+  ProSelect = null ;
+
+  point: number ;
 
   constructor(private homeservice: HomeService ,
               private httpClient: HttpClient,
@@ -74,11 +75,12 @@ export class GradeComponent implements OnInit {
     alert('ยกเลิก');
   }
   save(){
-    if(this.GpaSelect === null || this.StudentSelect === null || this.point === null || this.MajorSelect ===null|| this.ProSelect === null){
+    if(this.GpaSelect === null || this.StudentSelect === null || this.point === null || this.MajorSelect === null|| this.ProSelect === null){
       alert('กรุณากรอกข้อมูลให้ครบถ้วน');
     }else {
       this.httpClient.post('http://localhost:8080/grade/' + this.point + '/' + this.GpaSelect + '/' + this.MajorSelect + '/' + this.ProSelect + '/' + this.StudentSelect, {}).subscribe()
       alert('บันทึกสำเร็จ');
+      window.location.reload()
     }
   }
 
