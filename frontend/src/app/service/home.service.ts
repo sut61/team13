@@ -75,5 +75,14 @@ getpo(): Observable<any>{
     return this.http.get(this.API + '/SchoolCh');
   }
 
+ getbuilding(): Observable<any> {
+    return this.http.get(this.API + '/Building');
+  }
+  getcla(): Observable<any> {
+    return this.http.get(this.API + '/Cla');
+  }
+  getroomm(): Observable<any> {
+    return this.http.get(this.API + '/Roomm');
+    }
 
 }
