@@ -21,6 +21,7 @@ public class MediaRoomController{
     @Autowired private ApplicantRepository applicantRepository;
     @Autowired private ActivityRepository activityRepository;
     @Autowired private PrefixRepository prefixRepository;
+    @Autowired private MediaRoomRepository mediaRoomRepository;
 
     @GetMapping("/Applicant")
     public Collection<Applicant> applicant(){
@@ -32,8 +33,10 @@ public class MediaRoomController{
     public Applicant newApplicant(Applicant newApplicant,@RequestBody() Map<String,Object> body) {
         Optional<Prefix> prefix = prefixRepository.findById(Long.valueOf(body.get("prefix").toString()));
         Optional<Activity> activity = activityRepository.findById(Long.valueOf(body.get("activity").toString()));
+        Optional<MediaRoom> mediaRoom = mediaRoomRepository.findById(Long.valueOf(body.get("mediaRoom").toString()));
                 
         newApplicant.setActivity(activity.get());
+        newApplicant.setMediaRoom(mediaRoom.get());
         newApplicant.setPrefix(prefix.get());
         newApplicant.setApplicantName(body.get("applicantName").toString());
         newApplicant.setTime(body.get("time").toString());
@@ -51,6 +54,18 @@ public class MediaRoomController{
     public Activity newActivity(@PathVariable String activity){
         Activity newActivity = new Activity(activity); 
         return activityRepository.save(newActivity); 
+    }
+
+    //=============MediaRoom====================
+    @GetMapping("/MediaRoom")
+    public Collection<MediaRoom> mediaRoom(){
+        return mediaRoomRepository.findAll();
+    }
+
+    @PostMapping("/MediaRoom/addMediaRoom/{mediaRoom}")
+    public MediaRoom newMediaRoom(@PathVariable String mediaRoom){
+        MediaRoom newMediaRoom = new MediaRoom(mediaRoom);
+        return mediaRoomRepository.save(newMediaRoom);
     }
 
 }

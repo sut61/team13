@@ -22,6 +22,7 @@ public class DemoApplication {
     @Autowired TreatmentRepository treatmentRepository;
     @Autowired PrefixRepository prefixRepository;
     @Autowired ActivityRepository activityRepository;
+    @Autowired MediaRoomRepository mediaRoomRepository;
     @Autowired
 	private BooksRepository bookrepository ;
 
@@ -48,7 +49,7 @@ public class DemoApplication {
                            PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository,
                            SportsEquipmentRepository sportsEquipmentRepository,PieceRepository pieceRepository,BorrowSportsEquipmentRepository borrowSportsEquipmentRepository,
                            MeetingRepository meetingRepository, CategoryRepository categoryRepository,
-                           PersonRepository personRepository, StatusmeetRepository statusmeetRepository) {
+                           PersonRepository personRepository, StatusmeetRepository statusmeetRepository,MediaRoomRepository mediaRoomRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -74,6 +75,10 @@ public class DemoApplication {
         Stream.of("ทำกิจกรรมกลุ่ม","ดูสารคดี","อื่นๆ").forEach(activity -> {
             activityRepository.save(new Activity(activity));
         });
+        Stream.of("ห้อง Media 1","ห้อง Media 2","ห้อง Media 3").forEach(mediaRoom -> {
+            mediaRoomRepository.save(new MediaRoom(mediaRoom));
+        });
+
 		activityRepository.findAll().forEach(System.out::println);
 
             Gpa g1 = new Gpa();
