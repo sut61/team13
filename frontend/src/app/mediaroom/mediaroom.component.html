@@ -18,6 +18,15 @@
     </mat-form-field><br>
 
     <mat-form-field>
+      <h4>เลือกห้อง:</h4>
+      <mat-select name ="mediaRoom" [(ngModel)]="mediaroom.mediaRooms">
+        <mat-option *ngFor="let mediaRoom of mediaRooms" [value]="mediaRoom.value">
+          {{mediaRoom.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+    <mat-form-field>
       <h4>กิจกรรม:</h4>
       <mat-select name ="activity" [(ngModel)]="mediaroom.activitys">
         <mat-option *ngFor="let activity of activitys" [value]="activity.value">

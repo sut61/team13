@@ -9,6 +9,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 export class MediaroomComponent implements OnInit {
   prefixs = [];
   activitys = [];
+  mediaRooms = [];
 
   onClickSubmit(data) {
     console.log(data);
@@ -50,6 +51,21 @@ export class MediaroomComponent implements OnInit {
           this.activitys.push({
             value: data[index].activityId,
             viewValue: data[index].activity
+          })
+        }
+      },
+      error => {
+        console.log("Error", error);
+      }
+    );
+
+    this.http.get("http://localhost:8080/MediaRoom").subscribe(
+      data => {
+        console.log("GET Request is successful ", data);
+        for (let index = 0; index < data["length"]; index++) {
+          this.mediaRooms.push({
+            value: data[index].mediaRoomId,
+            viewValue: data[index].mediaRoom
           })
         }
       },

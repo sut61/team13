@@ -32,6 +32,9 @@ public class Applicant{
     @ManyToOne()
     private Activity activity;
 
+    @ManyToOne()
+    private MediaRoom mediaRoom;
+
     public Applicant() {}
 
     public Long getApplicantId() {
@@ -76,4 +79,11 @@ public class Applicant{
         this.activity = activity;
     }
 
+    public MediaRoom getMediaRoom(){
+        return mediaRoom;
+    }
+
+    public void setMediaRoom(MediaRoom mediaRoom) {
+        this.mediaRoom = mediaRoom;
+    }
 }
