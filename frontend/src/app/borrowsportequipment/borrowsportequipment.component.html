@@ -1,0 +1,80 @@
+<div style="background-color:#2F4F4F;text-align:center;">
+  <br>
+  <br>
+  <h2 style="color:#ffffff;">Borrow Sports Equipment</h2>
+  <br>
+</div>
+
+<div style="background-color:#006666;text-align:center;">
+  <mat-form-field>
+    <input matInput placeholder="ชื่อผู้ยืม"[(ngModel)]="name_borrow">
+  </mat-form-field>
+
+</div>
+
+<div style="background-color:#006666;text-align:center;">
+  <mat-form-field>
+    <mat-select placeholder="Class" [(ngModel)]="classroomSelect">
+      <mat-option *ngFor="let class of classrooms" [value]="class.id">
+        {{class.classroom}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+
+
+<div style="background-color:#006666;text-align:center;">
+  <mat-form-field>
+    <mat-select placeholder="อุปกรณ์กีฬา" [(ngModel)]="sportequipmentSelect">
+      <mat-option *ngFor="let se of sportequipment" [value]="se.sportE_id">
+        {{se.sportsE}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div style="background-color:#006666;text-align:center;">
+  <mat-form-field>
+    <mat-select placeholder="จำนวน" [(ngModel)]="pieceSelect">
+      <mat-option *ngFor="let p of piece" [value]="p.p_id">
+        {{p.piece}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div style="background-color:#006666;text-align:center;">
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="วันที่ยืม "[(ngModel)]="day_borrow">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<div style="background-color:#006666;text-align:center;">
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker1" placeholder="วันที่คืน"[(ngModel)]="day_return">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+</div>
+
+<div style="background-color:#006666;text-align:center;">
+  <mat-form-field>
+    <input matInput placeholder="ชื่อผู้ให้ยืม"[(ngModel)]="name_lender">
+  </mat-form-field>
+</div>
+
+<div class="grade-button-row" style="background-color:#2c3946;text-align:center;">
+  <br>
+  &nbsp;  &nbsp;  &nbsp;
+  <button mat-raised-button (click)="save()">Save</button>
+  &nbsp;
+  <button mat-raised-button (click)="cancel()"  color="accent">Cancel</button>
+  &nbsp;
+  &nbsp;
+  <br>
+  <br>
+</div>
