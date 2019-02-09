@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import lombok.ToString;
-
+import javax.validation.constraints.*;
 import javax.persistence.*;
 
 
@@ -33,7 +33,7 @@ public class Gpa {
     public void setGgpa(String ggpa) {
         this.ggpa = ggpa;
     }
-
+    @NotNull
     private  String ggpa ;
 
     public Gpa(){}

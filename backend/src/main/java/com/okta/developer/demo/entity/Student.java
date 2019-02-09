@@ -3,7 +3,7 @@ package  com.okta.developer.demo.entity;
 import lombok.*;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
-
+import javax.validation.constraints.*;
 import javax.persistence.*;
 
 @Data
@@ -28,7 +28,9 @@ public class Student {
         Student_id = student_id;
     }
 
-    private @NonNull String student_name;
+    @NotNull
+    @Column(unique = true)
+    private String student_name;
 
 
 
