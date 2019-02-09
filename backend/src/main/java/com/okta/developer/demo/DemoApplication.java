@@ -46,7 +46,9 @@ public class DemoApplication {
     UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository,
     BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository,ClassroomsRepository classroomsRepository,ParentsRepository parentsRepository,SchoolCheckRepository schoolCheckRepository,StatusRepository statusRepository,
                            PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository,
-                           SportsEquipmentRepository sportsEquipmentRepository,PieceRepository pieceRepository,BorrowSportsEquipmentRepository borrowSportsEquipmentRepository) {
+                           SportsEquipmentRepository sportsEquipmentRepository,PieceRepository pieceRepository,BorrowSportsEquipmentRepository borrowSportsEquipmentRepository,
+                           MeetingRepository meetingRepository, CategoryRepository categoryRepository,
+                           PersonRepository personRepository, StatusmeetRepository statusmeetRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -497,6 +499,39 @@ public class DemoApplication {
             pieceRepository.save(pn4);
             pieceRepository.findAll().forEach(System.out::println);
 
+
+            Category c1 = new Category();
+            c1.setCatename("การจัดซื้อ");
+            Category c2 = new Category();
+            c1.setCatename("งบประมาณ");
+            Category c3 = new Category();
+            c1.setCatename("โครงการ");
+            categoryRepository.save(c1);
+            categoryRepository.save(c2);
+            categoryRepository.save(c3);
+            categoryRepository.findAll().forEach(System.out::println);
+
+            Person pes1 = new Person();
+            pes1.setPname("สมชาย สบายดี");
+            Person pes2 = new Person();
+            pes2.setPname("สมศรี ไม่มีเงิน");
+            Person pes3 = new Person();
+            pes3.setPname("สมพร นอนทั้งวัน");
+            personRepository.save(pes1);
+            personRepository.save(pes2);
+            personRepository.save(pes3);
+            personRepository.findAll().forEach(System.out::println);
+
+            Statusmeet s1 = new Statusmeet();
+            s1.setStatus("วาระที่ 1");
+            Statusmeet s2 = new Statusmeet();
+            s2.setStatus("วาระที่ 2");
+            Statusmeet s3 = new Statusmeet();
+            s3.setStatus("วาระที่ 3");
+            statusmeetRepository.save(s1);
+            statusmeetRepository.save(s2);
+            statusmeetRepository.save(s3);
+            statusmeetRepository.findAll().forEach(System.out::println);
         };
 
     }
