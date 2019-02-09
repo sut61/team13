@@ -6,5 +6,5 @@ import com.okta.developer.demo.entity.Activity;
 
 @RepositoryRestResource
     public interface ActivityRepository extends JpaRepository<Activity, Long> {
-
+      
 }
