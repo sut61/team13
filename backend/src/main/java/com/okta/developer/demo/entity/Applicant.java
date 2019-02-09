@@ -19,12 +19,12 @@ public class Applicant{
 
     @NotNull(message="apllicantName must not be null to be valid")
     private String applicantName; //ชื่อผู้ขอใช้บริการ
+    
+    private @NonNull String time;
+    
+    private @NonNull String date;
 
-    @Temporal(TemporalType.DATE)
-    private @io.micrometer.core.lang.NonNull
-    Date date;
-
-    private @NonNull String timeForMediaRoom;
+    
 
     @ManyToOne()
     private Prefix prefix;
@@ -48,10 +48,17 @@ public class Applicant{
         this.applicantName = applicantName;
     }
 
-    public Date getDay() {
+    public String getTime() {
+        return time;
+    }
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDate() {
         return date;
     }
-    public void setDay(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
