@@ -4,8 +4,8 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class HomeService {
-  public API = '//localhost:8080';
-  getBooktype(): Observable<any>{
+public API = '//localhost:8080';
+getBooktype(): Observable<any>{
     return this.http.get(this.API + '/booktype'); }
 
   getbookcase(): Observable<any>{
@@ -84,5 +84,11 @@ getpo(): Observable<any>{
   getroomm(): Observable<any> {
     return this.http.get(this.API + '/Roomm');
     }
-
+ getSportsE(): Observable<any> {
+    return this.http.get(this.API + '/SportEquipment');
+  }
+  getPiece(): Observable<any> {
+    return this.http.get(this.API + '/Piece');
+    }
 }
+
