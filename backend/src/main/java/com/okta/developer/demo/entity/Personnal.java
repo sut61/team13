@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.HashSet;
@@ -23,15 +24,33 @@ public class Personnal {
     @SequenceGenerator(name="Personnal_seq",sequenceName="Personnal_seq")
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="Personnal_seq")
     private   @NonNull Long id ;
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
     private   @NonNull String fname;
-    private   @NonNull String Lname;
-    private   @NonNull String nationality;
-    private   @NonNull String educational;
-    private   @NonNull String IdentificationNumber;
-    private   @NonNull String job_id;
-    private   @NonNull String phonenumber;
-    private   @NonNull String E_mail;
-    private   @NonNull String extraction;
+
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    private    String Lname;
+
+    private    String nationality;
+    private    String educational;
+
+    @NotNull
+    @Size(min = 5 ,max = 20)
+    private    String IdentificationNumber;
+
+    @NotNull
+    @Size(min = 5 ,max = 20)
+    private    String job_id;
+
+    @NotNull
+    @Size(min = 5 ,max = 20)
+    private    String phonenumber;
+    private    String E_mail;
+    private    String extraction;
 
     @Temporal(TemporalType.DATE)
     private @io.micrometer.core.lang.NonNull

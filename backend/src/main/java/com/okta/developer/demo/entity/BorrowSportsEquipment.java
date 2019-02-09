@@ -2,6 +2,9 @@ package com.okta.developer.demo.entity;
 
 import lombok.*;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Data
@@ -14,8 +17,16 @@ public class BorrowSportsEquipment {
     @SequenceGenerator(name="bsem_seq",sequenceName="bsem_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="bsem_seq")
     private   @NonNull Long id;
-    private   @NonNull String name_borrow;
-    private   @NonNull String name_lender;
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
+    private    String name_borrow;
+
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    private    String name_lender;
 
     @Temporal(TemporalType.DATE)
     private @io.micrometer.core.lang.NonNull
