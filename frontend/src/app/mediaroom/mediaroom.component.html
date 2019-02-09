@@ -1,0 +1,44 @@
+
+<body>
+<div class="flex-container">
+  <form #mediaroom = "ngForm"  (ngSubmit) = "onClickSubmit(mediaroom.value)" >
+    <h2>ห้องสื่อการเรียนรู้</h2>
+    <mat-form-field>
+      <h4>คำนำหน้า:</h4>
+      <mat-select name ="prefix" [(ngModel)]="mediaroom.prefixs">
+        <mat-option *ngFor="let prefix of prefixs" [value]="prefix.value">
+          {{prefix.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <h4>ชื่อ-นามสกุล:</h4>
+      <input matInput name ="applicantName"  [(ngModel)]="mediaroom.patientName_id">
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <h4>กิจกรรม:</h4>
+      <mat-select name ="activity" [(ngModel)]="mediaroom.activitys">
+        <mat-option *ngFor="let activity of activitys" [value]="activity.value">
+          {{activity.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <h4>วันที่:(22/02/2562)</h4>
+      <input matInput name ="date"  [(ngModel)]="mediaroom.date_id">
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <h4>เวลา:(14.00-16.00)</h4>
+      <input matInput name ="time"  [(ngModel)]="mediaroom.time_id">
+    </mat-form-field><br>
+
+    <pre style="text-align:left;">
+        <button type="submit" mat-stroked-button color="primary">บันทึก</button>
+      </pre>
+  </form>
+</div>
+</body>
