@@ -1,5 +1,6 @@
 package com.okta.developer.demo.entity;
 import lombok.*;
+import javax.validation.constraints.*;
 
 import javax.persistence.*;
 @Entity
@@ -11,7 +12,9 @@ public class Classrooms {
     @SequenceGenerator(name="classroom_seq",sequenceName="classroom_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="classroom_seq")
     private @NonNull Long id;
-    private @NonNull String classroom;
+    @NotNull
+    @Column(unique = true)
+    private String classroom;
     public Classrooms(){}
     public Classrooms(String classroom){
         this.classroom = classroom;

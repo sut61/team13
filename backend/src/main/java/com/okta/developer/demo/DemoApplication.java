@@ -382,12 +382,15 @@ public class DemoApplication {
 
             statusRepository.findAll().forEach(System.out::println);
 
-            Parents pa = new Parents();
-            Parents pa1 = new Parents();
-            pa.setName("Mather");
-            pa1.setName("Father");
-            parentsRepository.save(pa);
-            parentsRepository.save(pa1);
+            Parents par = new Parents();
+            Parents par1 = new Parents();
+            Parents par2 = new Parents();
+            par.setName("Mather");
+            par1.setName("Father");
+            par2.setName("Other");
+            parentsRepository.save(par);
+            parentsRepository.save(par1);
+            parentsRepository.save(par2);
             parentsRepository.findAll().forEach(System.out::println);
 
             Classrooms cl = new Classrooms();

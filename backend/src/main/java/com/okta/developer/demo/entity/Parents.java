@@ -1,6 +1,6 @@
 package com.okta.developer.demo.entity;
 import lombok.*;
-
+import javax.validation.constraints.*;
 import javax.persistence.*;
 
 @Entity
@@ -12,7 +12,8 @@ public class Parents {
     @SequenceGenerator(name="parents_seq",sequenceName="parents_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="parents_seq")
     private @NonNull Long id;
-    private @NonNull String name;
+    @NotNull
+    private  String name;
     public Parents(){}
     public Parents(String name){
         this.name = name;

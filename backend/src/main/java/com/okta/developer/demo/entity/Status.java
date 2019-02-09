@@ -2,7 +2,7 @@ package com.okta.developer.demo.entity;
 
 import lombok.*;
 
-
+import javax.validation.constraints.*;
 import javax.persistence.*;
 
 
@@ -36,7 +36,8 @@ public class Status {
         this.ststusname = ststusname;
     }
 
-    private @NonNull String ststusname;
+    @NotNull
+    private String ststusname;
 
     public Status (){}
     public Status (String ststusname){

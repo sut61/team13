@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.mapping.Collection;
+import javax.validation.constraints.*;
 
 import javax.persistence.*;
 
@@ -21,7 +22,8 @@ public class Professor {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="professor_seq")
     @Column(name = "PROFESSOR_ID", unique = true, nullable = true)
     private @NonNull Long professor_id;
-    private @NonNull String professor_name;
+    @NotNull
+    private String professor_name;
 
     public Long getProfessor_id() {
         return professor_id;
