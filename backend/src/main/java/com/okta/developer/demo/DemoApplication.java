@@ -45,7 +45,8 @@ public class DemoApplication {
                            PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,RoomRepository RoomRepository, StudyTimeTableRepository studyTimeTableRepository,
     UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository,
     BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository,ClassroomsRepository classroomsRepository,ParentsRepository parentsRepository,SchoolCheckRepository schoolCheckRepository,StatusRepository statusRepository,
-                           PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository) {
+                           PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository,
+                           SportsEquipmentRepository sportsEquipmentRepository,PieceRepository pieceRepository,BorrowSportsEquipmentRepository borrowSportsEquipmentRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -396,12 +397,30 @@ public class DemoApplication {
             Classrooms cl = new Classrooms();
             Classrooms cl1 = new Classrooms();
             Classrooms cl2 = new Classrooms();
+            Classrooms cl3 = new Classrooms();
+            Classrooms cl4 = new Classrooms();
+            Classrooms cl5 = new Classrooms();
+            Classrooms cl6 = new Classrooms();
+            Classrooms cl7 = new Classrooms();
+            Classrooms cl8 = new Classrooms();
             cl.setClassroom("อนุบาล1");
             cl1.setClassroom("อนุบาล2");
             cl2.setClassroom("อนุบาล3");
+            cl3.setClassroom("ป.1");
+            cl4.setClassroom("ป.2");
+            cl5.setClassroom("ป.3");
+            cl6.setClassroom("ป.4");
+            cl7.setClassroom("ป.5");
+            cl8.setClassroom("ป.6");
             classroomsRepository.save(cl);
             classroomsRepository.save(cl1);
             classroomsRepository.save(cl2);
+            classroomsRepository.save(cl3);
+            classroomsRepository.save(cl4);
+            classroomsRepository.save(cl5);
+            classroomsRepository.save(cl6);
+            classroomsRepository.save(cl7);
+            classroomsRepository.save(cl8);
             classroomsRepository.findAll().forEach(System.out::println);
 
             Building bui1 = new Building();
@@ -442,6 +461,41 @@ public class DemoApplication {
             roommRepository.save(roo3);
             roommRepository.save(roo4);
             roommRepository.save(roo5);
+
+
+            SportsEquipment se = new SportsEquipment();
+            SportsEquipment se1 = new SportsEquipment();
+            SportsEquipment se2 = new SportsEquipment();
+            SportsEquipment se3 = new SportsEquipment();
+            SportsEquipment se4 = new SportsEquipment();
+            se.setSportsE("ฟุตบอล");
+            se1.setSportsE("วอลลเลย์บอล");
+            se2.setSportsE("บาสเกตบอล");
+            se3.setSportsE("แชร์บอล");
+            se4.setSportsE("ตะกร้อ");
+            sportsEquipmentRepository.save(se);
+            sportsEquipmentRepository.save(se1);
+            sportsEquipmentRepository.save(se2);
+            sportsEquipmentRepository.save(se3);
+            sportsEquipmentRepository.save(se4);
+            sportsEquipmentRepository.findAll().forEach(System.out::println);
+
+            Piece pn = new Piece();
+            Piece pn1 = new Piece();
+            Piece pn2 = new Piece();
+            Piece pn3 = new Piece();
+            Piece pn4 = new Piece();
+            pn.setPiece("1");
+            pn1.setPiece("2");
+            pn2.setPiece("3");
+            pn3.setPiece("4");
+            pn4.setPiece("5");
+            pieceRepository.save(pn);
+            pieceRepository.save(pn1);
+            pieceRepository.save(pn2);
+            pieceRepository.save(pn3);
+            pieceRepository.save(pn4);
+            pieceRepository.findAll().forEach(System.out::println);
 
         };
 
