@@ -32,13 +32,11 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class Stu {
+public class Pra {
 
 
     @Autowired
-    private StudentsRepository studenstRepository;
-
-
+    private PracticeRepository practiceRepository;
 
     @Autowired
     private TestEntityManager entityManager;
@@ -49,29 +47,15 @@ public class Stu {
     @Before
     public void setup() {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-
+        validator = factory.getValidator();
     }
-
     @Test
-    public void testCaseSprintFirstWaraporn() {
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println("---------------------->>Test Case Sprint#1 Waraporn<<------------------------");
-        System.out.println();
-        System.out.println();
-        System.out.println();
-       // validator = factory.getValidator();
-
-    }
-
-    @Test
-    public void testStudentsAllMatch() {
-        Students st = new Students();
-        st.setName("Jirasakk");
-        st.setNum("1199900628249");
+    public void testPracticeAllMatch() {
+        Practice pr = new Practice();
+        pr.setName("Waraphorn");
+        pr.setNum("asdfghjk");
         try {
-            entityManager.persist(st);
+            entityManager.persist(pr);
             entityManager.flush();
 
 
@@ -91,12 +75,12 @@ public class Stu {
     }
 
     @Test
-    public void testStudentsStudentsNull() {
-        Students st = new Students();
-        st.setName(null);
-        st.setNum("1199900628249");
+    public void testPracticeNameNull() {
+        Practice pr = new Practice();
+        pr.setName(null);
+        pr.setNum("asdfghhjk");
         try {
-            entityManager.persist(st);
+            entityManager.persist(pr);
             entityManager.flush();
 
 
@@ -104,7 +88,7 @@ public class Stu {
             System.out.println();
             System.out.println();
             System.out.println();
-            System.out.println("---------------------->>Test Student Null<<------------------------");
+            System.out.println("---------------------->>Test <<------------------------");
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();
@@ -116,12 +100,12 @@ public class Stu {
     }
 
     @Test
-    public void testStudentsNumNull() {
-        Students st = new Students();
-        st.setName("Paratee");
-        st.setNum(null);
+    public void testPracticeNumNull() {
+        Practice pr = new Practice();
+        pr.setName("Waraphorn");
+        pr.setNum(null);
         try {
-            entityManager.persist(st);
+            entityManager.persist(pr);
             entityManager.flush();
 
 
@@ -129,32 +113,7 @@ public class Stu {
             System.out.println();
             System.out.println();
             System.out.println();
-            System.out.println("---------------------->>Test Student num Null<<------------------------");
-            System.out.println(e.getMessage());
-            System.out.println();
-            System.out.println();
-            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
-            assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
-        }
-
-    }
-
-    @Test
-    public void testStudentsNameOverSize() {
-        Students st = new Students();
-        st.setName("Parateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-        st.setNum("1199900628249");
-        try {
-            entityManager.persist(st);
-            entityManager.flush();
-
-
-        } catch (javax.validation.ConstraintViolationException e) {
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println("---------------------->>Test Student Name Over Size<<------------------------");
+            System.out.println("---------------------->>Test Practice num Null<<------------------------");
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();
@@ -165,12 +124,12 @@ public class Stu {
     }
 
     @Test
-    public void testStudentsNameMinSize() {
-        Students st = new Students();
-        st.setName("Paee");
-        st.setNum("1199900628249");
+    public void testPracticeNameOverSize() {
+        Practice pr = new Practice();
+        pr.setName("Parateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+        pr.setNum("asdfghjk");
         try {
-            entityManager.persist(st);
+            entityManager.persist(pr);
             entityManager.flush();
 
 
@@ -178,7 +137,7 @@ public class Stu {
             System.out.println();
             System.out.println();
             System.out.println();
-            System.out.println("---------------------->>Test Student Name Min Size<<------------------------");
+            System.out.println("---------------------->>Test Practice Name Over Size<<------------------------");
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();
@@ -189,12 +148,12 @@ public class Stu {
     }
 
     @Test
-    public void testStudentsNameCanNotPattern() {
-        Students st = new Students();
-        st.setName("%)@&%)@($*@@)%$#$*");
-        st.setNum("1199900628249");
+    public void testPracticeNameMinSize() {
+        Practice pr = new Practice();
+        pr.setName("Wara");
+        pr.setNum("asdfghjk");
         try {
-            entityManager.persist(st);
+            entityManager.persist(pr);
             entityManager.flush();
 
 
@@ -202,7 +161,55 @@ public class Stu {
             System.out.println();
             System.out.println();
             System.out.println();
-            System.out.println("---------------------->>Test Student Name Connot Pattern<<------------------------");
+            System.out.println("---------------------->>Test Practice Name Min Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+
+    @Test
+    public void testPracticeNumOverSize() {
+        Practice pr = new Practice();
+        pr.setName("Waraphorn");
+        pr.setNum("asdfghjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        try {
+            entityManager.persist(pr);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Practice Name Over Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+
+    @Test
+    public void testPracticeNumMinSize() {
+        Practice pr = new Practice();
+        pr.setName("Waraphorn");
+        pr.setNum("asd");
+        try {
+            entityManager.persist(pr);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Practice Num Min Size<<------------------------");
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();
@@ -213,22 +220,22 @@ public class Stu {
     }
 
     @Test(expected = javax.persistence.PersistenceException.class)
-    public void testNameStudentBeUnique() {
-        Students st = new Students();
-        st.setName("Thanyakorn");
-        st.setNum("1199900628249");
-        entityManager.persist(st);
+    public void testNamePracticeBeUnique() {
+        Practice pr = new Practice();
+        pr.setName("Thanyakorn");
+        pr.setNum("asdfghjk");
+        entityManager.persist(pr);
         entityManager.flush();
 
-        Students st1 = new Students();
-        st1.setName("Thanyakorn");
-        st1.setNum("1199900628249");
-        entityManager.persist(st1);
+        Practice pr1 = new Practice();
+        pr1.setName("Thanyakorn");
+        pr1.setNum("asdfghjk");
+        entityManager.persist(pr1);
 
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("------------------------->> Test Student BeUnique <<-------------------------");
+        System.out.println("------------------------->> Test Practice BeUnique <<-------------------------");
         System.out.println();
         System.out.println();
         System.out.println();
@@ -238,11 +245,12 @@ public class Stu {
 
     }
 
-    //======================-------------------------------------- Test Case Genders class entity ----------------------------------======================
+
+    //======================-------------------------------------- Test Case Buildingon class entity ----------------------------------======================
     @Test
-    public void testGendersParentsSuccessful() {
-        Genders ge = new Genders();
-        ge.setGenders("genders");
+    public void testBuildingParentsSuccessful() {
+        Building ge = new Building();
+        ge.setBuilding("genders");
 
         try {
             entityManager.persist(ge);
@@ -257,7 +265,7 @@ public class Stu {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("---------------------->>Test Check Genders Successful<<------------------------");
+        System.out.println("---------------------->>Test Check Building Successful<<------------------------");
         System.out.println();
         System.out.println();
         System.out.println();
@@ -265,62 +273,9 @@ public class Stu {
     }
 
     @Test
-    public void testGendersParentsNull() {
-        Genders ge = new Genders();
-        ge.setGenders(null);
-
-
-        try {
-            entityManager.persist(ge);
-            entityManager.flush();
-
-            fail("Should not pass to this line");
-        } catch (javax.validation.ConstraintViolationException e) {
-
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println("---------------------->>Test Check Genders Null<<------------------------");
-            System.out.println(e.getMessage());
-            System.out.println();
-            System.out.println();
-
-            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
-            assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
-        }
-    }
-
-    //======================-------------------------------------- Test Case Nationality class entity ----------------------------------======================
-    @Test
-    public void testNationalityParentsSuccessful() {
-        Nationality ge = new Nationality();
-        ge.setNation("Nationality");
-
-        try {
-            entityManager.persist(ge);
-            entityManager.flush();
-
-
-        } catch (javax.validation.ConstraintViolationException e) {
-            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
-            assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 6);
-        }
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println("---------------------->>Test Check Nationality Successful<<------------------------");
-        System.out.println();
-        System.out.println();
-        System.out.println();
-
-    }
-
-    @Test
-    public void testNationalityParentsNull() {
-        Nationality ge = new Nationality();
-        ge.setNation(null);
+    public void testBuildingParentsNull() {
+        Building ge = new Building();
+        ge.setBuilding(null);
 
 
         try {
@@ -333,7 +288,7 @@ public class Stu {
             System.out.println();
             System.out.println();
             System.out.println();
-            System.out.println("---------------------->>Test Check Nationality Null<<------------------------");
+            System.out.println("---------------------->>Test Check Building Null<<------------------------");
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();
@@ -342,14 +297,12 @@ public class Stu {
             assertEquals(violations.isEmpty(), false);
             assertEquals(violations.size(), 1);
         }
-
     }
-
-    //======================-------------------------------------- Test Case Religion class entity ----------------------------------======================
+    //======================-------------------------------------- Test Case Roomm  class entity ----------------------------------======================
     @Test
-    public void testReligionParentsSuccessful() {
-        Religion ge = new Religion();
-        ge.setReligion("genders");
+    public void testRoommParentsSuccessful() {
+        Roomm  ge = new Roomm();
+        ge.setRoomm ("Roomm");
 
         try {
             entityManager.persist(ge);
@@ -364,7 +317,7 @@ public class Stu {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("---------------------->>Test Check Religion Successful<<------------------------");
+        System.out.println("---------------------->>Test Check Roomm Successful<<------------------------");
         System.out.println();
         System.out.println();
         System.out.println();
@@ -372,9 +325,9 @@ public class Stu {
     }
 
     @Test
-    public void testReligionParentsNull() {
-        Religion ge = new Religion();
-        ge.setReligion(null);
+    public void testRoommParentsNull() {
+        Roomm ge = new Roomm();
+        ge.setRoomm(null);
 
 
         try {
@@ -387,7 +340,59 @@ public class Stu {
             System.out.println();
             System.out.println();
             System.out.println();
-            System.out.println("---------------------->>Test Check Religion Null<<------------------------");
+            System.out.println("---------------------->>Test Check Roomm Null<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    //======================-------------------------------------- Test Case Cla  class entity ----------------------------------======================
+    @Test
+    public void testClaParentsSuccessful() {
+        Cla  ge = new Cla();
+        ge.setCla ("Cla");
+
+        try {
+            entityManager.persist(ge);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 6);
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------->>Test Check Cla Successful<<------------------------");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+    }
+
+    @Test
+    public void testClaParentsNull() {
+        Cla ge = new Cla();
+        ge.setCla(null);
+
+
+        try {
+            entityManager.persist(ge);
+            entityManager.flush();
+
+            //fail("Should not pass to this line");
+        } catch (javax.validation.ConstraintViolationException e) {
+
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Check Cla Null<<------------------------");
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();

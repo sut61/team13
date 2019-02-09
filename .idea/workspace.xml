@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3910c3-f1bb-45a7-9e14-b7038197a37e" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Prc.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Stu.java" afterDir="false" />
+=======
+>>>>>>> issue-83
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -113,7 +116,13 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/DemoApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/GradeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/GradeTest.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/SchoolCheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/SchoolCheckTest.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Pra.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Pra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/SchoolCheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/SchoolCheckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Stu.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Stu.java" afterDir="false" />
+>>>>>>> issue-83
       <change beforePath="$PROJECT_DIR$/frontend/.angular-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular-cli.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
@@ -242,7 +251,11 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2295">
+<<<<<<< HEAD
               <caret line="138" selection-start-line="138" selection-end-line="138" />
+=======
+              <caret line="135" selection-start-line="135" selection-end-line="135" />
+>>>>>>> issue-83
             </state>
           </provider>
         </entry>
@@ -282,6 +295,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Stu.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="187">
               <caret line="50" lean-forward="true" selection-end-line="50" />
               <folding>
@@ -289,11 +303,16 @@
                 <element signature="e#1153#1154#0" expanded="true" />
                 <element signature="e#1237#1238#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="136">
+              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+>>>>>>> issue-83
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Prc.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="55">
@@ -303,6 +322,12 @@
                 <element signature="e#1151#1152#0" expanded="true" />
                 <element signature="e#1235#1236#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Pra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="404" column="1" selection-start-line="404" selection-start-column="1" selection-end-line="404" selection-end-column="1" />
+>>>>>>> issue-83
             </state>
           </provider>
         </entry>
@@ -315,7 +340,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/frontend/src/app/personnal/personnal.component.ts" />
+=======
+>>>>>>> issue-83
         <option value="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/repository/NationalityRepository.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Personnal.java" />
         <option value="$PROJECT_DIR$/frontend/src/app/student/student.component.ts" />
@@ -364,8 +392,14 @@
         <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/SchoolCheckTest.java" />
         <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/DemoApplicationTests.java" />
         <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/GradeTest.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Stu.java" />
         <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Prc.java" />
+=======
+        <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Student.java" />
+        <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Stu.java" />
+        <option value="$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Pra.java" />
+>>>>>>> issue-83
       </list>
     </option>
   </component>
@@ -570,7 +604,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549726524995" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549719487158" />
+>>>>>>> issue-83
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/team13/backend" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -632,9 +670,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31467474" />
+=======
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
+>>>>>>> issue-83
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -652,7 +695,11 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.23076923" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.45008183" />
+>>>>>>> issue-83
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.31950846" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -669,7 +716,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/SchoolCheckTest.java</url>
+          <line>289</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/frontend/src/app/personnal/personnal.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
@@ -677,6 +737,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> issue-83
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/entity/Personnel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -933,6 +995,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/borrowsportequipment/borrowsportequipment.component.ts" />
+    <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/GradeTest" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/okta/developer/demo/DemoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -946,14 +1010,11 @@
     <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2295">
+<<<<<<< HEAD
           <caret line="138" selection-start-line="138" selection-end-line="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/borrowsportequipment/borrowsportequipment.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+=======
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+>>>>>>> issue-83
         </state>
       </provider>
     </entry>
@@ -964,7 +1025,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/DemoApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1598">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/GradeTest" />
+=======
+        <state relative-caret-position="153">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/GradeTest.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Student.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+>>>>>>> issue-83
     <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/SchoolCheckTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -972,6 +1054,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/GradeTest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1003,6 +1086,19 @@
             <element signature="e#1151#1152#0" expanded="true" />
             <element signature="e#1235#1236#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Stu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/test/java/com/okta/developer/demo/Pra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="404" column="1" selection-start-line="404" selection-start-column="1" selection-end-line="404" selection-end-column="1" />
+>>>>>>> issue-83
         </state>
       </provider>
     </entry>
