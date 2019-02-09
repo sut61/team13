@@ -51,6 +51,7 @@ import { EnrolbookComponent } from './enrolbook/enrolbook.component';
 import { SchoolcheckComponent } from './schoolcheck/schoolcheck.component';
 import { PracticeComponent } from './practice/practice.component';
 import { BorrowsportequipmentComponent } from './borrowsportequipment/borrowsportequipment.component';
+import { MediaroomComponent } from './mediaroom/mediaroom.component';
 const appRoutes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: 'home', component: HomeComponent, children: [
@@ -63,7 +64,8 @@ const appRoutes: Routes = [
 { path: 'schoolcheck', component: SchoolcheckComponent},
 { path: 'borrowsportequipment', component: BorrowsportequipmentComponent},
 { path: 'student', component: StudentComponent },
-{ path: 'practice', component: PracticeComponent }
+{ path: 'practice', component: PracticeComponent },
+{ path: 'mediaroom', component: MediaroomComponent }
 ]
 },
 { path: '**',   redirectTo: '/login'},
@@ -87,7 +89,8 @@ const appRoutes: Routes = [
     EnrolbookComponent,
     SchoolcheckComponent,
     PracticeComponent,
-    BorrowsportequipmentComponent
+    BorrowsportequipmentComponent,
+    MediaroomComponent
   ],
   imports: [
     BrowserModule,
