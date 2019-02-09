@@ -29,7 +29,7 @@ public class MediaRoomController{
 
     
     @PostMapping("/Applicant/addApplicant")
-    public Applicant newApplicant(Applicant newApplicant,@PathVariable Date date,@RequestBody() Map<String,Object> body) {
+    public Applicant newApplicant(Applicant newApplicant,@RequestBody() Map<String,Object> body) {
         Optional<Prefix> prefix = prefixRepository.findById(Long.valueOf(body.get("prefix").toString()));
         Optional<Activity> activity = activityRepository.findById(Long.valueOf(body.get("activity").toString()));
                 
