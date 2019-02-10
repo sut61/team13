@@ -3,6 +3,7 @@
   <div class="flex-container">
     <form #nurseroom = "ngForm"  (ngSubmit) = "onClickSubmit(nurseroom.value)" >
       <h2>ระบบห้องพยาบาล</h2>
+      
         <mat-form-field>  
           <h4>คำนำหน้า:</h4> 
             <mat-select name ="prefix" [(ngModel)]="nurseroom.prefixs">
@@ -14,7 +15,7 @@
 
         <mat-form-field>
           <h4>ชื่อ-นามสกุล:</h4> 
-            <input matInput name ="patientName"  [(ngModel)]="nurseroom.patientName_id">
+            <input matInput name ="patientName" id="name" [(ngModel)]="nurseroom.patientName_id">
         </mat-form-field><br>
 
         <mat-form-field>  
@@ -46,9 +47,9 @@
 
         <mat-form-field>
           <h4>คำแนะนำ:</h4> 
-            <input matInput name ="suggestion"  [(ngModel)]="nurseroom.suggestion_id">
+            <input matInput name ="suggestion" id="suggestion" [(ngModel)]="nurseroom.suggestion_id">
         </mat-form-field><br>
-    
+        <h4 style="color:greenyellow;">{{text}}</h4>
       <pre style="text-align:left;">
         <button type="submit" mat-stroked-button color="primary">บันทึก</button>
       </pre>

@@ -11,17 +11,22 @@ export class NursRoomComponent implements OnInit {
   symptoms = [];
   treatments = [];
   hospitals = [];
+  text : String; 
   
   onClickSubmit(data) {
       console.log(data);
       this.http.post("http://localhost:8080/PatientName/addPatientName/",data).subscribe(
       data => {
         console.log("POST Request is successful ", data);
-        alert("บันทึกสำเร็จ")
+        //alert("บันทึกสำเร็จ")
+        this.text="บันทึกสำเร็จ"
+      
       },
       error => {
         console.log("Error", error);
-        alert("ผิดพลาด " + error)
+        //alert("บันทึกผิดพลาด" + error)
+        this.text="กรุณากรอกข้อมูลให้ครบ"
+        
       }
 
     );
