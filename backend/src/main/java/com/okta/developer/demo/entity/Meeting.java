@@ -1,7 +1,7 @@
 package com.okta.developer.demo.entity;
 import lombok.*;
 import javax.persistence.*;
-
+import java.util.Date;
 @Entity
 @ToString
 @EqualsAndHashCode
@@ -12,6 +12,15 @@ public class Meeting {
     private @NonNull Long id;
     private String topic;
     private String descrip;
+    public Date day;
+
+    public Date getDay() {
+        return day;
+    }
+
+    public void setDay(Date day) {
+        this.day = day;
+    }
 
     @ManyToOne
     private Category category;
