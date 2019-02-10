@@ -34,8 +34,12 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 public class MeetingTest{
     @Autowired
     private TestEntityManager entityManager;
+<<<<<<< HEAD
     @Autowired
     private MeetingRepository meetingRepository;
+=======
+
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
     private Validator validator;
     @Before
     public void setup() {
@@ -86,11 +90,19 @@ public class MeetingTest{
             entityManager.flush();
 
 
+<<<<<<< HEAD
         } catch (javax.validation.ConstraintViolationException e) {
             System.out.println();
             System.out.println();
             System.out.println();
             System.out.println("---------------------->>Test Topic null<<------------------------");
+=======
+        }  catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Borrow Sports Equipment Name_Borrow Null<<------------------------");
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();
@@ -100,7 +112,11 @@ public class MeetingTest{
         }
     }
 
+<<<<<<< HEAD
     //
+=======
+//
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
     @Test
     public void testMeetingDescripNull() {
         Meeting mt = new Meeting();
@@ -123,11 +139,19 @@ public class MeetingTest{
             assertEquals(violations.size(), 1);
         }
     }
+<<<<<<< HEAD
     //
     @Test
     public void testMeetingTopicOverSize() {
         Meeting mt = new Meeting();
         mt.setTopic("Paratggggggggggggggggggggggggggggggggggggggggee");
+=======
+//
+    @Test
+    public void testMeetingTopicOverSize() {
+        Meeting mt = new Meeting();
+        mt.setTopic("Paratgggggggggggggggggggggggjjjjjjjjjgggggee");
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         mt.setDescrip("asdfghjk");
         try {
             entityManager.persist(mt);
@@ -145,11 +169,19 @@ public class MeetingTest{
             assertEquals(violations.size(), 1);
         }
     }
+<<<<<<< HEAD
     //
     @Test
     public void testMeetingTopicMinSize() {
         Meeting mt = new Meeting();
         mt.setTopic("bibi");
+=======
+//
+    @Test
+    public void testMeetingTopicMinSize() {
+        Meeting mt = new Meeting();
+        mt.setTopic("bib");
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         mt.setDescrip("asdfghjk");
         try {
             entityManager.persist(mt);
@@ -167,12 +199,20 @@ public class MeetingTest{
             assertEquals(violations.size(), 1);
         }
     }
+<<<<<<< HEAD
     //
+=======
+//
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
     @Test
     public void testMeetingDescripOverSize() {
         Meeting mt = new Meeting();
         mt.setTopic("nafefda");
+<<<<<<< HEAD
         mt.setDescrip("asdiadsuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
+=======
+        mt.setDescrip("asdiadsuuuuuuuuuuuuuuuuuuuuuuuuuuuuiiiiiiiiuuuuuuu");
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         try {
             entityManager.persist(mt);
             entityManager.flush();
@@ -195,8 +235,13 @@ public class MeetingTest{
     @Test
     public void testMeetingDescripMinSize() {
         Meeting mt = new Meeting();
+<<<<<<< HEAD
         mt.setTopic("buuyufhfgs");
         mt.setDescrip("at");
+=======
+        mt.setTopic("bibiudsff");
+        mt.setDescrip("adt");
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         try {
             entityManager.persist(mt);
             entityManager.flush();
@@ -211,7 +256,114 @@ public class MeetingTest{
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
             assertEquals(violations.size(), 1);
+<<<<<<< HEAD
 
         }
     }
     }
+=======
+        }
+    }
+
+    @Test
+    public void testMeetingTopicBeUnique() {
+        Meeting mt = new Meeting();
+        mt.setTopic("Momotaro");
+        mt.setDescrip("dfawedfdfa");
+        entityManager.persist(mt);
+
+
+        Meeting mt1 = new Meeting();
+        mt1.setTopic("Momotaro");
+        mt1.setDescrip("dfawedfdfa");
+
+        try {
+            entityManager.persist(mt1);
+            entityManager.flush();
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println("--------------------------------->> test Meeting BeUnique <<-------------------------- ");
+            System.out.println(e.getConstraintViolations());
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 2);
+        } catch (javax.persistence.PersistenceException e) {
+            System.out.println("--------------------------------->> test Meeting BeUnique <<-------------------------- ");
+            System.out.println("--------------------------------->> UNIQUE COLUMN <<-------------------------- ");
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void testCategoryNull() {
+        Category cy = new Category();
+        cy.setCatename(null);
+        try {
+            entityManager.persist(cy);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test <<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+
+    @Test
+    public void testPersonNull() {
+        Person ps = new Person();
+        ps.setPname(null);
+        try {
+            entityManager.persist(ps);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test <<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+
+    @Test
+    public void testStatusmeetNull() {
+        Statusmeet st = new Statusmeet();
+        st.setStatus(null);
+        try {
+            entityManager.persist(st);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test <<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+
+
+
+
+}
+>>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385

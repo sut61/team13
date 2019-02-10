@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import javax.validation.constraints.*;
 @Data
 @Entity
 @Table(name = "Person")
@@ -16,6 +17,7 @@ public class Person {
     @SequenceGenerator(name="Person",sequenceName="Person_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="Person_seq")
     private @NonNull Long id;
+    @NotNull
     private String pname;
 
     public Person(){

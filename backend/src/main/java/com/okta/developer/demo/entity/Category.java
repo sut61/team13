@@ -2,6 +2,7 @@ package com.okta.developer.demo.entity;
 import lombok.*;
 import javax.persistence.*;
 import java.util.List;
+import javax.validation.constraints.*;
 @Data
 @Entity
 @Table(name = "Category")
@@ -10,6 +11,8 @@ public class Category {
     @SequenceGenerator(name="Category_seq",sequenceName="Category_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="Category_seq")
     private @NonNull Long id;
+
+    @NotNull
     private String catename;
 
     public Long getId() {
