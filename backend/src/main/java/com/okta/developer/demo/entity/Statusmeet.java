@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import javax.validation.constraints.*;
 @Data
 @Entity
 @Table(name = "Statusmeet")
@@ -15,6 +16,8 @@ public class Statusmeet{
     @SequenceGenerator(name="Statusmeet",sequenceName="Statusmeet_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="Statusmeet_seq")
     private @NonNull Long id;
+
+    @NotNull
     private String status;
 
     public Long getId() {
