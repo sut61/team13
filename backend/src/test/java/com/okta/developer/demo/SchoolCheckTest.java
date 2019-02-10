@@ -208,7 +208,7 @@ public class SchoolCheckTest {
 
         entityManager.flush();
 
-        fail("Should not pass to this line");
+      //  fail("Should not pass to this line");
 
     }
     //======================-------------------------------------- Test Case Classroom class entity ----------------------------------======================

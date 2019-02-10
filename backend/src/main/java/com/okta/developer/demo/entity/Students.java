@@ -3,7 +3,7 @@ package com.okta.developer.demo.entity;
 import lombok.NonNull;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.*;
 @Entity
 public class Students {
     @Id
@@ -11,7 +11,15 @@ public class Students {
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="s_seq")
     private @NonNull Long id;
 
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
     private String name;
+
+    @NotNull
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
     private String num ;
 
 

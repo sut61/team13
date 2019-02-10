@@ -51,11 +51,14 @@ export class StudentComponent implements OnInit {
   }
 
   save(){
+ if(this.gederSelect === null || this.nationalitySelect === null || this.username === null || this.religionSelect === null|| this.num === null){
+        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+      }else {
     this.httpClient.post('http://localhost:8080/students/' +this.gederSelect+'/'+this.nationalitySelect+'/'+this.religionSelect+'/'+ this.username+'/'+this.num+'/',{}).subscribe()
     alert('บันทึกสำเร็จ');
 
   }
-
+}
 
 }
 

@@ -4,7 +4,7 @@ import lombok.NonNull;
 
 import javax.persistence.*;
 import java.util.Date;
-
+import javax.validation.constraints.*;
 @Entity
 public class Practice {
 
@@ -13,7 +13,16 @@ public class Practice {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pra_seq")
     private @NonNull Long id;
 
+
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
     private String name;
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
     private String num;
 
 

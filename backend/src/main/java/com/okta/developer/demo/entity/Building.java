@@ -4,6 +4,7 @@ package com.okta.developer.demo.entity;
 
 import javax.persistence.*;
 import lombok.*;
+import javax.validation.constraints.*;
 @Entity
 @Table(name = "Building")
 public class Building {
@@ -12,7 +13,7 @@ public class Building {
     @SequenceGenerator(name="bui_seq",sequenceName="bui_seq")
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="bui_seq")
     private @NonNull Long id;
-
+    @NotNull
     private String Building ;
 
     public Long getId() {

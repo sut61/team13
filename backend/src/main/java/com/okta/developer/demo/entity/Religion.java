@@ -5,7 +5,7 @@ import lombok.NonNull;
 import lombok.ToString;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.*;
 @Data
 @Entity
 @ToString
@@ -20,7 +20,8 @@ public class Religion {
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="re")
 
     private @NonNull long id;
-    private @NonNull String  religion;
+    @NotNull
+    private String  religion;
 
 
     public Religion(){
