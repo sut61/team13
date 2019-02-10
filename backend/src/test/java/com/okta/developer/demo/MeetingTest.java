@@ -34,12 +34,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 public class MeetingTest{
     @Autowired
     private TestEntityManager entityManager;
-<<<<<<< HEAD
-    @Autowired
-    private MeetingRepository meetingRepository;
-=======
 
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
     private Validator validator;
     @Before
     public void setup() {
@@ -47,17 +42,6 @@ public class MeetingTest{
         validator = factory.getValidator();
     }
 
-    @Test
-    public void testCaseSprintFirstChutimon() {
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println("---------------------->>Test Case Sprint#2 Supachai Sroyklam B5925803<<------------------------");
-        System.out.println();
-        System.out.println();
-        System.out.println();
-
-    }
     @Test
     public void testMeetingAllMatch(){
         Meeting mt = new Meeting();
@@ -90,19 +74,11 @@ public class MeetingTest{
             entityManager.flush();
 
 
-<<<<<<< HEAD
-        } catch (javax.validation.ConstraintViolationException e) {
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println("---------------------->>Test Topic null<<------------------------");
-=======
         }  catch (javax.validation.ConstraintViolationException e) {
             System.out.println();
             System.out.println();
             System.out.println();
             System.out.println("---------------------->>Test Borrow Sports Equipment Name_Borrow Null<<------------------------");
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
             System.out.println(e.getMessage());
             System.out.println();
             System.out.println();
@@ -112,11 +88,7 @@ public class MeetingTest{
         }
     }
 
-<<<<<<< HEAD
     //
-=======
-//
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
     @Test
     public void testMeetingDescripNull() {
         Meeting mt = new Meeting();
@@ -139,19 +111,11 @@ public class MeetingTest{
             assertEquals(violations.size(), 1);
         }
     }
-<<<<<<< HEAD
     //
     @Test
     public void testMeetingTopicOverSize() {
         Meeting mt = new Meeting();
-        mt.setTopic("Paratggggggggggggggggggggggggggggggggggggggggee");
-=======
-//
-    @Test
-    public void testMeetingTopicOverSize() {
-        Meeting mt = new Meeting();
         mt.setTopic("Paratgggggggggggggggggggggggjjjjjjjjjgggggee");
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         mt.setDescrip("asdfghjk");
         try {
             entityManager.persist(mt);
@@ -169,19 +133,11 @@ public class MeetingTest{
             assertEquals(violations.size(), 1);
         }
     }
-<<<<<<< HEAD
     //
     @Test
     public void testMeetingTopicMinSize() {
         Meeting mt = new Meeting();
-        mt.setTopic("bibi");
-=======
-//
-    @Test
-    public void testMeetingTopicMinSize() {
-        Meeting mt = new Meeting();
         mt.setTopic("bib");
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         mt.setDescrip("asdfghjk");
         try {
             entityManager.persist(mt);
@@ -199,20 +155,12 @@ public class MeetingTest{
             assertEquals(violations.size(), 1);
         }
     }
-<<<<<<< HEAD
     //
-=======
-//
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
     @Test
     public void testMeetingDescripOverSize() {
         Meeting mt = new Meeting();
         mt.setTopic("nafefda");
-<<<<<<< HEAD
-        mt.setDescrip("asdiadsuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
-=======
         mt.setDescrip("asdiadsuuuuuuuuuuuuuuuuuuuuuuuuuuuuiiiiiiiiuuuuuuu");
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         try {
             entityManager.persist(mt);
             entityManager.flush();
@@ -235,13 +183,8 @@ public class MeetingTest{
     @Test
     public void testMeetingDescripMinSize() {
         Meeting mt = new Meeting();
-<<<<<<< HEAD
-        mt.setTopic("buuyufhfgs");
-        mt.setDescrip("at");
-=======
         mt.setTopic("bibiudsff");
         mt.setDescrip("adt");
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
         try {
             entityManager.persist(mt);
             entityManager.flush();
@@ -256,12 +199,6 @@ public class MeetingTest{
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
             assertEquals(violations.size(), 1);
-<<<<<<< HEAD
-
-        }
-    }
-    }
-=======
         }
     }
 
@@ -366,4 +303,3 @@ public class MeetingTest{
 
 
 }
->>>>>>> 8ea3156c4a831b2bce5549de5a82c20356ed1385
