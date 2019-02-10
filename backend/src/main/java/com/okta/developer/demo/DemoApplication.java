@@ -522,9 +522,9 @@ public class DemoApplication {
             Category c1 = new Category();
             c1.setCatename("การจัดซื้อ");
             Category c2 = new Category();
-            c1.setCatename("งบประมาณ");
+            c2.setCatename("งบประมาณ");
             Category c3 = new Category();
-            c1.setCatename("โครงการ");
+            c3.setCatename("โครงการ");
             categoryRepository.save(c1);
             categoryRepository.save(c2);
             categoryRepository.save(c3);

@@ -90,5 +90,14 @@ getpo(): Observable<any>{
   getPiece(): Observable<any> {
     return this.http.get(this.API + '/Piece');
     }
+    getCategory(): Observable<any>{
+      return this.http.get(this.API + '/Category');
+    }
+    getPerson(): Observable<any>{
+      return this.http.get(this.API + '/Person');
+    }
+    getStatusmeet(): Observable<any>{
+      return this.http.get(this.API + '/Statusmeet');
+    }
 }
 
