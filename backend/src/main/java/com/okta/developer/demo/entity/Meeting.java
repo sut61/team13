@@ -2,6 +2,7 @@ package com.okta.developer.demo.entity;
 import lombok.*;
 import javax.persistence.*;
 import java.util.Date;
+import javax.validation.constraints.*;
 @Entity
 @ToString
 @EqualsAndHashCode
@@ -10,7 +11,17 @@ public class Meeting {
     @SequenceGenerator(name="Meeting_seq",sequenceName="Meeting_seq")
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="Meeting_seq")
     private @NonNull Long id;
+
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
     private String topic;
+
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z]+")
+    @Size(min = 5 ,max = 20)
+    @Column(unique = true)
     private String descrip;
     public Date day;
 
