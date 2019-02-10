@@ -14,7 +14,7 @@
 
     <mat-form-field>
       <h4>ชื่อ-นามสกุล:</h4>
-      <input matInput name ="applicantName"  [(ngModel)]="mediaroom.patientName_id">
+      <input matInput name ="applicantName" id="name" [(ngModel)]="mediaroom.patientName_id">
     </mat-form-field><br>
 
     <mat-form-field>
@@ -37,14 +37,14 @@
 
     <mat-form-field>
       <h4>วันที่:(22/02/2562)</h4>
-      <input matInput name ="date"  [(ngModel)]="mediaroom.date_id">
+      <input matInput name ="date" id="date" [(ngModel)]="mediaroom.date_id">
     </mat-form-field><br>
 
     <mat-form-field>
       <h4>เวลา:(14.00-16.00)</h4>
-      <input matInput name ="time"  [(ngModel)]="mediaroom.time_id">
+      <input matInput name ="time" id="time" [(ngModel)]="mediaroom.time_id">
     </mat-form-field><br>
-
+    <h4 style="color:greenyellow;">{{text}}</h4>
     <pre style="text-align:left;">
         <button type="submit" mat-stroked-button color="primary">บันทึก</button>
       </pre>
