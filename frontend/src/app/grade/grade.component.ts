@@ -80,7 +80,7 @@ export class GradeComponent implements OnInit {
     }else {
       this.httpClient.post('http://localhost:8080/grade/' + this.point + '/' + this.GpaSelect + '/' + this.MajorSelect + '/' + this.ProSelect + '/' + this.StudentSelect, {}).subscribe()
       alert('บันทึกสำเร็จ');
-      window.location.reload()
+     // window.location.reload()
     }
   }
 
