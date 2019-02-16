@@ -68,13 +68,15 @@ export class PersonnalComponent implements OnInit {
         console.log(this.educations);
     });
   }
-
-save(){
-
+  save(){
+ if(this.religionsSelect === null || this.educationsSelect === null || this.gendersSelect === null || this.positionsSelect === null|| this.degreesSelect === null || this.birthday === null || this.fname === null || this.lname === null || this.jobId === null|| this.nationality === null|| this.extraction === null || this.identificationNumber === null || this.major === null|| this.phone === null || this.email === null ){
+        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+      }else {
   this.httpClient.post('http://localhost:8080/personnals/'+this.religionsSelect+'/'+this.educationsSelect+'/'+this.gendersSelect+'/'+this.positionsSelect+'/'+this.degreesSelect+'/'+this.birthday+'/'+this.fname+'/'+this.lname+'/'+this.jobId+'/'+this.nationality+'/'+this.extraction+'/'+this.identificationNumber+'/'+this.major+'/'+this.phone+'/'+this.email,{}).subscribe()
   alert('บันทึกสำเร็จ');
-}
+  }
 cancel(){
-   this.router.navigate(['mainhome'])
+   this.router.navigate(['mainhome']);
+     }
 }
 }
