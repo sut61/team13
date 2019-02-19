@@ -12,6 +12,15 @@ public class Room {
  @Column(name="room_ID",unique = true, nullable = true)
  private @NonNull Long id_room;
  private @NonNull String roomname;
+
+ public String getRoomname() {
+  return roomname;
+ }
+
+ public void setRoomname(String roomname) {
+  this.roomname = roomname;
+ }
+
  public Room(String roomname){
  this.roomname = roomname;
  }

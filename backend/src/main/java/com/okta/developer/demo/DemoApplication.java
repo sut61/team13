@@ -134,7 +134,7 @@ public class DemoApplication {
 
 
             Major major1 = new Major("Mathematics");
-            Major major2 = new Major("Art");
+            Major major2 = new Major("Artist");
             Major major3 = new Major("Computer");
             Major major4 = new Major("Science");
             Major major5 = new Major("Social");

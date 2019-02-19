@@ -75,8 +75,9 @@ export class PersonnalComponent implements OnInit {
   this.httpClient.post('http://localhost:8080/personnals/'+this.religionsSelect+'/'+this.educationsSelect+'/'+this.gendersSelect+'/'+this.positionsSelect+'/'+this.degreesSelect+'/'+this.birthday+'/'+this.fname+'/'+this.lname+'/'+this.jobId+'/'+this.nationality+'/'+this.extraction+'/'+this.identificationNumber+'/'+this.major+'/'+this.phone+'/'+this.email,{}).subscribe()
   alert('บันทึกสำเร็จ');
   }
-cancel(){
+
+}cancel(){
    this.router.navigate(['mainhome']);
      }
 }
-}
+

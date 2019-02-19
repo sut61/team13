@@ -27,6 +27,16 @@ public class Personnel {
     private @NonNull String phonenumber;
     private @NonNull String E_mail;
     private @NonNull String Identification_number;
+    private @NonNull String teachers;
+
+    public String getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(String teachers) {
+        this.teachers = teachers;
+    }
+
     public Personnel(){}
     public Personnel(String fname,String Lname,String Birthday,String
             educationalString,String Firstday_of_work,String Lastday_of_work,String

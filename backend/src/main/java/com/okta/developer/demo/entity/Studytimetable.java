@@ -1,7 +1,7 @@
 package com.okta.developer.demo.entity;
 import lombok.*;
 import javax.persistence.*;
-
+import javax.validation.constraints.*;
 @Entity
 @ToString
 @EqualsAndHashCode
@@ -11,7 +11,20 @@ public class Studytimetable {
  @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="No_STT")
  @Column(name = "No")
  private @NonNull Long idStudytimetable;
- private @NonNull String timedate;
+
+ @NotNull
+// @Pattern(regexp = "[a-zA-Z]+")
+ @Size(min = 5 ,max = 20)
+ @Column(unique = true)
+  private String timedate;
+
+
+ @NotNull
+ @Pattern(regexp = "[a-zA-Z]+")
+ @Size(min = 5 ,max = 20)
+ @Column(unique = true)
+  private String day;
+
 
  public Long getIdStudytimetable() {
   return idStudytimetable;
@@ -61,7 +74,7 @@ public class Studytimetable {
   this.teachers = teachers;
  }
 public Studytimetable(){}
- private @NonNull String day;
+
  @ManyToOne private Major major;
  @ManyToOne private Room rooms;
  @ManyToOne private Personnel teachers;
@@ -71,4 +84,5 @@ public Studytimetable(String timedate, String day, Major major, Room room, Perso
  this.major = major;
  this.rooms = room;
  this.teachers = personnel;}
+
 }
