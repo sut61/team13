@@ -23,6 +23,12 @@ public class Treatment {
     public Treatment(){}
     public Treatment(String treatment){
          this.treatment = treatment;
-    }    
-   
+    }
+
+    public void setTreatment(String treatment) {
+        this.treatment = treatment;
+    }
+    public String getTreatment(){
+        return treatment;
+    }
 }

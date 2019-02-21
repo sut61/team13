@@ -18,11 +18,18 @@ public class Hospital {
     private @NonNull long hospitalId;
 
     @NotNull(message="hospital must not be null to be valid")
+    @Column(unique = true)
     private String hospital;
 
     public Hospital(){}
     public Hospital(String hospital){
          this.hospital = hospital;
-    }    
-   
+    }
+
+    public void setHospital(String hospital) {
+        this.hospital = hospital;
+    }
+    public String getHospital(){
+        return hospital;
+    }
 }
