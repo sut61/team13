@@ -346,4 +346,170 @@ public class HospitalRoomTest {
         fail("Should not pass to this line");
 
     }
+    @Test(expected = javax.persistence.PersistenceException.class)
+    public void testTreatmentUnique() {
+        Treatment treatment1 = new Treatment();
+        treatment1.setTreatment("นอนพักในห้องพยาบาล");
+        entityManager.persist(treatment1);
+        entityManager.flush();
+
+        Treatment treatment2 = new Treatment();
+        treatment2.setTreatment("นอนพักในห้องพยาบาล");
+        entityManager.persist(treatment2);
+        entityManager.flush();
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println("------------------------->>Test Treatment BeUnique<<-------------------------");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        fail("Should not pass to this line");
+
+    }
+
+    //===========================test size==================================
+    @Test
+    public void testPatientNameSize() {
+        PatientName patientName = new PatientName();
+        patientName.setPatientName("nkgjjjjjjjjjjjjgojpssfbsjjjgfnrrrrkbndlousngfdshhhgggggggggggggggggghn");
+        patientName.setSuggestion("ควรพักผ่อนให้เพียงพอ");
+
+        try {
+            entityManager.persist(patientName);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Patient Name Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testSuggestionSize() {
+        PatientName patientName = new PatientName();
+        patientName.setPatientName("ชาญชัย นนทะชัย");
+        patientName.setSuggestion("aaaaaaaaaaaaaaaaaaaccccccccccvvvvvvvvvvvvkkkkkkkkfffooooooooggdsdd");
+
+        try {
+            entityManager.persist(patientName);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Suggestion Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testHospitalSize() {
+        Hospital hospital = new Hospital();
+        hospital.setHospital("nkgjjjjjjjjjjjjgojpsahhnkjbknirrrrkbndlousngfdshhhgggggggggggggggggghn");
+
+        try {
+            entityManager.persist(hospital);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Hospital Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testPrefixSize() {
+        Prefix prefix = new Prefix();
+        prefix.setPrefix("nkgjjjjjjjjjjjjgojpsahhnkjbknirrrrkbndlousngfdshhhgggggggggggggggggghn");
+
+        try {
+            entityManager.persist(prefix);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Prefix Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testSymptomSize() {
+        Symptom symptom = new Symptom();
+        symptom.setSymptom("nkgjjjjjjjjjjjjgojpsahhnkjbknirrrrkbndlousngfdshhhgggggggggggggggggghn");
+
+        try {
+            entityManager.persist(symptom);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Symptom Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testTreatmentSize() {
+        Treatment treatment = new Treatment();
+        treatment.setTreatment("nkgjjjjjjjjjjjjgojpsahhnkjbknirrrrkbndlousngfdshhhgggggggggggggggggghn");
+
+        try {
+            entityManager.persist(treatment);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Treatment Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+
+    //===============================test pattern===========================
 }
