@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
 import lombok.*;
 
 @Entity
@@ -14,9 +16,11 @@ public class PatientName {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private @NonNull Long id;
-  //  private @NonNull String prefix; //คำนำหน้าชื่อ
-    private @NonNull String patientName;
-    private @NonNull String suggestion;
+
+    @NotNull(message="patient name must not be null to be valid")
+    private String patientName;
+    @NotNull(message="suggesttion must not be null to be valid")
+    private String suggestion;
 
     @ManyToOne()
     @JoinColumn(name = "prefixId")
@@ -33,7 +37,7 @@ public class PatientName {
     @ManyToOne()
     @JoinColumn(name = "treatmentId")
     private Treatment treatment;
-    
+
     public PatientName(){}
     public PatientName(String patientName, String suggestion){
         Prefix prefix = new Prefix();
@@ -42,5 +46,18 @@ public class PatientName {
         Treatment treatment = new Treatment();
         this.patientName = patientName;
         this.suggestion = suggestion;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+    public String getPatientName(){
+        return patientName;
+    }
+    public void setSuggestion(String suggestion){
+        this.suggestion = suggestion;
+    }
+    public String getSuggestion(){
+        return suggestion;
     }
 }

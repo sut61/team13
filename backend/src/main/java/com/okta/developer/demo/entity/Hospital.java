@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
 import lombok.*;
 
 @Entity
@@ -14,7 +16,9 @@ public class Hospital {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private @NonNull long hospitalId;
-    private @NonNull String hospital; 
+
+    @NotNull(message="hospital must not be null to be valid")
+    private String hospital;
 
     public Hospital(){}
     public Hospital(String hospital){
