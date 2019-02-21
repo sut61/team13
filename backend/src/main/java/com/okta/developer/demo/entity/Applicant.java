@@ -7,6 +7,8 @@ import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import javax.persistence.Entity;
+import java.util.Date;
+import java.sql.Time;
 
 @Entity
 @Table(name = "Applicant")
