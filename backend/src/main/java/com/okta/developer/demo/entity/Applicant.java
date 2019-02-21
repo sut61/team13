@@ -4,11 +4,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.*;
-import javax.validation.constraints.Size;
+
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.persistence.Entity;
 import java.util.Date;
+import java.sql.Time;
 
 @Entity
 @Table(name = "Applicant")
@@ -19,12 +19,10 @@ public class Applicant{
 
     @NotNull(message="apllicantName must not be null to be valid")
     private String applicantName; //ชื่อผู้ขอใช้บริการ
-    
-    private @NonNull String time;
-    
-    private @NonNull String date;
-
-    
+    @NotNull(message="apllicantName must not be null to be valid")
+    private String time;
+    @NotNull(message="apllicantName must not be null to be valid")
+    private String date;
 
     @ManyToOne()
     private Prefix prefix;
