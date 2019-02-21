@@ -30,7 +30,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 
-public class HospitalRoom {
+public class HospitalRoomTest {
     @Autowired private PatientNameRepository patientNameRepository;
     @Autowired private TreatmentRepository treatmentRepository;
     @Autowired private SymptomRepository symptomRepository;
@@ -146,8 +146,8 @@ public class HospitalRoom {
         prefix.setPrefix("เด็กชาย");
 
         try {
-            entityManager.persist(prefix);
-            entityManager.flush();
+            //entityManager.persist(prefix);
+            //entityManager.flush();
         } catch(javax.validation.ConstraintViolationException e) {
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
