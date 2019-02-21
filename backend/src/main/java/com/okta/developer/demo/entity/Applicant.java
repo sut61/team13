@@ -7,6 +7,7 @@ import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import javax.persistence.Entity;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.sql.Time;
 
@@ -18,10 +19,13 @@ public class Applicant{
     private @NonNull long applicantId;
 
     @NotNull(message="apllicantName must not be null to be valid")
+    @Size(min = 5 ,max = 20)
     private String applicantName; //ชื่อผู้ขอใช้บริการ
     @NotNull(message="apllicantName must not be null to be valid")
+    @Size(min = 5 ,max = 15)
     private String time;
     @NotNull(message="apllicantName must not be null to be valid")
+    @Size(min = 5 ,max = 15)
     private String date;
 
     @ManyToOne()
