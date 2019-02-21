@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import lombok.*;
 
@@ -19,6 +20,7 @@ public class Hospital {
 
     @NotNull(message="hospital must not be null to be valid")
     @Column(unique = true)
+    @Size(min = 1 ,max = 40)
     private String hospital;
 
     public Hospital(){}

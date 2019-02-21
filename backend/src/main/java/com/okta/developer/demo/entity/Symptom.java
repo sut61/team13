@@ -16,7 +16,7 @@ public class Symptom {
 
     @NotNull(message="symptom must not be null to be valid")
     @Column(unique = true)
-    private @NonNull String symptom; //อาการป่วย
+    private String symptom; //อาการป่วย
     
     public Symptom(){}
     public Symptom(String symptom){

@@ -18,7 +18,8 @@ public class Treatment {
     private @NonNull long treatmentId;
 
     @NotNull(message="treatment must not be null to be valid")
-    private @NonNull String treatment; //การรักษา
+    @Column(unique = true)
+    private String treatment; //การรักษา
     
     public Treatment(){}
     public Treatment(String treatment){
