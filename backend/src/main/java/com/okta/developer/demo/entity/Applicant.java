@@ -21,10 +21,10 @@ public class Applicant{
     @NotNull(message="apllicantName must not be null to be valid")
     @Size(min = 5 ,max = 20)
     private String applicantName; //ชื่อผู้ขอใช้บริการ
-    @NotNull(message="apllicantName must not be null to be valid")
+    @NotNull(message="Time must not be null to be valid")
     @Size(min = 5 ,max = 15)
     private String time;
-    @NotNull(message="apllicantName must not be null to be valid")
+    @NotNull(message="Date must not be null to be valid")
     @Size(min = 5 ,max = 15)
     private String date;
 

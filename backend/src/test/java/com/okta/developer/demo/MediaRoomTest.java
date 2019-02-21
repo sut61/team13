@@ -35,6 +35,7 @@ public class MediaRoomTest {
     @Autowired private ApplicantRepository applicantRepository;
     @Autowired private ActivityRepository activityRepository;
     @Autowired private MediaRoomRepository mediaRoomRepository;
+    @Autowired private PrefixRepository prefixRepository;
 
 
     @Autowired
@@ -119,7 +120,7 @@ public class MediaRoomTest {
         prefix.setPrefix("นาย");
 
         try {
-            //entityManager.persist(mediaRoom);
+            //entityManager.persist(prefix);
             //entityManager.flush();
         }
         catch(javax.validation.ConstraintViolationException e) {
@@ -425,7 +426,7 @@ public class MediaRoomTest {
 
     }
 
-    /*@Test(expected = javax.persistence.PersistenceException.class)
+    @Test(expected = javax.persistence.PersistenceException.class)
     public void testMediaRoomUnique() {
         MediaRoom mediaRoom1 = new MediaRoom();
         mediaRoom1.setMediaRoom("ห้องสื่อการเรียนรู้1");
@@ -447,7 +448,7 @@ public class MediaRoomTest {
         fail("Should not pass to this line");
 
     }
-*/
+
     //===================test Size============================
     @Test
     public void testApplicantNameSize() {
