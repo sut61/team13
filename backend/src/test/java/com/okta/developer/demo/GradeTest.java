@@ -245,7 +245,7 @@ public class GradeTest {
 
         Student st1 = new Student();
         st1.setStudent_name("Phiyada");
-        ;
+
         entityManager.persist(st1);
 
         System.out.println();
