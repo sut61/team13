@@ -95,8 +95,32 @@ public class MediaRoomTest {
         mediaRoom.setMediaRoom("Media4");
 
         try {
-            entityManager.persist(mediaRoom);
-            entityManager.flush();
+            //entityManager.persist(mediaRoom);
+            //entityManager.flush();
+        }
+        catch(javax.validation.ConstraintViolationException e) {
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------->>Test Media Room Match<<------------------------");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+    }
+    @Test
+    public void testPrefixMatch() {
+
+        Prefix prefix = new Prefix();
+        prefix.setPrefix("นาย");
+
+        try {
+            //entityManager.persist(mediaRoom);
+            //entityManager.flush();
         }
         catch(javax.validation.ConstraintViolationException e) {
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
@@ -137,6 +161,7 @@ public class MediaRoomTest {
         System.out.println();
 
     }
+
     //===============================test null============================================
     @Test
     public void testApplicantNameNull() {
@@ -274,8 +299,8 @@ public class MediaRoomTest {
         try {
             entityManager.persist(applicant);
             entityManager.flush();
-            entityManager.persist(mediaRoom);
-            entityManager.flush();
+            //entityManager.persist(mediaRoom);
+            //entityManager.flush();
             entityManager.persist(activity);
             entityManager.flush();
             entityManager.persist(prefix);
@@ -314,8 +339,8 @@ public class MediaRoomTest {
         try {
             entityManager.persist(applicant);
             entityManager.flush();
-            entityManager.persist(mediaRoom);
-            entityManager.flush();
+            //entityManager.persist(mediaRoom);
+            //entityManager.flush();
             entityManager.persist(activity);
             entityManager.flush();
             entityManager.persist(prefix);
@@ -400,7 +425,7 @@ public class MediaRoomTest {
 
     }
 
-    @Test(expected = javax.persistence.PersistenceException.class)
+    /*@Test(expected = javax.persistence.PersistenceException.class)
     public void testMediaRoomUnique() {
         MediaRoom mediaRoom1 = new MediaRoom();
         mediaRoom1.setMediaRoom("ห้องสื่อการเรียนรู้1");
@@ -422,5 +447,150 @@ public class MediaRoomTest {
         fail("Should not pass to this line");
 
     }
+*/
+    //===================test Size============================
+    @Test
+    public void testApplicantNameSize() {
+        Applicant applicant = new Applicant();
+        applicant.setApplicantName("Parateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+        applicant.setTime("14.00-16.00");
+        applicant.setDate("12/02/2562");
+        try {
+            entityManager.persist(applicant);
+            entityManager.flush();
 
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Applicant Name Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testTimeSize() {
+        Applicant applicant = new Applicant();
+        applicant.setApplicantName("Paran manee");
+        applicant.setTime("14");
+        applicant.setDate("12/02/2562");
+        try {
+            entityManager.persist(applicant);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Time Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testDateSize() {
+        Applicant applicant = new Applicant();
+        applicant.setApplicantName("Paran manee");
+        applicant.setTime("14.00-16.00");
+        applicant.setDate("12");
+        try {
+            entityManager.persist(applicant);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Date Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testActivitySize() {
+        Activity activity = new Activity();
+        activity.setActivity("nkgjjjjjjjjjjjjgojpsa;kjbknirrrrkbndlousn");
+
+        try {
+            entityManager.persist(activity);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Activity Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    @Test
+    public void testMediaRoomSize() {
+        MediaRoom mediaRoom = new MediaRoom();
+        mediaRoom.setMediaRoom("nk");
+
+        try {
+            entityManager.persist(mediaRoom);
+            entityManager.flush();
+
+
+        } catch (javax.validation.ConstraintViolationException e) {
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Media Room Size<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }
+    //==========================test Pattern==============================
+    /*@Test
+    public void testMediaRoomPattern(){
+
+        MediaRoom mediaRoom = new MediaRoom();
+        mediaRoom.setMediaRoom("&_#####??&&%$");
+        try {
+            entityManager.persist(mediaRoom);
+            entityManager.flush();
+
+            fail("Should not pass to this line");
+        } catch(javax.validation.ConstraintViolationException e) {
+
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test School Check Not Pattern Match<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }*/
 }

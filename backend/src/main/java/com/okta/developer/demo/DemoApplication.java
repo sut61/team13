@@ -75,7 +75,7 @@ public class DemoApplication {
         Stream.of("ทำกิจกรรมกลุ่ม","ดูสารคดี","อื่นๆ").forEach(activity -> {
             activityRepository.save(new Activity(activity));
         });
-        Stream.of("ห้อง Media 1","ห้อง Media 2","ห้อง Media 3").forEach(mediaRoom -> {
+        Stream.of("Media1","Media2","Media3","Media4").forEach(mediaRoom -> {
             mediaRoomRepository.save(new MediaRoom(mediaRoom));
         });
 
