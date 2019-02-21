@@ -60,4 +60,28 @@ public class PatientName {
     public String getSuggestion(){
         return suggestion;
     }
+    public void setHospital(Hospital hospital){
+        this.hospital = hospital;
+    }
+    public Hospital getHospital(){
+        return hospital;
+    }
+    public void setPrefix(Prefix prefix){
+        this.prefix = prefix;
+    }
+    public Prefix getPrefix(){
+        return prefix;
+    }
+    public void setSymptom(Symptom symptom){
+        this.symptom = symptom;
+    }
+    public Symptom getSymptom(){
+        return symptom;
+    }
+    public void setTreatment(Treatment treatment){
+        this.treatment = treatment;
+    }
+    public Treatment getTreatment(){
+        return treatment;
+    }
 }

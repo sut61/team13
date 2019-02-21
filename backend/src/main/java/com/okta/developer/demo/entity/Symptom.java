@@ -15,10 +15,18 @@ public class Symptom {
     private @NonNull long symptomId;
 
     @NotNull(message="symptom must not be null to be valid")
+    @Column(unique = true)
     private @NonNull String symptom; //อาการป่วย
     
     public Symptom(){}
     public Symptom(String symptom){
          this.symptom = symptom;
-    }    
+    }
+
+    public void setSymptom(String symptom) {
+        this.symptom = symptom;
+    }
+    public String getSymptom(){
+        return symptom;
+    }
 }
