@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import lombok.*;
@@ -19,6 +20,7 @@ public class PatientName {
     private @NonNull Long id;
 
     @NotNull(message="patient name must not be null to be valid")
+    @Pattern(regexp = "[ก-ฮa-zA-Z]")
     @Size(min = 5 ,max = 20)
     private String patientName;
 
