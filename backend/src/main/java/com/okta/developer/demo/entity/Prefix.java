@@ -17,9 +17,8 @@ public class Prefix{
 
     @NotNull(message="prefix must not be null to be valid")
     @Column(unique = true)
-    //@Size(min = 5 ,max = 20)
     private String prefix; //คำนำหน้าชื่อ
-    
+
     public Prefix(){}
     public Prefix(String prefix){
          this.prefix = prefix;
