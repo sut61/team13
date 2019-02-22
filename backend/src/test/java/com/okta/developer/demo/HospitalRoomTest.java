@@ -205,7 +205,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
+            assertEquals(violations.size(), 2);
         }
     }
 
@@ -391,7 +391,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
+            assertEquals(violations.size(), 2);
         }
     }
     @Test
@@ -415,7 +415,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
+            assertEquals(violations.size(), 2);
         }
     }
     @Test
@@ -512,4 +512,26 @@ public class HospitalRoomTest {
     }
 
     //===============================test pattern===========================
+
+    @Test
+    public void TestPatienNamePatern(){
+        PatientName patientName = new PatientName();
+        patientName.setPatientName("1234//[[][/abcdefghijklmn");
+
+        try{
+            entityManager.persist(patientName);
+            entityManager.flush();
+        } catch(javax.validation.ConstraintViolationException e){
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Hospital Pattern<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 3);
+        }
+    }
 }

@@ -71,7 +71,7 @@ public class DemoApplication {
         });
         treatmentRepository.findAll().forEach(System.out::println);
 
-        Stream.of("-","โรงพยาบาลมหาวิทยาลัยเทคโนโลยีสุรนารี").forEach(hospital -> {
+        Stream.of("ไม่มีการนำส่งโรงพยาบาล","โรงพยาบาลมหาวิทยาลัยเทคโนโลยีสุรนารี").forEach(hospital -> {
             hospitalRepository.save(new Hospital(hospital));
         });
         hospitalRepository.findAll().forEach(System.out::println);
