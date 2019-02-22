@@ -47,15 +47,15 @@ export class TableComponent implements OnInit {
     });
     this.homeservice.getRoom().subscribe(data => {
       this.rooms = data;
-
+      console.log(data);
     });
     this.homeservice.getSubject().subscribe(data => {
       this.subjects = data;
-
+      console.log(data);
     });
     this.homeservice.getStudyTimeTable().subscribe(data => {
       this.No = data;
-
+      console.log(data);
     });
   }
 

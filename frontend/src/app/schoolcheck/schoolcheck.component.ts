@@ -65,7 +65,7 @@ export class SchoolcheckComponent implements OnInit {
     }else {
       this.httpClient.post('http://localhost:8080/schoolcheck/'+this.StudentSelect+'/'+this.ClassroomSelect+'/'+this.datecome+'/'+this.StatusSelect+'/'+this.ParentSelect+'/'+this.Parrents,{}).subscribe()
       alert('บันทึกสำเร็จ');
-     // window.location.reload()
+
     }
   }
 
