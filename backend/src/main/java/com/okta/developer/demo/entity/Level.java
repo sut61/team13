@@ -1,5 +1,4 @@
 package com.okta.developer.demo.entity;
-
 import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,32 +11,34 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Data
-@Table(name = "Activity")
-public class Activity{
+@Table(name = "Level")
+
+public class Level {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long activityId;
+    private long levelId;
     @NotNull(message="String must not be null to be valid")
     @Size(min = 5 ,max = 20)
-    private String activity;
+    private String level;
 
-    public Activity(){}
-    
-    public Activity(String activity){
-        this.activity = activity;
-    }
-    public String getActivity() {
-        return activity;
-    }
+    public Level(){}
 
-    public void setActivity(String activity) {
-        this.activity = activity;
+    public Level(String level){
+        this.level = level;
     }
-    public Long getActivityId() {
-        return activityId;
+    public String getLevel() {
+        return level;
     }
 
-    public void setActivityId(Long activityId) {
-        this.activityId = activityId;
+    public void setLevel(String level) {
+        this.level = level;
     }
+    public Long getLevelId() {
+        return levelId;
+    }
+
+    public void setLevelId(Long levelId) {
+        this.levelId = levelId;
+    }
+
 }

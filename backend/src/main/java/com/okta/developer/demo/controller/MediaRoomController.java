@@ -22,6 +22,9 @@ public class MediaRoomController{
     @Autowired private ActivityRepository activityRepository;
     @Autowired private PrefixRepository prefixRepository;
     @Autowired private MediaRoomRepository mediaRoomRepository;
+    @Autowired private LevelRepository levelRepository;
+    @Autowired private EquipmentRepository equipmentRepository;
+
 
     @GetMapping("/Applicant")
     public Collection<Applicant> applicant(){
@@ -34,13 +37,16 @@ public class MediaRoomController{
         Optional<Prefix> prefix = prefixRepository.findById(Long.valueOf(body.get("prefix").toString()));
         Optional<Activity> activity = activityRepository.findById(Long.valueOf(body.get("activity").toString()));
         Optional<MediaRoom> mediaRoom = mediaRoomRepository.findById(Long.valueOf(body.get("mediaRoom").toString()));
+        Optional<Level> level = levelRepository.findById(Long.valueOf(body.get("level").toString()));
+        Optional<Equipment> equipment = equipmentRepository.findById(Long.valueOf(body.get("equipment").toString()));
                 
+        newApplicant.setLevel(level.get());
+        newApplicant.setEquipment(equipment.get());
         newApplicant.setActivity(activity.get());
         newApplicant.setMediaRoom(mediaRoom.get());
         newApplicant.setPrefix(prefix.get());
         newApplicant.setApplicantName(body.get("applicantName").toString());
-        newApplicant.setTime(body.get("time").toString());
-        newApplicant.setDate(body.get("date").toString());
+
         return applicantRepository.save(newApplicant);
     }
 
@@ -66,6 +72,29 @@ public class MediaRoomController{
     public MediaRoom newMediaRoom(@PathVariable String mediaRoom){
         MediaRoom newMediaRoom = new MediaRoom(mediaRoom);
         return mediaRoomRepository.save(newMediaRoom);
+    }
+
+    //=============Level====================
+    @GetMapping("/Level")
+    public Collection<Level> level(){
+        return levelRepository.findAll();
+    }
+
+    @PostMapping("/Level/addLevel/{level}")
+    public Level newLevel(@PathVariable String level){
+        Level newLevel = new Level(level);
+        return levelRepository.save(newLevel);
+    }
+    //=============Equipment====================
+    @GetMapping("/Equipment")
+    public Collection<Equipment> equipment(){
+        return equipmentRepository.findAll();
+    }
+
+    @PostMapping("/Equipment/addEquipment/{equipment}")
+    public Equipment newEquipment(@PathVariable String equipment){
+        Equipment newEquipment = new Equipment(equipment);
+        return equipmentRepository.save(newEquipment);
     }
 
 }

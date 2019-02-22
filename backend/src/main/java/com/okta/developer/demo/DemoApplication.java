@@ -23,6 +23,9 @@ public class DemoApplication {
     @Autowired PrefixRepository prefixRepository;
     @Autowired ActivityRepository activityRepository;
     @Autowired MediaRoomRepository mediaRoomRepository;
+    @Autowired LevelRepository levelRepository;
+    @Autowired EquipmentRepository equipmentRepository;
+
     @Autowired
 	private BooksRepository bookrepository ;
 
@@ -49,7 +52,8 @@ public class DemoApplication {
                            PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository,
                            SportsEquipmentRepository sportsEquipmentRepository,PieceRepository pieceRepository,BorrowSportsEquipmentRepository borrowSportsEquipmentRepository,
                            MeetingRepository meetingRepository, CategoryRepository categoryRepository,
-                           PersonRepository personRepository, StatusmeetRepository statusmeetRepository,MediaRoomRepository mediaRoomRepository) {
+                           PersonRepository personRepository, StatusmeetRepository statusmeetRepository,MediaRoomRepository mediaRoomRepository, LevelRepository levelRepository,
+                           EquipmentRepository equipmentRepository) {
 		return args -> {
 		Stream.of("เด็กชาย","เด็กหญิง","นาย","นาง","นางสาว").forEach(prefix -> {
             prefixRepository.save(new Prefix(prefix));
@@ -62,7 +66,7 @@ public class DemoApplication {
         });
         symptomRepository.findAll().forEach(System.out::println);
 
-        Stream.of("ทำแผล","ทายา","นอนพักในห้องพยาบาล","ให้ยาตามอาการ").forEach(treatment -> {
+        Stream.of("นอนพักในห้องพยาบาล","ให้ยาตามอาการ","ทำแผล","ทายา").forEach(treatment -> {
             treatmentRepository.save(new Treatment(treatment));
         });
         treatmentRepository.findAll().forEach(System.out::println);
@@ -72,11 +76,17 @@ public class DemoApplication {
         });
         hospitalRepository.findAll().forEach(System.out::println);
         
-        Stream.of("ทำกิจกรรมกลุ่ม","ดูสารคดี","อื่นๆ").forEach(activity -> {
+        Stream.of("ทำกิจกรรมกลุ่ม","ดูสารคดี","วาดรูประบายสี").forEach(activity -> {
             activityRepository.save(new Activity(activity));
         });
         Stream.of("Media1","Media2","Media3","Media4").forEach(mediaRoom -> {
             mediaRoomRepository.save(new MediaRoom(mediaRoom));
+        });
+        Stream.of("อนุบาล1","อนุบาล2","อนุบาล3").forEach(level -> {
+            levelRepository.save(new Level(level));
+        });
+        Stream.of("ชุดตัวต่อเลโก้","ชุดวาดรูประบายสี","ชุดเรียนรู้ดาราศาสตร์","โทรทัศน์").forEach(equipment -> {
+            equipmentRepository.save(new Equipment(equipment));
         });
 
 		activityRepository.findAll().forEach(System.out::println);

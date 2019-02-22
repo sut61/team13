@@ -35,4 +35,11 @@ public class MediaRoom{
     public String getMediaRoom(){
         return mediaRoom;
     }
+    public void setMediaRoomId(Long mediaRoomId){
+        this.mediaRoomId = mediaRoomId;
+    }
+
+    public long getMediaRoomId() {
+        return mediaRoomId;
+    }
 }
