@@ -18,7 +18,7 @@
     </mat-form-field><br>
 
     <mat-form-field>
-      <h4>ห้องที่เข้าใช้บริการ:</h4>
+      <h4>ระดับชั้นที่เข้าใช้บริการ:</h4>
       <mat-select name ="level" [(ngModel)]="mediaroom.levels">
         <mat-option *ngFor="let level of levels" [value]="level.value">
           {{level.viewValue}}

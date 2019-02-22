@@ -20,11 +20,12 @@ public class PatientName {
     private @NonNull Long id;
 
     @NotNull(message="patient name must not be null to be valid")
-    @Pattern(regexp = "[ก-ฮa-zA-Z]")
+    //@Pattern(regexp = "")
     @Size(min = 5 ,max = 20)
     private String patientName;
 
     @NotNull(message="suggesttion must not be null to be valid")
+    //@Pattern(regexp = "([ก-ฮ])\\w+")
     @Size(min = 5 ,max = 30)
     private String suggestion;
 

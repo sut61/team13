@@ -182,7 +182,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
+            assertEquals(violations.size(), 2);
         }
     }
     @Test
@@ -205,7 +205,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 2);
+            assertEquals(violations.size(), 1);
         }
     }
 
@@ -512,14 +512,14 @@ public class HospitalRoomTest {
     }
 
     //===============================test pattern===========================
-
+/*
     @Test
-    public void TestPatienNamePatern(){
-        PatientName patientName = new PatientName();
-        patientName.setPatientName("1234//[[][/abcdefghijklmn");
+    public void TestSuggestionPattern(){
+        PatientName suggestion = new PatientName();
+        suggestion.setSuggestion("พักผ่อนให้เพียงพอ");
 
         try{
-            entityManager.persist(patientName);
+            entityManager.persist(suggestion);
             entityManager.flush();
         } catch(javax.validation.ConstraintViolationException e){
             System.out.println();
@@ -531,7 +531,51 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 3);
+            assertEquals(violations.size(), 2);
         }
-    }
+    }*/
+/*
+    @Test
+    public void TestPatientNamePattern(){
+        PatientName patientName = new PatientName();
+        patientName.setPatientName("123445asfg");
+
+        try{
+            entityManager.persist(patientName);
+            entityManager.flush();
+        } catch(javax.validation.ConstraintViolationException e){
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Patient Name Pattern<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }*/
+
+   /* @Test
+    public void TestPrefixPatern(){
+        MediaRoom mediaRoom = new MediaRoom();
+        mediaRoom.setMediaRoom("mejdjgkl455");
+
+        try{
+            entityManager.persist(mediaRoom);
+            entityManager.flush();
+        } catch(javax.validation.ConstraintViolationException e){
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("---------------------->>Test Media Room Pattern<<------------------------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
+        }
+    }*/
 }
