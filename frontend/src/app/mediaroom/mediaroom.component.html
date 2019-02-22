@@ -13,12 +13,21 @@
     </mat-form-field><br>
 
     <mat-form-field>
-      <h4>ชื่อ-นามสกุล:</h4>
+      <h4>ชื่อผู้ขอใช้บริการ:</h4>
       <input matInput name ="applicantName" id="name" [(ngModel)]="mediaroom.patientName_id">
     </mat-form-field><br>
 
     <mat-form-field>
-      <h4>เลือกห้อง:</h4>
+      <h4>ห้องที่เข้าใช้บริการ:</h4>
+      <mat-select name ="level" [(ngModel)]="mediaroom.levels">
+        <mat-option *ngFor="let level of levels" [value]="level.value">
+          {{level.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <h4>เลือกห้องสื่อการเรียนรู้:</h4>
       <mat-select name ="mediaRoom" [(ngModel)]="mediaroom.mediaRooms">
         <mat-option *ngFor="let mediaRoom of mediaRooms" [value]="mediaRoom.value">
           {{mediaRoom.viewValue}}
@@ -36,14 +45,15 @@
     </mat-form-field><br>
 
     <mat-form-field>
-      <h4>วันที่:(mm/dd/yyyy)</h4>
-      <input matInput name ="date" id="date" [(ngModel)]="mediaroom.date_id">
+      <h4>อุปกรณ์:</h4>
+      <mat-select name ="equipment" [(ngModel)]="mediaroom.equipments">
+        <mat-option *ngFor="let equipment of equipments" [value]="equipment.value">
+          {{equipment.viewValue}}
+        </mat-option>
+      </mat-select>
     </mat-form-field><br>
 
-    <mat-form-field>
-      <h4>เวลา:(14:00-16:00)</h4>
-      <input matInput name ="time" id="time" [(ngModel)]="mediaroom.time_id">
-    </mat-form-field><br>
+
     <h4 style="color:greenyellow;">{{text}}</h4>
     <pre style="text-align:left;">
         <button type="submit" mat-stroked-button color="primary">บันทึก</button>

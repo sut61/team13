@@ -21,12 +21,6 @@ public class Applicant{
     @NotNull(message="apllicantName must not be null to be valid")
     @Size(min = 5 ,max = 20)
     private String applicantName; //ชื่อผู้ขอใช้บริการ
-    @NotNull(message="Time must not be null to be valid")
-    @Size(min = 5 ,max = 15)
-    private String time;
-    @NotNull(message="Date must not be null to be valid")
-    @Size(min = 5 ,max = 15)
-    private String date;
 
     @ManyToOne()
     private Prefix prefix;
@@ -36,6 +30,12 @@ public class Applicant{
 
     @ManyToOne()
     private MediaRoom mediaRoom;
+
+    @ManyToOne()
+    private Level level;
+
+    @ManyToOne()
+    private Equipment equipment;
 
     public Applicant() {}
 
@@ -51,20 +51,6 @@ public class Applicant{
     }
     public void setApplicantName(String applicantName) {
         this.applicantName = applicantName;
-    }
-
-    public String getTime() {
-        return time;
-    }
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getDate() {
-        return date;
-    }
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public Prefix getPrefix() {
@@ -87,5 +73,18 @@ public class Applicant{
 
     public void setMediaRoom(MediaRoom mediaRoom) {
         this.mediaRoom = mediaRoom;
+    }
+
+    public Level getLevel(){
+        return level;
+    }
+    public void setLevel(Level level) {
+        this.level = level;
+    }
+    public Equipment getEquipment(){
+        return equipment;
+    }
+    public void setEquipment(Equipment equipment) {
+        this.equipment = equipment;
     }
 }

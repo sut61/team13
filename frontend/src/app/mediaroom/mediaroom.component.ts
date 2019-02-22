@@ -10,6 +10,8 @@ export class MediaroomComponent implements OnInit {
   prefixs = [];
   activitys = [];
   mediaRooms = [];
+  levels = [];
+  equipments = [];
   text: String;
 
   onClickSubmit(data) {
@@ -69,6 +71,34 @@ export class MediaroomComponent implements OnInit {
           this.mediaRooms.push({
             value: data[index].mediaRoomId,
             viewValue: data[index].mediaRoom
+          })
+        }
+      },
+      error => {
+        console.log("Error", error);
+      }
+    );
+    this.http.get("http://localhost:8080/Level").subscribe(
+      data => {
+        console.log("GET Request is successful ", data);
+        for (let index = 0; index < data["length"]; index++) {
+          this.levels.push({
+            value: data[index].levelId,
+            viewValue: data[index].level
+          })
+        }
+      },
+      error => {
+        console.log("Error", error);
+      }
+    );
+    this.http.get("http://localhost:8080/Equipment").subscribe(
+      data => {
+        console.log("GET Request is successful ", data);
+        for (let index = 0; index < data["length"]; index++) {
+          this.equipments.push({
+            value: data[index].equipmentId,
+            viewValue: data[index].equipment
           })
         }
       },

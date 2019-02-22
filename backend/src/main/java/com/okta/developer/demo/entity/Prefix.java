@@ -31,4 +31,12 @@ public class Prefix{
     public String getPrefix(){
         return prefix;
     }
+
+    public void setPrefixId(long prefixId) {
+        this.prefixId = prefixId;
+    }
+
+    public long getPrefixId() {
+        return prefixId;
+    }
 }
