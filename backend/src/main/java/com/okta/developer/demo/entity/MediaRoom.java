@@ -19,9 +19,9 @@ public class MediaRoom{
     private @NonNull long mediaRoomId;
 
     @NotNull(message="media room must not be null to be valid")
+    @Pattern(regexp = "^Media\\d{1}")
     @Column(unique = true)
-    @Size(min = 5 ,max = 20)
-    //@Pattern(regexp = "[a-zA-Z]+")
+    //@Size(min = 5 ,max = 20)
     private @NonNull String mediaRoom;
 
     public MediaRoom(){}
