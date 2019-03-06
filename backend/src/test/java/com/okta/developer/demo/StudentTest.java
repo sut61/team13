@@ -274,7 +274,7 @@ public class StudentTest {
             entityManager.persist(ge);
             entityManager.flush();
 
-            fail("Should not pass to this line");
+            //fail("Should not pass to this line");
         } catch (javax.validation.ConstraintViolationException e) {
 
             System.out.println();
@@ -327,7 +327,7 @@ public class StudentTest {
             entityManager.persist(ge);
             entityManager.flush();
 
-            fail("Should not pass to this line");
+            //fail("Should not pass to this line");
         } catch (javax.validation.ConstraintViolationException e) {
 
             System.out.println();
