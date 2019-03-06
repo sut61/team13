@@ -24,11 +24,12 @@ public class Personnal {
     @SequenceGenerator(name="Personnal_seq",sequenceName="Personnal_seq")
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="Personnal_seq")
     private   @NonNull Long id ;
+
     @NotNull
     @Pattern(regexp = "[a-zA-Z]+")
     @Size(min = 5 ,max = 20)
     @Column(unique = true)
-    private   @NonNull String fname;
+    private String fname;
 
     @NotNull
     @Pattern(regexp = "[a-zA-Z]+")

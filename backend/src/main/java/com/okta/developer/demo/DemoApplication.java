@@ -169,18 +169,6 @@ public class DemoApplication {
 
 
 
-            Personnal per = new Personnal();
-            per.setFname("Chutimon");
-            per.setLname("Wongsa");
-            per.setJob_id("B5908851");
-            per.setIdentificationNumber("1199900642331");
-            per.setPhonenumber("0990589313");
-            personnalRepository.save(per);
-            personnalRepository.save(per);
-            personnalRepository.save(per);
-            personnalRepository.save(per);
-            personnalRepository.save(per);
-            personnalRepository.findAll().forEach(System.out::println);
 
 
             Degree d1 =new Degree();
