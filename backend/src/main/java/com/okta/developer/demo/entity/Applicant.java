@@ -19,7 +19,8 @@ public class Applicant{
     private @NonNull long applicantId;
 
     @NotNull(message="apllicantName must not be null to be valid")
-    @Size(min = 5 ,max = 20)
+    @Size(min = 5)
+    @Size(max = 20)
     private String applicantName; //ชื่อผู้ขอใช้บริการ
 
     @ManyToOne()

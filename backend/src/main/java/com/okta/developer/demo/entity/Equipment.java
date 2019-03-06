@@ -19,7 +19,8 @@ public class Equipment {
     private long equipmentId;
 
     @NotNull(message="String must not be null to be valid")
-    @Size(min = 5 ,max = 40)
+    @Size(min = 5)
+    @Size(max = 40)
     private String equipment;
 
     public Equipment(){}

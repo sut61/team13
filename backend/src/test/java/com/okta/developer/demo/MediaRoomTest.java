@@ -555,47 +555,7 @@ public class MediaRoomTest {
             assertEquals(violations.size(), 1);
         }
     }
-/*    @Test
-    public void testMediaRoomSize() {
-        Applicant applicant = new Applicant();
-        MediaRoom mediaRoom = new MediaRoom();
-        Prefix prefix = new Prefix();
-        Activity activity = new Activity();
-        Level level = new Level();
-        Equipment equipment = new Equipment();
 
-        applicant.setApplicantName("Parate fjfpdf");
-        activity.setActivity("ทำกิจกรรมกลุ่ม");
-        mediaRoom.setMediaRoom("media1111111111111111111111111111111111111111111111111111111111111111111111111111111");
-        level.setLevel("อนุบาล1");
-        equipment.setEquipment("โทรทัศน์");
-        prefix.setPrefix("นางสาว");
-        try {
-            entityManager.persist(applicant);
-            entityManager.flush();
-            entityManager.persist(mediaRoom);
-            entityManager.flush();
-            entityManager.persist(activity);
-            entityManager.flush();
-            entityManager.persist(prefix);
-            entityManager.flush();
-            entityManager.persist(level);
-            entityManager.flush();
-            entityManager.persist(equipment);
-            entityManager.flush();
-        } catch (javax.validation.ConstraintViolationException e) {
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println("---------------------->>Test Media Room Size<<------------------------");
-            System.out.println(e.getMessage());
-            System.out.println();
-            System.out.println();
-            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
-            assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
-        }
-    }*/
     @Test
     public void testLevelSize() {
         Applicant applicant = new Applicant();

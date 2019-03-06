@@ -18,7 +18,8 @@ public class Level {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long levelId;
     @NotNull(message="String must not be null to be valid")
-    @Size(min = 5 ,max = 20)
+    @Size(min = 5)
+    @Size(max = 20)
     private String level;
 
     public Level(){}

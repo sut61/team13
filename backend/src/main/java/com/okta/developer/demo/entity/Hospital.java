@@ -20,9 +20,9 @@ public class Hospital {
     private @NonNull long hospitalId;
 
     @NotNull(message="hospital must not be null to be valid")
-    //@Pattern(regexp = "โรงพยาบาล+")
     @Column(unique = true)
-    @Size(min = 5 ,max = 40)
+    @Size(min = 5)
+    @Size(max = 40)
     private String hospital;
 
     public Hospital(){}

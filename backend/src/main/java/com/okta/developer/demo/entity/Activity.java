@@ -18,7 +18,8 @@ public class Activity{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long activityId;
     @NotNull(message="String must not be null to be valid")
-    @Size(min = 5 ,max = 20)
+    @Size(min = 5)
+    @Size(max = 20)
     private String activity;
 
     public Activity(){}

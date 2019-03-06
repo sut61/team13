@@ -18,7 +18,6 @@ public class Prefix{
 
     @NotNull(message="prefix must not be null to be valid")
     @Column(unique = true)
-    //@Pattern(regexp = "^(เ|น)+")
     private String prefix; //คำนำหน้าชื่อ
 
     public Prefix(){}
