@@ -41,9 +41,9 @@
       </div>
       <div>
         <mat-form-field>
-          <mat-select placeholder="ชั้น"[(ngModel)]="claSelect">
+          <mat-select placeholder="ชั้น"[(ngModel)]="classroomSelect">
 
-            <mat-option *ngFor="let cla of cla" [value]="cla.id">{{cla.cla}}</mat-option>
+            <mat-option *ngFor="let classroom of classroom" [value]="classroom.id">{{classroom.classroom}}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>

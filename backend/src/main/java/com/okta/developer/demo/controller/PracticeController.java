@@ -18,7 +18,7 @@ public class PracticeController {
             @Autowired private PracticeRepository practiceRepository;
     @Autowired private RoommRepository roommRepository;
     @Autowired private BuildingRepository buildingRepository;
-    @Autowired private ClaRepository claRepository;
+    @Autowired private ClassroomRepository classroomRepository;
 
     @GetMapping(path="/Practice")
     public Collection<Practice> Practice() {
@@ -34,27 +34,27 @@ public class PracticeController {
         return buildingRepository.findAll().stream()
                 .collect(Collectors.toList());
     }
-            @GetMapping(path="/Cla")
-            public List<Cla> Cla() {
-                return claRepository.findAll().stream()
+            @GetMapping(path="/Classroom")
+            public List<Classroom> Classroom() {
+                return classroomRepository.findAll().stream()
                         .collect(Collectors.toList());
             }
 
 
-            @PostMapping("/practice/{bui_id}/{cla_id}/{roo_id}/{name}/{num}/{day}")
+            @PostMapping("/practice/{bui_id}/{cla_id}/{roo_id}/{name}/{particulars}/{day}")
     public Practice practice(@PathVariable long roo_id, @PathVariable long bui_id, @PathVariable long cla_id
-            , @PathVariable String name, @PathVariable String num,@PathVariable Date day){
+            , @PathVariable String name, @PathVariable String particulars,@PathVariable Date day){
 
         Roomm roomm = roommRepository.findById(roo_id).get();
         Building building = buildingRepository.findById(bui_id).get();
-        Cla cla = claRepository.findById(cla_id).get();
+        Classroom classroom = classroomRepository.findById(cla_id).get();
 
         Practice practice = new Practice();
         practice.setName(name);
-        practice.setNum(num);
+        practice.setParticulars(particulars);
         practice.setDay(day);
         practice.setRoomm(roomm);
-        practice.setCla(cla);
+        practice.setClassroom(classroom);
         practice.setBuilding(building);
         practiceRepository.save(practice);
         return practice;

@@ -32,7 +32,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class Stu {
+public class StudentTest {
 
 
     @Autowired

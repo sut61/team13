@@ -7,15 +7,16 @@ import lombok.*;
 import javax.validation.constraints.*;
 import javax.validation.constraints.*;
 @Entity
-@Table(name = "Cla")
-public class Cla {
+@Table(name = "Classroom")
+public class Classroom {
 
     @Id
     @SequenceGenerator(name = "cla_seq", sequenceName = "cla_seq")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cla_seq")
-    private @NonNull Long id;
+    private @NonNull
+    Long id;
     @NotNull
-    private String cla;
+    private String classroom;
 
     public Long getId() {
         return id;
@@ -25,12 +26,12 @@ public class Cla {
         this.id = id;
     }
 
-    public String getCla() {
-        return cla;
+    public String getClassroom() {
+        return classroom;
     }
 
-    public void setCla(String cla) {
-        this.cla = cla;
+    public void setClassroom(String classroom) {
+        this.classroom = classroom;
     }
 }
 

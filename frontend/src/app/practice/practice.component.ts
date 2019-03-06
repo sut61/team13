@@ -13,14 +13,14 @@ export class PracticeComponent implements OnInit {
   roomm: Array<any>;
   roommSelect = null;
 
-  cla: Array<any>;
-  claSelect = null;
+  classroom: Array<any>;
+  classroomSelect = null;
 
   building: Array<any>;
   buildingSelect = null;
 
   name :string;
-  num : String;
+  particulars : String;
   day : null;
 
   constructor(private homeservice: HomeService ,
@@ -34,9 +34,9 @@ export class PracticeComponent implements OnInit {
     }
   }
   ngOnInit() {
-    this.homeservice.getcla().subscribe(data => {
-      this.cla = data;
-      console.log(this.cla);
+    this.homeservice.getclassroom().subscribe(data => {
+      this.classroom = data;
+      console.log(this.classroom);
     });
 
     this.homeservice.getroomm().subscribe(data => {
@@ -51,10 +51,10 @@ export class PracticeComponent implements OnInit {
   }
 
   save(){
-  if(this.roommSelect === null || this.claSelect === null || this.name === null || this.buildingSelect === null|| this.num === null|| this.day === null){
+  if(this.roommSelect === null || this.classroomSelect === null || this.name === null || this.buildingSelect === null|| this.particulars === null|| this.day === null){
         alert('กรุณากรอกข้อมูลให้ครบถ้วน');
       }else {
-    this.httpClient.post('http://localhost:8080/practice/' +this.roommSelect+'/'+this.claSelect+'/'+this.buildingSelect+'/'+ this.name+'/'+this.num+'/'+this.day+'/',{}).subscribe()
+    this.httpClient.post('http://localhost:8080/practice/' +this.roommSelect+'/'+this.classroomSelect+'/'+this.buildingSelect+'/'+ this.name+'/'+this.particulars+'/'+this.day+'/',{}).subscribe()
     alert('บันทึกสำเร็จ');
 
   }

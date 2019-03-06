@@ -49,7 +49,7 @@ public class DemoApplication {
                            PersonnalRepository personnalRepository , PositionRepository positionRepository , ReligionRepository religionRepository,RoomRepository RoomRepository, StudyTimeTableRepository studyTimeTableRepository,
     UserRepository userRepository,NationalityRepository nationalityRepository,PersonnelRepository personnelRepository,
     BooksRepository bookRepository, BookTypeRepository bookTypeRepository,BookcaseRepository bookcaseRepository, AuthorRepository authorRepository,ClassroomsRepository classroomsRepository,ParentsRepository parentsRepository,SchoolCheckRepository schoolCheckRepository,StatusRepository statusRepository,
-                           PracticeRepository practiceRepository,ClaRepository claRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository,
+                           PracticeRepository practiceRepository,ClassroomRepository classroomRepository,RoommRepository roommRepository,BuildingRepository buildingRepository,ActivityRepository activityRepository,
                            SportsEquipmentRepository sportsEquipmentRepository,PieceRepository pieceRepository,BorrowSportsEquipmentRepository borrowSportsEquipmentRepository,
                            MeetingRepository meetingRepository, CategoryRepository categoryRepository,
                            PersonRepository personRepository, StatusmeetRepository statusmeetRepository,MediaRoomRepository mediaRoomRepository, LevelRepository levelRepository,
@@ -466,15 +466,15 @@ public class DemoApplication {
             buildingRepository.save(bui3);
 
 
-            Cla cla1 = new Cla();
-            cla1.setCla("1");
-            Cla cla2 = new Cla();
-            cla2.setCla("2");
-            Cla cla3 = new Cla();
-            cla3.setCla("3");
-            claRepository.save(cla1);
-            claRepository.save(cla2);
-            claRepository.save(cla3);
+            Classroom cla1 = new Classroom();
+            cla1.setClassroom("1");
+            Classroom cla2 = new Classroom();
+            cla2.setClassroom("2");
+            Classroom cla3 = new Classroom();
+            cla3.setClassroom("3");
+            classroomRepository.save(cla1);
+            classroomRepository.save(cla2);
+            classroomRepository.save(cla3);
 
             Roomm roo1 = new Roomm();
             roo1.setRoomm("อนุบาล");

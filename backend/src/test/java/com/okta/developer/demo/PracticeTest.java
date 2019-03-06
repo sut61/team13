@@ -32,7 +32,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class Pra {
+public class PracticeTest {
 
 
     @Autowired
@@ -53,7 +53,7 @@ public class Pra {
     public void testPracticeAllMatch() {
         Practice pr = new Practice();
         pr.setName("Waraphorn");
-        pr.setNum("asdfghjk");
+        pr.setParticulars("asdfghjk");
         try {
             entityManager.persist(pr);
             entityManager.flush();
@@ -78,7 +78,7 @@ public class Pra {
     public void testPracticeNameNull() {
         Practice pr = new Practice();
         pr.setName(null);
-        pr.setNum("asdfghhjk");
+        pr.setParticulars("asdfghhjk");
         try {
             entityManager.persist(pr);
             entityManager.flush();
@@ -103,7 +103,7 @@ public class Pra {
     public void testPracticeNumNull() {
         Practice pr = new Practice();
         pr.setName("Waraphorn");
-        pr.setNum(null);
+        pr.setParticulars(null);
         try {
             entityManager.persist(pr);
             entityManager.flush();
@@ -127,7 +127,7 @@ public class Pra {
     public void testPracticeNameOverSize() {
         Practice pr = new Practice();
         pr.setName("Parateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-        pr.setNum("asdfghjk");
+        pr.setParticulars("asdfghjk");
         try {
             entityManager.persist(pr);
             entityManager.flush();
@@ -151,7 +151,7 @@ public class Pra {
     public void testPracticeNameMinSize() {
         Practice pr = new Practice();
         pr.setName("Wara");
-        pr.setNum("asdfghjk");
+        pr.setParticulars("asdfghjk");
         try {
             entityManager.persist(pr);
             entityManager.flush();
@@ -175,7 +175,7 @@ public class Pra {
     public void testPracticeNumOverSize() {
         Practice pr = new Practice();
         pr.setName("Waraphorn");
-        pr.setNum("asdfghjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        pr.setParticulars("asdfghjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
         try {
             entityManager.persist(pr);
             entityManager.flush();
@@ -199,7 +199,7 @@ public class Pra {
     public void testPracticeNumMinSize() {
         Practice pr = new Practice();
         pr.setName("Waraphorn");
-        pr.setNum("asd");
+        pr.setParticulars("asd");
         try {
             entityManager.persist(pr);
             entityManager.flush();
@@ -223,13 +223,13 @@ public class Pra {
     public void testNamePracticeBeUnique() {
         Practice pr = new Practice();
         pr.setName("Thanyakorn");
-        pr.setNum("asdfghjk");
+        pr.setParticulars("asdfghjk");
         entityManager.persist(pr);
         entityManager.flush();
 
         Practice pr1 = new Practice();
         pr1.setName("Thanyakorn");
-        pr1.setNum("asdfghjk");
+        pr1.setParticulars("asdfghjk");
         entityManager.persist(pr1);
 
         System.out.println();
@@ -353,8 +353,8 @@ public class Pra {
     //======================-------------------------------------- Test Case Cla  class entity ----------------------------------======================
     @Test
     public void testClaParentsSuccessful() {
-        Cla  ge = new Cla();
-        ge.setCla ("Cla");
+        Classroom  ge = new Classroom();
+        ge.setClassroom ("Classroom");
 
         try {
             entityManager.persist(ge);
@@ -378,8 +378,8 @@ public class Pra {
 
     @Test
     public void testClaParentsNull() {
-        Cla ge = new Cla();
-        ge.setCla(null);
+        Classroom ge = new Classroom();
+        ge.setClassroom(null);
 
 
         try {

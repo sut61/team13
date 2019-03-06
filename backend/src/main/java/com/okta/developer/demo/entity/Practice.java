@@ -11,20 +11,20 @@ public class Practice {
     @Id
     @SequenceGenerator(name = "pra_seq", sequenceName = "pra_seq")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pra_seq")
-    private @NonNull Long id;
+    private @NonNull
+    Long id;
 
 
     @NotNull
     @Pattern(regexp = "[a-zA-Z]+")
-    @Size(min = 5 ,max = 20)
+    @Size(min = 5, max = 20)
     @Column(unique = true)
     private String name;
     @NotNull
     @Pattern(regexp = "[a-zA-Z]+")
-    @Size(min = 5 ,max = 20)
+    @Size(min = 5, max = 20)
     @Column(unique = true)
-    private String num;
-
+    private String particulars;
 
     @Temporal(TemporalType.DATE)
     private @io.micrometer.core.lang.NonNull
@@ -34,13 +34,10 @@ public class Practice {
     private Building building;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Cla cla;
+    private Classroom classroom;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Roomm roomm;
-
-    public Practice() {
-    }
 
     public Long getId() {
         return id;
@@ -58,12 +55,12 @@ public class Practice {
         this.name = name;
     }
 
-    public String getNum() {
-        return num;
+    public String getParticulars() {
+        return particulars;
     }
 
-    public void setNum(String num) {
-        this.num = num;
+    public void setParticulars(String particulars) {
+        this.particulars = particulars;
     }
 
     public Date getDay() {
@@ -82,12 +79,12 @@ public class Practice {
         this.building = building;
     }
 
-    public Cla getCla() {
-        return cla;
+    public Classroom getClassroom() {
+        return classroom;
     }
 
-    public void setCla(Cla cla) {
-        this.cla = cla;
+    public void setClassroom(Classroom classroom) {
+        this.classroom = classroom;
     }
 
     public Roomm getRoomm() {
@@ -97,5 +94,4 @@ public class Practice {
     public void setRoomm(Roomm roomm) {
         this.roomm = roomm;
     }
-
 }
