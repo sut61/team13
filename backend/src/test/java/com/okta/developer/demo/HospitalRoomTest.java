@@ -182,7 +182,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 2);
+            assertEquals(violations.size(), 1);
         }
     }
     @Test
@@ -391,7 +391,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 2);
+            assertEquals(violations.size(), 1);
         }
     }
     @Test
@@ -415,7 +415,7 @@ public class HospitalRoomTest {
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 2);
+            assertEquals(violations.size(), 1);
         }
     }
     @Test
