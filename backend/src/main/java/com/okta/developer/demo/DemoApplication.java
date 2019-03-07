@@ -303,13 +303,15 @@ public class DemoApplication {
 
 
             Personnel personnel = new Personnel("1123","5645313","Prayuth","Chanocha",
-                    "Po_2018@hotmail.com","Thai","B","Computer Engineering","044-856-4681");
+                    "Po_2018@hotmail.com","Thai","B","Mathematics","044-856-4681");
             personnelRepository.save(personnel);
             Personnel personnel2 = new Personnel("1150","87451245","Srivoradee","Rangsriramanakul",
-                    "Sri_2019@sut.com","Thai","B","Computer Engineering","044-123-1345");
+                    "Sri_2019@sut.com","Thai","B","Artist","044-123-1345");
             personnelRepository.save(personnel2);
 
 
+
+            ////-----DEMO------
             Studytimetable stt = new Studytimetable("08.00-10.00","Monday", major1,room2, personnel);
             studyTimeTableRepository.save(stt);
             Studytimetable stt2 = new Studytimetable("10.00-12.00","Friday", major2,room, personnel2);

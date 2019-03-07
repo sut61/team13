@@ -206,13 +206,11 @@ public class MeetingTest{
     public void testMeetingTopicBeUnique() {
         Meeting mt = new Meeting();
         mt.setTopic("Momotaro");
-        mt.setDescrip("dfawedfdfa");
         entityManager.persist(mt);
 
 
         Meeting mt1 = new Meeting();
         mt1.setTopic("Momotaro");
-        mt1.setDescrip("dfawedfdfa");
 
         try {
             entityManager.persist(mt1);
@@ -227,6 +225,29 @@ public class MeetingTest{
             System.out.println("--------------------------------->> test Meeting BeUnique <<-------------------------- ");
             System.out.println("--------------------------------->> UNIQUE COLUMN <<-------------------------- ");
             e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void TestMeetingCheckNotPaternMatch(){
+        Meeting mt = new Meeting();
+        mt.setTopic("_#####??&&%$");
+        entityManager.persist(mt);
+
+        try{
+            entityManager.persist(mt);
+            entityManager.flush();
+        } catch(javax.validation.ConstraintViolationException e){
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("------------>>Test  Pattern<<-----------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
         }
     }
 

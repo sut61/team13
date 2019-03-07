@@ -206,16 +206,14 @@ public class SttTest{
         }
     }
     @Test
-    public void testSttTimeDateBeUnique() {
+    public void testSttTimedateBeUnique() {
         Studytimetable s = new Studytimetable();
-        s.setTimedate("Momotaro");
-        s.setDay("dfawedfdfa");
+        s.setTimedate("kitoto");
         entityManager.persist(s);
 
 
         Studytimetable s1 = new Studytimetable();
-        s1.setTimedate("Momotaro");
-        s1.setDay("dfawedfdfa");
+        s1.setTimedate("kitoto");
 
         try {
             entityManager.persist(s1);
@@ -230,6 +228,29 @@ public class SttTest{
             System.out.println("--------------------------------->> test Meeting BeUnique <<-------------------------- ");
             System.out.println("--------------------------------->> UNIQUE COLUMN <<-------------------------- ");
             e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void TestSttCheckNotPaternMatch(){
+        Studytimetable s = new Studytimetable();
+        s.setDay("_#####??&&%$");
+        entityManager.persist(s);
+
+        try{
+            entityManager.persist(s);
+            entityManager.flush();
+        } catch(javax.validation.ConstraintViolationException e){
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("------------>>Test  Pattern<<-----------");
+            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println();
+            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+            assertEquals(violations.isEmpty(), false);
+            assertEquals(violations.size(), 1);
         }
     }
 
