@@ -51,10 +51,10 @@ export class PracticeComponent implements OnInit {
   }
 
   save(){
-  if(this.roommSelect === null || this.classroomSelect === null || this.name === null || this.buildingSelect === null|| this.particulars === null|| this.day === null){
+  if(this.roommSelect == null || this.classroomSelect == null || this.name == null || this.buildingSelect == null|| this.particulars == null|| this.day == null){
         alert('กรุณากรอกข้อมูลให้ครบถ้วน');
       }else {
-    this.httpClient.post('http://localhost:8080/practice/' +this.roommSelect+'/'+this.classroomSelect+'/'+this.buildingSelect+'/'+ this.name+'/'+this.particulars+'/'+this.day+'/',{}).subscribe()
+    this.httpClient.post('http://localhost:8080/practice/'+ this.buildingSelect+'/'+ this.classroomSelect+'/'+ this.roommSelect+'/'+ this.name+'/'+ this.particulars+'/'+ this.day+'/',{}).subscribe()
     alert('บันทึกสำเร็จ');
 
   }
