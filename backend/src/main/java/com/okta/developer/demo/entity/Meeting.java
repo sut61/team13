@@ -14,13 +14,15 @@ public class Meeting {
 
     @NotNull
     @Pattern(regexp = "[a-zA-Z]+")
-    @Size(min = 5 ,max = 20)
+    @Size(min = 5)
+    @Size(max =20)
     @Column(unique = true)
     private String topic;
 
     @NotNull
     @Pattern(regexp = "[a-zA-Z]+")
-    @Size(min = 5 ,max = 20)
+    @Size(min = 5)
+    @Size(max =20)
     @Column(unique = true)
     private String descrip;
     public Date day;

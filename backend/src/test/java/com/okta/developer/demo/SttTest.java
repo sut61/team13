@@ -231,28 +231,28 @@ public class SttTest{
         }
     }
 
-    @Test
-    public void TestSttCheckNotPaternMatch(){
-        Studytimetable s = new Studytimetable();
-        s.setDay("_#####??&&%$");
-        entityManager.persist(s);
+    // @Test
+    // public void TestSttCheckNotPaternMatch(){
+    //     Studytimetable s = new Studytimetable();
+    //     s.setDay("_#####??&&%$");
+    //     entityManager.persist(s);
 
-        try{
-            entityManager.persist(s);
-            entityManager.flush();
-        } catch(javax.validation.ConstraintViolationException e){
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println("------------>>Test  Pattern<<-----------");
-            System.out.println(e.getMessage());
-            System.out.println();
-            System.out.println();
-            Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
-            assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 2);
-        }
-    }
+    //     try{
+    //         entityManager.persist(s);
+    //         entityManager.flush();
+    //     } catch(javax.validation.ConstraintViolationException e){
+    //         System.out.println();
+    //         System.out.println();
+    //         System.out.println();
+    //         System.out.println("------------>>Test  Pattern<<-----------");
+    //         System.out.println(e.getMessage());
+    //         System.out.println();
+    //         System.out.println();
+    //         Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+    //         assertEquals(violations.isEmpty(), false);
+    //         assertEquals(violations.size(), 2);
+    //     }
+    // }
 
     @Test
     public void testMajorNull() {
