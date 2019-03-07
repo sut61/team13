@@ -223,7 +223,7 @@ public class SttTest{
             System.out.println(e.getConstraintViolations());
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 2);
+            assertEquals(violations.size(), 1);
         } catch (javax.persistence.PersistenceException e) {
             System.out.println("--------------------------------->> test Meeting BeUnique <<-------------------------- ");
             System.out.println("--------------------------------->> UNIQUE COLUMN <<-------------------------- ");
@@ -250,7 +250,7 @@ public class SttTest{
             System.out.println();
             Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
             assertEquals(violations.isEmpty(), false);
-            assertEquals(violations.size(), 1);
+            assertEquals(violations.size(), 2);
         }
     }
 
