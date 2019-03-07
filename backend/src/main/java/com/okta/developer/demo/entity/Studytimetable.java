@@ -14,15 +14,17 @@ public class Studytimetable {
 
  @NotNull
 // @Pattern(regexp = "[a-zA-Z]+")
- @Size(min = 5 ,max = 20)
+ @Size(min = 5)
+ @Size(max = 20)
  @Column(unique = true)
   private String timedate;
 
 
  @NotNull
- @Pattern(regexp = "[a-zA-Z]+")
- @Size(min = 5 ,max = 20)
- @Column(unique = true)
+ //@Pattern(regexp = "[a-zA-Z]+")
+ @Size(min = 5)
+ @Size(max = 20)
+ //@Column(unique = true)
   private String day;
 
 
